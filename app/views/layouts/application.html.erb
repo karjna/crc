@@ -3,12 +3,20 @@
   <head>
     <title>Crc</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class = "container">
+        <h1><a href = "/" class = "navbar-brand">Civil Rights Corps</a></h1>
+     </div>
+    </nav>
+    <div class = 'container'>
+     <%= yield %>
+    </div>
   </body>
 </html>
