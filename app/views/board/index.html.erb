@@ -1,0 +1,15 @@
+<h1>Our Board</h1>
+ <div class="card-columns">
+ <% @board.each do |memberdata| %>
+    <% member = memberdata.data.fields %>
+   
+        <a class="card bg-dark text-white" href = "/board/<%= memberdata.data.slug %>">
+            <img class="card-img" src="<%= member.photo %>" alt="Card image">
+            <div class="card-img-overlay">
+                <h1 class="card-title"><%= member.first_name %> <%= member.last_name %></h1>
+              
+            </div>
+        </a>
+
+    <% end %>
+</div>

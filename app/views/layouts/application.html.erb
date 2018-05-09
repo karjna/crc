@@ -10,13 +10,12 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class = "container">
-        <h1><a href = "/" class = "navbar-brand">Civil Rights Corps</a></h1>
-     </div>
-    </nav>
+    <%= render 'layouts/header' %>    
+
     <div class = 'container'>
      <%= yield %>
     </div>
+
+    <%= render 'layouts/footer' %>   
   </body>
 </html>

@@ -15,7 +15,7 @@
 <!-- Recent posts -->
 <h4>Recent posts</h4>
 
-<ul>
+<ul class = "list-unstyled">
   <% @author.recent_posts.each do |post| %>
     <li><%= render :partial => 'buttercms/posts/post', :locals => {:post => post} %></li>
   <% end %>

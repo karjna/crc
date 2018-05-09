@@ -16,5 +16,20 @@ Rails.application.routes.draw do
     get '/blog/:slug' => 'posts#show', :as => :buttercms_post
   end
 
+  get '/work' => 'work#index'
+  get '/work/:slug' => 'work#show'
+
+  get '/team' => 'team#index'
+  get '/team/:slug' => 'team#show'
+
+  get '/board' => 'board#index'
+  get '/board/:slug' => 'board#show'
+
+  get '/files' => 'files#index'
+  get '/file/:serial' => 'files#show'
+
+  get '/contact' => 'home#contact'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

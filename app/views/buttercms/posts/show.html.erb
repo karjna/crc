@@ -3,19 +3,22 @@
 
 <!-- Post title -->
 <h2><%= @post.title %></h2>
-
-<!-- Post author -->
-<p>
-  <%= link_to "#{@post.author.first_name} #{@post.author.last_name}", buttercms_author_path(@post.author.slug) %>
-</p>
-
-<!-- Post categories -->
 <% @post.categories.each do |category| %>
-  <%= link_to category.name, buttercms_category_path(category.slug), :title => category.name %>
+  <%= link_to category.name, buttercms_category_path(category.slug), :title => category.name , :class => 'badge badge-light mb-3' %>
 <% end %>
 
-<!-- Publish date -->
-<p><%= Time.parse(@post.published).strftime('%B %d, %Y') %></p>
+<p>
+  <!-- Post author -->
+  <span>
+    <%= link_to "#{@post.author.first_name} #{@post.author.last_name}", buttercms_author_path(@post.author.slug) %>
+  </span>
+  <br>
+  <!-- Post categories -->
+
+
+  <!-- Publish date -->
+  <span class = "font-italic"><%= Time.parse(@post.published).strftime('%B %d, %Y') %></span>
+</p>
 
 <!-- Post body -->
 <%= @post.body.html_safe %>
