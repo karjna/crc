@@ -25,6 +25,9 @@ Rails.application.routes.draw do
   get '/board' => 'board#index'
   get '/board/:slug' => 'board#show'
 
+  get '/jobs' => 'jobs#index'
+  get '/job/:slug' => 'jobs#show'
+
   get '/files' => 'files#index'
   get '/file/:serial' => 'files#show'
 
