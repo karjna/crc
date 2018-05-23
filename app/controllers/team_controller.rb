@@ -1,7 +1,10 @@
 class TeamController < ApplicationController
     def index
         @team = ButterCMS::Page.list('team_member')
-        
+        @sorted = ButterCMS::Content.fetch([
+        :team_members
+        ])
+        @sorted = @sorted.data
     end
 
     def show

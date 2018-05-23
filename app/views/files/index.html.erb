@@ -1,5 +1,4 @@
 <h1>File Library</h1>
-
 <table class="table table-hover">
   <thead>
     <tr>
@@ -9,12 +8,11 @@
   </thead>
   <tbody>
    <% @files.files.each do |file| %>
-    <% if file.private != true %>
+    <% if file.private != true || @show_private == 'true' %>
         <% slug = file.file.gsub(/https:\/\/cdn.buttercms.com\//, '')%>
         <tr>
             <td><a href = "/file/<%= slug %>"><%= file.file_name %></td>
-            <td><%= link_to "test login", files_path(:serial => slug, :title => "test-password") %>
-            </td>
+            <td></td>
         </tr>
     <% end %>
    <% end %>

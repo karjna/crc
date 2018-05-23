@@ -1,5 +1,12 @@
 <%= content_for :html_title, @post.seo_title %>
 <%= content_for :meta_description, @post.meta_description %>
+<nav aria-label="breadcrumb" class = "pb-5">
+  <ol class="list-inline">
+    <li class="list-inline-item"><a class = "badge badge-primary" href="/">Home</a></li>>
+    <li class="list-inline-item"><a class = "badge badge-primary" href="/blog">Blog</a></li>>
+    <li class="list-inline-item badge badge-light" aria-current="page"><%= @post.title %></li>
+  </ol>
+</nav>
 
 <!-- Post title -->
 <h2><%= @post.title %></h2>

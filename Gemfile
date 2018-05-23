@@ -34,6 +34,9 @@ gem 'buttercms-rails'
 gem 'bootstrap', '~> 4.1.0'
 
 gem 'jquery-rails'
+
+gem "gretel"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

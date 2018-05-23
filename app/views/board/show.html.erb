@@ -1,3 +1,11 @@
+<nav aria-label="breadcrumb" class = "pb-5">
+  <ol class="list-inline">
+    <li class="list-inline-item"><a class = "badge badge-primary" href="/">Home</a></li>>
+    <li class="list-inline-item"><a class = "badge badge-primary" href="/board">Board</a></li>>
+    <li class="list-inline-item badge badge-light" aria-current="page"><%= @member.first_name %> <%= @member.last_name %></li>
+  </ol>
+</nav>
+
 <img class = "img-fluid float-right pl-4" src = "<%= @member.photo %>"/>
 <h1><%= @member.first_name %> <%= @member.last_name %></h1>
 <%== @member.bio %>
