@@ -2,21 +2,23 @@
 
  <div class="card-columns">
     <% @sorted.team_members.each do |memberdata| %>
-        <% member = memberdata.sort_team_members.fields %>
             <div class="card">
-                <img class="card-img-top" src="<%= member.team_member_photo %>" alt="Card image cap">
+                <img class="card-img-top" src="<%= memberdata.team_member_photo %>" alt="Card image cap">
                 <div class="card-body">
-                    <h3 class = "card-title"><%= member.first_name %> <%= member.last_name %></h3>
-                    <h5 class = "text-secondary"><%= member.position %></h5>
-                    <% if member.bio_summary != "" %>
-                        <% clean = strip_tags(member.bio_summary)%>
-                        <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
-                    <% else %>
-                        <% clean = strip_tags(member.bio)%>
-                        <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
-                    <% end %>
-                    <a href = "/team/<%= memberdata.sort_team_members.slug %>" class = "btn btn-outline-primary">Learn More</a>
+                    <h3 class = "card-title"><a href = ""><%= memberdata.first_name %> <%= memberdata.last_name %></a></h3>
+                    <h5 class = "text-secondary"><%= memberdata.position %></h5>
+                   
+                    <div class = "d-none">
+                        <% if memberdata.bio_summary != "" %>
+                            <% clean = strip_tags(memberdata.bio_summary)%>
+                            <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
+                        <% else %>
+                            <% clean = strip_tags(memberdata.bio)%>
+                            <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
+                        <% end %>
+                    </div>
                 </div>
             </div>
     <% end %>
 </div>
+

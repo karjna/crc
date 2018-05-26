@@ -1,6 +1,9 @@
 class BoardController < ApplicationController
     def index
         @board = ButterCMS::Page.list('board_member')
+        @sorted = ButterCMS::Content.fetch([
+        :sort_board_members
+        ])
         
     end
 

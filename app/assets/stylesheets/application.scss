@@ -8,6 +8,8 @@
  }
 
 //  variables
+$yellow: #f2c602;
+
 
 .code{
     font-family: "Source Code Pro", sans-serif;
@@ -25,12 +27,23 @@
     position: relative;
 }
 
+// general styles
 
+a{
+    color: $yellow;
+    &:hover{
+        color:white;;
+    }
+}
 // nav
 
 .nav-item{
     a{
         color: white;
+        opacity: 0.8;
+        &:hover{
+            opacity: 1;
+        }
     }
 }
 

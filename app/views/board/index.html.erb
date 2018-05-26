@@ -1,12 +1,11 @@
 <h1>Our Board</h1>
  <div class="card-columns">
- <% @board.each do |memberdata| %>
-    <% member = memberdata.data.fields %>
+ <% @sorted.data.sort_board_members.each  do |memberdata| %>
    
-        <a class="card bg-dark text-white" href = "/board/<%= memberdata.data.slug %>">
-            <img class="card-img" src="<%= member.photo %>" alt="Card image">
+        <a class="card bg-dark text-white" href = "">
+            <img class="card-img" src="<%= memberdata.photo %>" alt="Card image">
             <div class="card-img-overlay">
-                <h1 class="card-title"><%= member.first_name %> <%= member.last_name %></h1>
+                <h1 class="card-title"><%= memberdata.first_name %> <%= memberdata.last_name %></h1>
               
             </div>
         </a>
