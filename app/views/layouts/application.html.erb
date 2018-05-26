@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Crc</title>
+    <title>Civil Rights Corps</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Source+Code+Pro:200,400,700,900" rel="stylesheet">
+
+
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body <% if current_page?(root_path) %>class = "home" <% end %>>
 
     <%= render 'layouts/header' %>    
-
-    <div class = 'container'>
-    
+    <% unless current_page?(root_path) %>
+      <div class = 'container'>
+    <% end %>
      <%= yield %>
-    </div>
+    <% unless current_page?(root_path) %>
+      </div>
+    <% end %>
 
     <%= render 'layouts/footer' %>   
   </body>

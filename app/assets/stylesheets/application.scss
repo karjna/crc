@@ -1,1 +1,43 @@
  @import "bootstrap";
+ @import 'home.scss';
+
+ body{
+     background: #000;
+     color:white;
+     @extend .code;
+ }
+
+//  variables
+
+.code{
+    font-family: "Source Code Pro", sans-serif;
+}
+
+.abel{
+    font-family: 'Abel', sans-serif;
+}
+
+// utilities
+
+.center-vert{
+    transform: translateY(-50%);
+    top:50%;
+    position: relative;
+}
+
+
+// nav
+
+.nav-item{
+    a{
+        color: white;
+    }
+}
+
+body.home{
+    nav{
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+}

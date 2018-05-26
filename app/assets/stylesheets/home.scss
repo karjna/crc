@@ -1,3 +1,36 @@
-// Place all the styles related to the Home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.slide{
+    height:95vh;
+    width: 100%;
+    display:inline-block;
+    background-size: cover;
+    background-position: center;
+    &.shadow{
+        &:before{
+          content:'';
+          display: inline-block;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.45); 
+            position: absolute;
+            top:0;
+            left: 0; 
+        }
+    }
+}
+
+.first {
+    @extend .slide;
+    background-image: image-url('pillar.jpg');
+    h1{
+        font-size:96px;
+        text-transform:uppercase
+    }
+    p{
+        max-width:900px;
+        margin:0 auto;
+        padding:20px 40px;
+    }
+}
+
+
+
