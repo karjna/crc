@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   get '/file/:serial' => 'files#show'
 
   get '/contact' => 'home#contact'
+  get '/media' => 'home#media'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
