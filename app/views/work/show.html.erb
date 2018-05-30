@@ -1,42 +1,14 @@
-<nav aria-label="breadcrumb" class = "pb-5">
-  <ol class="list-inline">
-    <li class="list-inline-item"><a class = "badge badge-primary" href="/">Home</a></li>>
-    <li class="list-inline-item"><a class = "badge badge-primary" href="/work">Work</a></li>>
-    <li class="list-inline-item badge badge-light" aria-current="page"><%= @work.title %></li>
-  </ol>
-</nav>
-
-
 <h1><%= @work.title %></h1>
-    
-<p><%= raw @work.about_body %></p>
-
-<% if @work.files.length > 0 %>
-    <div class="card-deck">
-        <% @work.files.each do |file| %>
+<div class = "description"><%== @work.long_description %></div>
+<div class = "row">
+    <% @cases[0].each do |cas| %>
+        <div class = "col-sm-6">
             <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><%= file.file_title %></h5>
-                    <p class="card-text"><%= file.description %> </p>
-                    <a href="<%= file.file %>" class="btn btn-primary">View File</a>
-                </div>
+                <a class="card-body" href = "/work/<%= @work.url_slug %>/<%= cas.slug %>">
+                    <h5 class="card-title"><%= cas.fields.title %></h5>
+                    <p class="card-text"><%= cas.fields.summary %></p>
+                </a>
             </div>
-        <% end %>
-    </div>
-<% end %>
-
-<h2 class = "mb-3 mt-5">Media Coverage</h2>
-<% if @work.media_coverage.length > 0 %>
-    <div class="card-deck">
-        <% @work.media_coverage.each do |media| %>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><%= media.article_title %></h5>
-                    <p class="card-text"><a target = "_blank" href="<%= media.article_source_link %>"><%= media.article_source %></a> </p>
-                    <p class="card-text"><%= raw media.summary %> </p>
-                    <a target="_blank" href="<%= media.article_source_link %>" class="btn btn-primary">Read the Full story</a>
-                </div>
-            </div>
-        <% end %>
-    </div>
-<% end %>
+        </div>
+    <% end %>
+</div>

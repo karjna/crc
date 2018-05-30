@@ -1,19 +1,18 @@
-<div class="card-columns">
-    <% @work.each do |workitem| %>
-        <% item = workitem.data.fields %>
-        <div class="card">
-            <% if item.banner_image != "" %>
-            <img class="card-img-top" src= "<%= item.banner_image %>" alt="Card image cap">
+<div class = "card-columns two-column">
+    <% @work.work_topic.each do |workitem| %>
+        <a href = "/work/<%= workitem.url_slug %>" class="card">
+            <% if workitem.landing_page_image != "" %>
+            <img class="card-img-top" src= "<%= workitem.landing_page_image %>" alt="Card image cap">
             <% end %>
             <div class="card-body">
-                <h5 class="card-title"><a href = "/work/<%= workitem.data.slug %>"><%= item.title %></a></h5>
-                <% if item.summary != "" %>
-                    <p class="card-text"><%= item.summary %></p>
+                <h5 class="card-title"><%= workitem.title %></h5>
+                <% if workitem.short_description != "" %>
+                    <p class="card-text"><%= workitem.short_description %></p>
                 <% else %>
-                    <% clean = strip_tags(item.about_body)%>
+                    <% clean = strip_tags(workitem.long_description)%>
                     <p class="card-text"><%= truncate( clean, :length => 160 ) %></p>
                 <% end %>
             </div>
-        </div>
+        </a>
     <% end %>
 </div>

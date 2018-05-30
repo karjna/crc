@@ -1,5 +1,7 @@
  @import "bootstrap";
  @import 'home.scss';
+ @import 'work.scss';
+ @import 'header.scss';
 
  body{
      background: #000;
@@ -20,7 +22,10 @@ $yellow: #f2c602;
 }
 
 // utilities
-
+.two-column{
+    -webkit-column-count: 2;
+    column-count: 2;
+}
 .center-vert{
     transform: translateY(-50%);
     top:50%;
@@ -34,6 +39,35 @@ a{
     &:hover{
         color:white;;
     }
+}
+
+h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn{
+    background-color:transparent;
+    border:1px solid white;
+    text-decoration: none;
+}
+
+a.card-body, a.card{
+    border:1px solid $yellow;
+    text-align: center;
+    border-radius:5px;
+    margin-bottom:1.25rem !important;
+    &:hover{
+        border:1px solid white;
+        text-decoration: none;
+    }
+    .card-text{
+        color:white;
+    }
+}
+.card{
+    background-color:transparent;
 }
 // nav
 

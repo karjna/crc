@@ -1,21 +1,26 @@
- <nav class="  ">
+ <nav class="header">
       <div class = "container">
-       <% unless current_page?(root_path) %>  
-            <h1><a href = "/" class = "navbar-brand">Civil Rights Corps</a></h1>
-        <% end %>
-        <ul class="<% if current_page?(root_path) %> nav nav-fill nav-pills<% else %>nav justify-content-end <% end %>">
+       
+        <ul class=" nav nav-fill nav-pills">
             <li class="nav-item">
-                <a class="nav-link " href="/work">Work</a>
+                <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work">Work</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/team">Team</a>
+                <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team">Team</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/board">Board</a>
+                <a class="nav-link <%= 'disabled' if params[:controller] == 'board' %>" href="/board">Board</a>
             </li>
+            
+            
+             <% unless current_page?(root_path) %> 
+                <li class="nav-item"> 
+                    <h1><a href = "/" class = "brand">Civil Rights Corps</a></h1>         
+                </li>
+            <% end %>
             <li class="nav-item">
                 <a class="nav-link <%= 'disabled' if params[:controller] == 'buttercms/posts' %>" href="/blog">Blog</a>
             </li>
@@ -26,7 +31,7 @@
                 <a class="nav-link" href="/media">Media</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/jobs">Join Our Team</a>
+                <a class="nav-link" href="/jobs">Jobs</a>
             </li>
         </ul>
      </div>
