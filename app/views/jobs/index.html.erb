@@ -1,7 +1,7 @@
 <h1>Join Our Team</h1>
 
  <% @sorted.job_listings.each do |job| %>
-    <div class = "row">
+    <div class = "row mt-5">
        
         <div class = "col-sm-8">
             <h3><%= job.job_title %></h3>
@@ -11,7 +11,7 @@
                 <% clean = strip_tags(job.job_description)%>
                 <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
             <% end %>
-            <a href = "" class = "btn btn-outline-primary">Learn More</a>
+            <a href = "" class = "btn ">Learn More</a>
         </div>
     </div>
 <% end %>
