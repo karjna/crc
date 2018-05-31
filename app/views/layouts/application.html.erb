@@ -5,23 +5,25 @@
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Abel|Source+Code+Pro:200,400,700,900" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body <% if current_page?(root_path) %>class = "home" <% end %>>
-
-    <%= render 'layouts/header' %>    
-    <% unless current_page?(root_path) %>
-      <div class = 'container'>
-    <% end %>
-     <%= yield %>
-    <% unless current_page?(root_path) %>
-      </div>
-    <% end %>
-
+  <body class = "<%= @bodyClass %>">
+    <div class = "banner">
+      <%= render 'layouts/header' %>    
+      <% unless current_page?(root_path) %>
+        <div class = 'container'>
+      <% end %>
+      <%= yield %>
+      <% unless current_page?(root_path) %>
+        </div>
+      <% end %>
+    </div>
     <%= render 'layouts/footer' %>   
   </body>
 </html>
