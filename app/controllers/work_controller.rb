@@ -1,5 +1,6 @@
 class WorkController < ApplicationController
     def index
+        @bodyClass = "topics"
         @work = ButterCMS::Content.fetch([
         :work_topic
         ])
@@ -7,6 +8,7 @@ class WorkController < ApplicationController
     end
 
     def show
+        @bodyClass = "topic"
         slug = params[:slug]  
            
         @cases = []    
@@ -21,6 +23,7 @@ class WorkController < ApplicationController
     end
 
     def detail
+        @bodyClass = "work"
         slug = params[:slug] 
         @parent = params[:topic]
         @work = ButterCMS::Page.get('recent_work', slug).data.fields

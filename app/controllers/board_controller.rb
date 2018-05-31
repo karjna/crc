@@ -1,5 +1,6 @@
 class BoardController < ApplicationController
     def index
+        @bodyClass = "board"
         @sorted = ButterCMS::Content.fetch([
         :sort_board_members
         ])
@@ -7,6 +8,7 @@ class BoardController < ApplicationController
     end
 
     def show
+        @bodyClass = "board member"
         slug = params[:slug]
     
         @member = ButterCMS::Page.get('board_member', slug).data.fields
