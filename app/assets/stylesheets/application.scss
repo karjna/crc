@@ -72,9 +72,10 @@ a.card-body, a.card{
 // nav
 
 .nav-item{
-    a{
+    a:not(.brand){
         color: white;
         opacity: 0.8;
+        font-size: 15px;
         &:hover{
             opacity: 1;
         }
