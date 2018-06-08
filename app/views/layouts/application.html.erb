@@ -15,14 +15,18 @@
 
   <body class = "<%= @bodyClass %>">
     <div class = "banner">
-      <%= render 'layouts/header' %>    
+      <%= render 'layouts/header' %>   
+
       <% unless current_page?(root_path) %>
-        <div class = 'container'>
+        <div class = 'container content-container'>
       <% end %>
+
       <%= yield %>
+
       <% unless current_page?(root_path) %>
         </div>
       <% end %>
+
     </div>
     <%= render 'layouts/footer' %>   
   </body>
