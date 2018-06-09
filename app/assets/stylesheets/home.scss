@@ -1,3 +1,11 @@
+body.home{
+    nav.header{
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
 .slide{
     min-height:95vh;
     width: 100%;
@@ -55,6 +63,7 @@
             left: 0; 
             z-index: -1;
             opacity: 0.5;
+            background-position: center;
             background-image: image_url('contact.jpg');
         }
     }
