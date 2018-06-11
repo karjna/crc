@@ -1,7 +1,7 @@
  <nav class="header">
       <div class = "container">
        
-        <ul class=" nav nav-fill nav-pills">
+        <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
             <li class="nav-item">
                 <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work">Work</a>
             </li>
@@ -34,5 +34,60 @@
                 <a class="nav-link" href="/jobs">Jobs</a>
             </li>
         </ul>
+
+        <div class = "mobile-header d-lg-none">
+
+             <% unless current_page?(root_path) %> 
+                <div class="float-left"> 
+                    <h1><a href = "/" class = "brand">Civil Rights Corps</a></h1>         
+                </div>
+            <% end %>
+
+            <div class = "float-right hamburger"><i class="fas fa-bars" data-toggle="modal" data-target="#mobileNav"></i></div>
+
+            <div class="modal fade" id="mobileNav" tabindex="-1" role="dialog" aria-labelledby="mobileNav" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                    
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <ul class=" nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work">Work</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team">Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'board' %>" href="/board">Board</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'buttercms/posts' %>" href="/blog">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/files">Files</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/media">Media</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/jobs">Jobs</a>
+                                </li>
+                            </ul>
+                        </div>
+                   
+                    </div>
+                </div>
+            </div>
+
+        </div>
      </div>
 </nav>

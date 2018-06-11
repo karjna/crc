@@ -15,3 +15,42 @@
         }
     }
 }
+
+.mobile-header{
+    display: inline-block;
+    width: 100%;
+    h1{
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        font-size: 1.5rem;
+    }
+}
+
+// mobile nav modal
+
+#mobileNav{
+    background-color: rgba(0, 0, 0, 0.78);
+    .modal-dialog{
+        .modal-content{
+            background-color: transparent;  
+            .modal-header{
+                border-bottom:0px;
+                color:white;
+                .close{
+                    color:white;
+                    opacity: 1;
+                }
+            }
+            .modal-body{
+                .nav-item{
+                    display: block;
+                    width: 100%;
+                    a{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
