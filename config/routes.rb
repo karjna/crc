@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
   get '/contact' => 'home#contact'
   get '/media' => 'home#media'
+  get '/donate' => 'home#donate'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

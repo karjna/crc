@@ -7,6 +7,10 @@ class HomeController < ApplicationController
     @bodyClass = "contact"
   end
 
+  def donate
+    @bodyClass = "donate"
+  end
+
   def media
     @bodyClass = "media_page"
     @description = ButterCMS::Content.fetch([:media_page_description])
