@@ -32,6 +32,10 @@ $yellow: #f2c602;
     position: relative;
 }
 
+.spaced{
+    letter-spacing: 4px;
+}
+
 // general styles
 
 a{
@@ -51,6 +55,11 @@ h1{
     background-color:transparent;
     border:1px solid white;
     text-decoration: none;
+    color:white;
+    &:hover{
+        color:$yellow;
+        border-color:$yellow;
+    }
 }
 
 a.card-body, a.card{
@@ -82,5 +91,7 @@ a.card-body, a.card{
     }
 }
 
-
+hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
