@@ -54,3 +54,20 @@
         }
     }
 }
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}   
+
+.dropdown-menu{
+    background-color: black;
+    border:1px solid white;
+    margin: 0;
+    .dropdown-item:hover{
+        background-color: #2d2d2d;
+    }
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+    background-color: transparent
+}
