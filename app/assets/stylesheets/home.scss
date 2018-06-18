@@ -69,5 +69,18 @@ body.home{
     }
 }
 
+.page-banner{
+    height:550px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+}
 
+$banners: join;
+
+@each $banner in $banners{
+    .page-banner.#{$banner}{
+        background-image: image_url('#{$banner}.jpg')
+    }
+}
 
