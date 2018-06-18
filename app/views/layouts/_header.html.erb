@@ -2,8 +2,16 @@
       <div class = "container">
        
         <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
-            <li class="nav-item">
-                <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work">Work</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Work</a>
+                 <div class="dropdown-menu" aria-labelledby="workDropdown">
+                    <a class="dropdown-item" href="/work">Overview</a>
+                    <a class="dropdown-item" href="#">Prosecutor's Project</a>
+                    <a class="dropdown-item" href="#">Indigent Defense Initiative</a>
+                    <a class="dropdown-item" href="#">Wealth-Based Detention</a>
+                    <a class="dropdown-item" href="#">Criminalization of Poverty</a>
+                    <a class="dropdown-item" href="/work/docket">Our Docket</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
