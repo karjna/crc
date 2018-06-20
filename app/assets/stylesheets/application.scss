@@ -79,7 +79,11 @@ a.card-body, a.card{
     background-color:transparent;
 }
 // nav
-
+.header{
+    h1{
+        font-size: 2rem;
+    }
+}
 .nav-item{
     a:not(.brand){
         color: white;
@@ -92,6 +96,6 @@ a.card-body, a.card{
 }
 
 hr{
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
