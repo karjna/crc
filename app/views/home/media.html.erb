@@ -11,17 +11,18 @@
             </div>
             <h3><%= video.title %></h3>
             <h5><% if (video.source)%><%== video.source %><% end %></h5>
-            <p><%== video.description %></p>
-          
+            
+             <% clean = strip_tags(video.description)%>
+            <p><%= truncate( clean, :length => 350 ) %></p>
         </div>
     <% end %>
 </div>
 
-<h2>Media Coverage</h2>
+<h2 class = "display-4  mt-5 text-uppercase text-center abel">Media Coverage</h2>
 <% @coverage.media_coverage.each do |media| %>
     <div class = "my-5">
         <h3><%= media.title %></h3>
-        <h5><%= media.author %>, <%= media.source_name %></h5>
+        <h5><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
         <p><%== media.summary %></p>
         <a href = "<%= media.source_url %>" target = "_blank">Read the Full Story</a>
     </div>
