@@ -1,4 +1,7 @@
 <h1><%= @work.title %></h1>
+<% if @work.landing_page_image != "" %>
+    <div class = "page-banner" style = "background-image:url(<%= @work.landing_page_image %>)"></div>
+<% end %>
 <div class = "description"><%== @work.long_description %></div>
 <div class = "row">
     <% @cases[0].each do |cas| %>
