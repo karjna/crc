@@ -1,8 +1,8 @@
 <nav aria-label="breadcrumb" class = "pb-5">
   <ol class="list-inline breadcrumbs">
    
-     <li class="list-inline-item"><a class = "badge badge-primary" href="/work">Work</a></li>>
-    <li class="list-inline-item"><a class = "badge badge-primary" href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>>
+     <li class="list-inline-item"><a class = "badge " href="/work">Work</a></li>>
+    <li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>>
     <li class="list-inline-item badge badge-light" aria-current="page"><%= @work.title %></li>
   </ol>
 </nav>
