@@ -1,15 +1,19 @@
  <nav class="header">
       <div class = "container">
-       
+         <% unless current_page?(root_path) %> 
+                <div class="nav-item"> 
+                    <h1><a href = "/" class = "brand">Civil Rights Corps</a></h1>         
+                </div>
+            <% end %>
         <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Work</a>
                  <div class="dropdown-menu" aria-labelledby="workDropdown">
                     <a class="dropdown-item" href="/work">Overview</a>
-                    <a class="dropdown-item" href="#">Prosecutor's Project</a>
-                    <a class="dropdown-item" href="#">Indigent Defense Initiative</a>
-                    <a class="dropdown-item" href="#">Wealth-Based Detention</a>
-                    <a class="dropdown-item" href="#">Criminalization of Poverty</a>
+                    <a class="dropdown-item" href="/work/prosecutors-project">Prosecutor's Project</a>
+                    <a class="dropdown-item" href="/work/indigent-defense-initiative">Indigent Defense Initiative</a>
+                    <a class="dropdown-item" href="/work/wealth-based-detention">Wealth-Based Detention</a>
+                    <a class="dropdown-item" href="/work/criminalization-of-poverty">Criminalization of Poverty</a>
                     <a class="dropdown-item" href="/work/docket">Our Docket</a>
                 </div>
             </li>
@@ -23,11 +27,6 @@
                 <a class="nav-link <%= 'disabled' if params[:controller] == 'board' %>" href="/board">Board</a>
             </li>
 
-             <% unless current_page?(root_path) %> 
-                <li class="nav-item"> 
-                    <h1><a href = "/" class = "brand">Civil Rights Corps</a></h1>         
-                </li>
-            <% end %>
             <li class="nav-item">
                 <a class="nav-link" href="/donate">Donate</a>
             </li>
