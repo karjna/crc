@@ -70,13 +70,14 @@ body.home{
 }
 
 .page-banner{
-    height:550px;
+    height:450px;
     width:100%;
     background-size:cover;
     background-position:center;
+    margin-bottom: 40px;
 }
 
-$banners: join;
+$banners: join donate;
 
 @each $banner in $banners{
     .page-banner.#{$banner}{
