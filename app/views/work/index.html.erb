@@ -2,8 +2,8 @@
 <div class = "card-columns two-column">
     <% @work.work_topic.each do |workitem| %>
         <a href = "/work/<%= workitem.url_slug %>" class="card">
-            <% if workitem.landing_page_image != "" %>
-            <img class="card-img-top" src= "<%= workitem.landing_page_image %>" alt="Card image cap">
+            <% if workitem.list_page_image != "" %>
+            <img class="card-img-top" src= "<%= workitem.list_page_image %>" alt="Card image cap">
             <% end %>
             <div class="card-body">
                 <h5 class="card-title"><%= workitem.title %></h5>
