@@ -23,7 +23,7 @@
             <div class="details__price"></div>
             <p class="details__description"></p>
             <button class="details__addtocart">Add to cart</button>
-            <button class="details__close"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+            <button class="details__close"><i class="fas fa-times"></i></button>
             <button class="details__magnifier"><svg class="icon icon--magnifier"><use xlink:href="#icon-magnifier"></use></svg></button>
             `;
 
