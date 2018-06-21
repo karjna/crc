@@ -1,25 +1,20 @@
 <h1>Our Team</h1>
 
-
- <div class="card-columns">
-    <% @sorted.team_members.each do |memberdata| %>
-            <div class="card">
-                <img class="card-img-top" src="<%= memberdata.team_member_photo %>" alt="Card image cap">
-                <div class="card-body">
-                    <h3 class = "card-title"><a href = ""><%= memberdata.first_name %> <%= memberdata.last_name %></a></h3>
-                    <h5 class = "text-secondary"><%= memberdata.position %></h5>
-                   
-                    <div class = "d-none">
-                        <% if memberdata.bio_summary != "" %>
-                            <% clean = strip_tags(memberdata.bio_summary)%>
-                            <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
-                        <% else %>
-                            <% clean = strip_tags(memberdata.bio)%>
-                            <p class="card-text"><%= truncate( clean, :length => 460 ) %></p>
-                        <% end %>
-                    </div>
+<div class="content">
+    <div class="grid">
+        <% @sorted.team_members.each do |memberdata| %>
+            <div class="grid__item">
+                <div class="product">
+                    <div class="product__bg"></div>
+                    <img class="product__img" src="<%= memberdata.team_member_photo %>" alt="img 01"/>
+                    <h2 class="product__title"><%= memberdata.first_name %> <%= memberdata.last_name %></h2>
+                    <h3 class="product__subtitle"><%= memberdata.position %></h3>
+                    <div class="product__description"><%= raw memberdata.bio %></div>
                 </div>
             </div>
-    <% end %>
+        <% end %>
+    </div>
 </div>
+
+
 
