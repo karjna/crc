@@ -313,7 +313,7 @@
    
         const DOM = {};
         DOM.grid = document.querySelector('.grid');
-        console.log(DOM.grid;
+        console.log(DOM.grid)
         DOM.content = DOM.grid.parentNode;
         DOM.hamburger = document.querySelector('.dummy-menu');
         DOM.gridItems = Array.from(DOM.grid.querySelectorAll('.grid__item'));
