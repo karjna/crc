@@ -18,7 +18,6 @@
 //= require bootstrap
 //= require anime.min.js
 //= require imagesloaded.pkgd.min.js
-//= require main.js
 
 
 
