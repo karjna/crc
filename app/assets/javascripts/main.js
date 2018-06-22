@@ -300,7 +300,10 @@
 			this.initEvents();
 		}
         initEvents() {
-            this.DOM.product.addEventListener('click', () => this.open());
+            this.DOM.product.addEventListener('click', function(){
+                this.open();
+                console.log("click")
+            } );
         }
         open() {
             DOM.details.fill(this.info);
@@ -315,8 +318,12 @@
         DOM.grid = document.querySelector('.grid');
         console.log(DOM.grid)
         DOM.content = DOM.grid.parentNode;
+        console.log('content',DOM.content)
         DOM.hamburger = document.querySelector('.dummy-menu');
+        console.log('hamburger',DOM.hamburger)
         DOM.gridItems = Array.from(DOM.grid.querySelectorAll('.grid__item'));
+        console.log('gridItems',DOM.gridItems)
+
         let items = [];
         DOM.gridItems.forEach(item => items.push(new Item(item)));
     
