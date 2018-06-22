@@ -9,7 +9,7 @@
  * http://www.codrops.com
  */
 {
-    document.addEventListener("DOMContentLoaded", function() {
+    window.onload = function(e){ 
     class Details {
         constructor() {
             this.DOM = {};
