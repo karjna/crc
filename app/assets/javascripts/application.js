@@ -16,8 +16,7 @@
 //= require jquery3
 //= require popper
 //= require bootstrap
-//= require anime.min.js
-//= require imagesloaded.pkgd.min.js
+
 
 
 
