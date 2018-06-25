@@ -9,7 +9,6 @@
  * http://www.codrops.com
  */
 {
-    document.addEventListener("DOMContentLoaded", function() {
     class Details {
         constructor() {
             this.DOM = {};
@@ -325,7 +324,6 @@
         DOM.details = new Details();
     
         imagesLoaded(document.body, () => document.body.classList.remove('loading'));
-    })
 
 };
 
