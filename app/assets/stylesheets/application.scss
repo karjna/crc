@@ -1,8 +1,4 @@
- @import "bootstrap";
- @import 'home.scss';
- @import 'work.scss';
- @import 'header.scss';
- @import 'team.scss';
+@import "bootstrap";
 
  body{
      background: #000;
@@ -12,20 +8,29 @@
 
 //  variables
 $yellow: #f2c602;
+$roboto:'Roboto Condensed', sans-serif;
+$lato: 'Lato', sans-serif;
+$anton: 'Anton', sans-serif;
 
-
-.code{
-    font-family: "Source Code Pro", sans-serif;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Playfair Display', serif;
-    font-family: 'Heebo', sans-serif;
+.roboto-con{
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.lato{
     font-family: 'Lato', sans-serif;
 }
 
+.anton{
+    font-family: 'Anton', sans-serif;
+
+}
+.code{
+  
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
 .abel{
-    font-family: 'Abel', sans-serif;
+    font-family: 'Anton', sans-serif;
 }
 
 // utilities
@@ -52,10 +57,19 @@ a{
     }
 }
 
+p{
+    font-family: $lato;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
 h1{
-    font-size: 3.5rem;
+    font-size: 29px;;
     text-align: center;
     margin-bottom: 50px;
+    font-family: $anton;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .btn{
@@ -85,24 +99,17 @@ a.card-body, a.card{
 .card{
     background-color:transparent;
 }
-// nav
-.header{
-    h1{
-        font-size: 2rem;
-    }
-}
-.nav-item{
-    a:not(.brand){
-        color: white;
-        opacity: 0.8;
-        font-size: 15px;
-        &:hover{
-            opacity: 1;
-        }
-    }
-}
+
 
 hr{
     border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.content-container{
+    padding-top: 45px;
+}
+
+@import 'home.scss';
+@import 'work.scss';
+@import 'header.scss';
+@import 'team.scss';
