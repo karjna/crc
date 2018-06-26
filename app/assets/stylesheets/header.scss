@@ -16,6 +16,33 @@
     }
 }
 
+
+// nav
+.header{
+    h1{
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+}
+.brand{
+    img{
+        width:225px;
+    }
+}
+.nav-item{
+    a:not(.brand){
+        color: white;
+        opacity: 0.8;
+        font-size: 13px;
+        font-family: $roboto;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        &:hover{
+            opacity: 1;
+        }
+    }
+}
+
 .mobile-header{
     display: inline-block;
     width: 100%;
