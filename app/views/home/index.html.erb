@@ -1,10 +1,41 @@
 <div class = "first shadow">
     <div class = "center-vert">
         <h2 class = "abel banner-title text-center">Civil Rights Corps</h2>
-        <p class = "abel text-center">
+        <p class = "roboto-con text-center">
         Civil Rights Corps is a non-profit organization dedicated to challenging systemic injustice in the American legal system.  We work with individuals accused and convicted of crimes, their families and communities, people currently or formerly incarcerated, activists, organizers, judges, and government officials to challenge mass human caging and to create a legal system that promotes equality and human freedom.  Civil Rights Corps engages in advocacy and public education and specializes in innovative, systemic civil rights litigation with the goal of resensitizing the legal system and our culture to the injustice and brutality that characterize the contemporary American criminal system.
         </p>
      </div>
+</div>
+<div class = "featured-area">
+    <div class = "container">
+        <% @featured.each do |item| %>
+        
+           <% if @featured.count % 2 == 1 %>
+                <div class = "case long">
+                    <div class = "case__image" style = "background-image:url(<%= item.featured_image == '' ? item.case.fields.banner_image : item.featured_image %>)">
+                    </div>
+                    <div class = "case__details">
+                        <h5 class = "case__type">Featured</h5>
+                        <h2 class = "case__title">
+                            <% if item.alternate_title == "" %>
+                                <%= item.case.fields.title %>
+                            <% else %>
+                                <%= item.alternate_title %>
+                            <% end %>
+                        </h2>
+                        <p class = "case__description">
+                            <% if item.alternate_summary == "" %>
+                                <%= item.case.fields.summary %>
+                            <% else %>
+                                <%= item.alternate_summary %>
+                            <% end %>
+                        </p>
+                        <a href = "/work/<%= item.case.slug %>" class = "case__link">Learn More</a>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
 </div>
 
 
