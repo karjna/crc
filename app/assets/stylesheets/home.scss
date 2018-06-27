@@ -85,3 +85,47 @@ $banners: join donate;
     }
 }
 
+.featured-area{
+    padding: 50px 0;
+}
+.case{
+    border-bottom: 1px solid #7b7b7b;
+    &.long{
+        .case__image{
+            width:50%;
+            background-size:cover;
+            background-position:center;
+            min-height: 370px;
+            display: inline-block;
+            margin-bottom: -6px;
+        }
+    }
+    &.short{
+
+    }
+
+}
+.case__type{
+    font-family: $roboto;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.case__title{
+    font-family: $lato;
+}
+.case__link{
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: block;
+    
+}
+.case__details{
+    width: 50%;
+    float: right;
+    display: inline-block;
+    padding: 40px 50px;
+    border-top:4px solid white;
+}
+
+
+
