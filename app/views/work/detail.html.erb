@@ -2,7 +2,7 @@
   <ol class="list-inline breadcrumbs">
    
      <li class="list-inline-item"><a class = "badge " href="/work">Work</a></li>>
-    <li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>>
+    <% if @parent != "case" %><li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>><% end %>
     <li class="list-inline-item badge badge-light" aria-current="page"><%= @work.title %></li>
   </ol>
 </nav>
