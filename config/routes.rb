@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get '/work' => 'work#index'
   get '/work/:slug' => 'work#show'
   get '/work/*topic/:slug' => 'work#detail'
+  
 
   get '/team' => 'team#index'
   get '/team/:slug' => 'team#show'
