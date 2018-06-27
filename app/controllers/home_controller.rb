@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
   def index
     @bodyClass = "home"
+    @featured = ButterCMS::Content.fetch([
+        :featured_cases
+        ])
+    @featured = @featured.data.featured_cases
   end
 
   def contact
