@@ -28,4 +28,8 @@ class WorkController < ApplicationController
         @parent = params[:topic]
         @work = ButterCMS::Page.get('recent_work', slug).data.fields
     end
+
+    def docket
+        @bodyClass = "docket"
+    end
 end
