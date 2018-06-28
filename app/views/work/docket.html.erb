@@ -1,1 +1,24 @@
 <h1>Our Docket</h1>
+
+
+
+<% @states.each do |state| %>
+    <hr>
+    <h3 class = "text-center"><%= state.state_name %></h3>
+    <div class="row full-width">
+        <% @docket.each do |item| %>
+            <% if item.state.slug == state.slug %>
+                <div class = "col-three">
+                    <div class="card docket-item">
+                        <a href="" class="card-body ">
+                            <h5 class="card-title"><%= item.client_name %></h5>
+                            <p class="card-text"><%= item.city %> </p>
+                        </a>
+                    </div>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+<% end %>
+
+<%= @docket.inspect %>
