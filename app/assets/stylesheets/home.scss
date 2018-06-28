@@ -12,6 +12,7 @@ body.home{
     display:inline-block;
     background-size: cover;
     background-position: center;
+    
     &.shadow{
         &:before{
           content:'';
@@ -77,6 +78,28 @@ body.home{
     margin-bottom: 40px;
 }
 
+.newsletter-area{
+    background-color: #1b1b1bc9;
+    padding: 54px 0 40px;
+    #mc_embed_signup{
+        margin-top: 20px;
+    }
+    input{
+        line-height: normal;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        padding: 15px 20px;
+        width: 100%;
+    }
+    .mc-field-group{
+        width: 80%;
+        float: left;
+    }
+    .clear{
+        float: right;;
+    }
+}
 $banners: join donate;
 
 @each $banner in $banners{
