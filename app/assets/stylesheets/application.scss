@@ -100,6 +100,20 @@ a.card-body, a.card{
     background-color:transparent;
 }
 
+.breadcrumbs{
+    margin-bottom: -70px;
+    text-align: center;
+    text-transform: capitalize;
+    
+    .badge{
+        opacity: 0.7;
+
+        &:hover{
+            text-decoration: none;
+            opacity: 1;
+        }
+    }
+}
 
 hr{
     border-top: 1px solid rgba(255, 255, 255, 0.4);
