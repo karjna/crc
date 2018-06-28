@@ -6,14 +6,14 @@
     <div class = "row my-5">
        
         <div class = "col-sm-6">
-            <h2 class = "abel px-3 text-uppercase display-4 text-center spaced"><%= job.job_title %></h3>
+            <h2 class = " px-3 text-uppercase display-4 text-center spaced roboto-con"><%= job.job_title %></h3>
         </div>
         <div class = "col-sm-6 text-center">
             <% if job.job_summary != "" %>
-                <p class="card-text text-center abel"><%= job.job_summary %></p>
+                <p class="card-text text-center "><%= job.job_summary %></p>
             <% else %>
                 <% clean = strip_tags(job.job_description)%>
-                <p class="card-text text-center abel"><%= truncate( clean, :length => 400 ) %></p>
+                <p class="card-text text-center "><%= truncate( clean, :length => 400 ) %></p>
             <% end %>
             <a href = "" class = "btn ">Learn More</a>
         </div>
