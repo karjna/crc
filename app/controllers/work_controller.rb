@@ -1,9 +1,7 @@
 class WorkController < ApplicationController
     def index
         @bodyClass = "topics"
-        @work = ButterCMS::Content.fetch([
-        :work_topic
-        ])
+        @work = ButterCMS::Content.fetch([:work_topic])
         @work = @work.data      
     end
 
@@ -31,5 +29,10 @@ class WorkController < ApplicationController
 
     def docket
         @bodyClass = "docket"
+        @states = ButterCMS::Content.fetch([:states])
+        @docket = ButterCMS::Content.fetch([:docket])
+
+        @states = @states.data.states
+        @docket = @docket.data.docket
     end
 end
