@@ -1,9 +1,11 @@
+<div class = "row">
+<div class = "col-md-8">
 <nav aria-label="breadcrumb" class = "pb-5">
   <ol class="list-inline breadcrumbs">
    
-     <li class="list-inline-item"><a class = "badge " href="/work">Work</a></li>>
-    <% if @parent != "case" %><li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>><% end %>
-    <li class="list-inline-item badge badge-light" aria-current="page"><%= @work.title %></li>
+     <li class="list-inline-item"><a class = "badge " href="/work">Work</a></li>&bull;
+    <% if @parent != "case" %><li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>&bull;<% end %>
+    <li class="list-inline-item" aria-current="page"><span class = "badge"><%= @work.title %></span></li>
   </ol>
 </nav>
 
@@ -12,40 +14,40 @@
     
 <div class = "description"><%= raw @work.about_body %></div>
 
-<% if @work.files.length > 0 %>
-<div class = "">
-    <div class="card-deck full-width">
-        <% @work.files.each do |file| %>
-            <div class="card">
-            
-                <a href="<%= file.file %>" class="card-body">
-                    <h5 class="card-title"><%= file.file_title %></h5>
-                    <p class="card-text"><%= file.description %> </p>
-                </a>
-            </div>
-        <% end %>
     </div>
-</div>
-<% end %>
+    <div class = "col-sm-4 pt-4">
+        <% if @work.partners != "" %>
+            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Partners</h2>
+            <%== @work.partners%>
+        <% end %>
 
-<h2 class = "mb-3 mt-5 text-center">Media Coverage</h2>
-<% if @work.media_coverage.length > 0 %>
-<div class = "row">
-    <div class="card-deck">
-        <% @work.media_coverage.each do |media| %>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title"><%= media.article_title %></h5>
-                    <p class="card-text"><a target = "_blank" href="<%= media.article_source_link %>"><%= media.article_source %></a> </p>
-                    <p class="card-text"><%= raw media.summary %> </p>
-                    
-                    
+        <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Filings</h2>
+
+        <% if @work.files.length > 0 %>
+            <div class = "">
+                <div class=" full-width">
+                    <% @work.files.each do |file| %>
+                        <div class="card">
+                        
+                            <a href="<%= file.file %>" class="card-body">
+                                <h5 class="card-title"><%= file.file_title %></h5>
+                                <p class="card-text"><%= file.description %> </p>
+                            </a>
+                        </div>
+                    <% end %>
                 </div>
-                <div class="card-footer">
-                        <a target="_blank" href="<%= media.article_source_link %>" class="btn btn-primary">Read the Full story</a>
-                    </div>
             </div>
+        <% end %>
+
+        <% if @work.media_coverage.length > 0 %>
+            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Media Coverage</h2>
+       
+            <% @work.media_coverage.each do |media| %>
+            
+                        <h5 class="card-title"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
+    
+            <% end %>
+
         <% end %>
     </div>
 </div>
-<% end %>
