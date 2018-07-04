@@ -7,7 +7,7 @@
             <% end %>
         <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Work</a>
+                <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Work</a>
                  <div class="dropdown-menu" aria-labelledby="workDropdown">
                     <a class="dropdown-item" href="/work">Overview</a>
                     <a class="dropdown-item" href="/work/prosecutors-project">Prosecutor's Project</a>
@@ -61,7 +61,7 @@
                         <div class="modal-body">
                             <ul class=" nav nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work">Work</a>
+                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work"> Our Work</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
