@@ -82,7 +82,7 @@ main {
 	width: 100%;
 	max-width: 1000px;
 	display: grid;
-	grid-template-columns: 50% 50%;
+	grid-template-columns: 33% 33% 33%;
 }
 
 .grid__item {
@@ -103,13 +103,13 @@ main {
 }
 
 .product__bg {
-	height: 18em;
+	height: 10em;
 	background: var(--details-bg-down);
 	position: relative;
 }
 
 .product__img {
-	max-height: 25em;
+	max-height: 17em;
 	margin: 0 auto;
 	display: block;
 	position: absolute;
@@ -127,7 +127,6 @@ main {
     font-weight: 700;
 	top:-40px;
 	font-family: $lato;
-	padding: 0 20px;
 }
 
 .product__subtitle {
@@ -138,7 +137,6 @@ main {
 	font-size: 0.85em;
     letter-spacing: 0.115em;
 	top:-40px;
-	padding: 0 20px;
 }
 
 .product:hover .product__subtitle {
