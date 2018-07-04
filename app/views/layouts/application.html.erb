@@ -3,13 +3,17 @@
   <head>
     <title>Civil Rights Corps</title>
     <%= csrf_meta_tags %>
-    <link href="https://fonts.googleapis.com/css?family=Anton|Lato:100,300,400|Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Lato:100,300,400|Roboto+Condensed|IBM+Plex+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <%= favicon_link_tag 'favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% if @bodyClass == 'media_page'%>
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <% end %>
   </head>
 
   <body class = "<%= @bodyClass %>">
