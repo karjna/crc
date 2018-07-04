@@ -10,7 +10,8 @@
 $yellow: #f2c602;
 $roboto:'Roboto Condensed', sans-serif;
 $lato: 'Lato', sans-serif;
-$anton: 'Anton', sans-serif;
+$anton: 'IBM Plex Mono', monospace;
+$ibm: 'IBM Plex Mono', monospace;
 
 .roboto-con{
     font-family: 'Roboto Condensed', sans-serif;
@@ -20,8 +21,13 @@ $anton: 'Anton', sans-serif;
     font-family: 'Lato', sans-serif;
 }
 
+.ibm{
+    font-family: 'IBM Plex Mono', monospace;
+}
+
 .anton{
     font-family: 'Anton', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 
 }
 .code{
@@ -31,6 +37,7 @@ $anton: 'Anton', sans-serif;
 
 .abel{
     font-family: 'Anton', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 // utilities
@@ -64,7 +71,7 @@ p{
 }
 
 h1{
-    font-size: 29px;;
+    font-size: 3em !important;
     text-align: center;
     margin-bottom: 50px;
     font-family: $anton;
