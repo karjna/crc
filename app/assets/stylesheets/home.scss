@@ -7,12 +7,12 @@ body.home{
 }
 
 .slide{
-    min-height:95vh;
+    min-height:75vh;
     width: 100%;
     display:inline-block;
     background-size: cover;
     background-position: center;
-    
+    position: relative;
     &.shadow{
         &:before{
           content:'';
@@ -71,7 +71,7 @@ body.home{
 }
 
 .page-banner{
-    height:450px;
+    height:275px;
     width:100%;
     background-size:cover;
     background-position:center;
