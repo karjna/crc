@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
     def index
         @bodyClass = "jobs"
-        @jobs = ButterCMS::Page.list('job_listing')
+     
         @sorted = ButterCMS::Content.fetch([
         :job_listings
         ])
@@ -11,7 +11,12 @@ class JobsController < ApplicationController
     def show
         @bodyClass = "job"
         slug = params[:slug]
-    
-        @job = ButterCMS::Page.get('job_listing', slug).data.fields
+        
+        @jobs = ButterCMS::Content.fetch([:job_listings])
+        @jobs.data.job_listings.each { |item|
+            if( item.slug == slug)
+                @job = item
+            end
+        }
     end
 end

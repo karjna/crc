@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get '/board/:slug' => 'board#show'
 
   get '/jobs' => 'jobs#index'
-  get '/job/:slug' => 'jobs#show'
+  get '/jobs/:slug' => 'jobs#show'
 
   get '/files' => 'files#index'
   get '/file/:serial' => 'files#show'

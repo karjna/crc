@@ -15,7 +15,7 @@
                 <% clean = strip_tags(job.job_description)%>
                 <p class="card-text text-center "><%= truncate( clean, :length => 400 ) %></p>
             <% end %>
-            <a href = "" class = "btn ">Learn More</a>
+            <a href = "/jobs/<%= job.slug %>" class = "btn ">Learn More</a>
         </div>
     </div>
 <% end %>
