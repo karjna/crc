@@ -3,35 +3,52 @@
 <%== @description%>
 </div>
 
-<div class = "row">
-    <div class = "col-sm-10 offset-md-1">
-        <div class = "slider-for">
-            <% @videos.video.each do |video| %>       
-                <div class = "">
-                    <div class="embed-responsive embed-responsive-21by9 ">
+
+<% @videos.video.each_with_index do |video, index| %>  
+    <div class = "row mt-3 mb-1"> 
+        <% if index % 2 == 0 %>
+            <div class = "col-sm-5">
+                <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
+            </div>
+        <% end %>
+        <div class = "col-sm-7">
+            <h3 ata-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4 ibm"><%= video.title %></h3>
+            <h5><% if (video.source)%><%== video.source %><% end %></h5>
+            
+            <% clean = strip_tags(video.description)%>
+            <p><%= truncate( clean, :length => 350 ) %></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" >
+                Watch Video
+                </button>
+        </div>
+        <% if index % 2 == 1 %>
+            <div class = "col-sm-5">
+                <img data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
+            </div>
+        <% end %>
+    </div>
+    <hr>
+    <div class="modal fade" id="<%= get_youtube_id(video.youtube_link) %>" tabindex="-1" role="dialog" aria-labelledby="<%= get_youtube_id(video.youtube_link) %>" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" ><%= video.title %></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   <div class="embed-responsive embed-responsive-16by9 ">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
                     </div>
-                    <h3><%= video.title %></h3>
-                    <h5><% if (video.source)%><%== video.source %><% end %></h5>
-                    
-                    <% clean = strip_tags(video.description)%>
-                    <p><%= truncate( clean, :length => 350 ) %></p>
                 </div>
-            <% end %>
-        </div>
-        <div class = "slider-nav">
-            <% @videos.video.each do |video| %>       
-                <div class = "">                                                  sx
-                    
-                        <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
-
-                    <h4><%= video.title %></h4>
-                    <h5><% if (video.source)%><%== video.source %><% end %></h5>
-                </div>
-            <% end %>
+          
+            </div>
         </div>
     </div>
-</div>
+<% end %>
+
+
 <h2 class = "display-4  mt-5 text-uppercase text-center abel">Media Coverage</h2>
 <div class = "row">
     <% @coverage.media_coverage.each do |media| %>
