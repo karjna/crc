@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get '/file/:serial' => 'files#show'
 
   get '/contact' => 'home#contact'
+  get '/media/videos' => 'home#videos'
   get '/media' => 'home#media'
   get '/donate' => 'home#donate'
 
