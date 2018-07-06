@@ -17,7 +17,7 @@
             
             <% clean = strip_tags(video.description)%>
             <p><%= truncate( clean, :length => 350 ) %></p>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" >
+            <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" >
                 Watch Video
                 </button>
         </div>
