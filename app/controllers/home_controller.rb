@@ -25,4 +25,11 @@ class HomeController < ApplicationController
     @videos = @videos.data
     @coverage = @coverage.data
   end
+
+  def videos
+    @bodyClass = "videos"
+    @videos = ButterCMS::Content.fetch([:featured_video])
+
+    @videos = @videos.data.featured_video
+  end
 end
