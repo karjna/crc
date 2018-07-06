@@ -1,0 +1,29 @@
+<div class = "row">
+    <div class = "col-sm-10 offset-md-1">
+        <div class = "slider-for">
+            <% @videos.video.each do |video| %>       
+                <div class = "">
+                    <div class="embed-responsive embed-responsive-21by9 ">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
+                    </div>
+                    <h3><%= video.title %></h3>
+                    <h5><% if (video.source)%><%== video.source %><% end %></h5>
+                    
+                    <% clean = strip_tags(video.description)%>
+                    <p><%= truncate( clean, :length => 350 ) %></p>
+                </div>
+            <% end %>
+        </div>
+        <div class = "slider-nav">
+            <% @videos.video.each do |video| %>       
+                <div class = "">                                                  sx
+                    
+                        <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
+
+                    <h4><%= video.title %></h4>
+                    <h5><% if (video.source)%><%== video.source %><% end %></h5>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</div>
