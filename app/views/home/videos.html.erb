@@ -3,8 +3,8 @@
             <% @videos.each do |video| %>  
                    
                 <div class = "">
-                    <div class="embed-responsive embed-responsive-16by9 ">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
+                    <div class="embed-responsive embed-responsive-21by9 mb-3">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;showinfo=0"></iframe>
                     </div>
                     <h3><%= video.title %></h3>
                     <h5><% if (video.source)%><%== video.source %><% end %></h5>
@@ -22,10 +22,10 @@
                         <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
 
                     <h4><%= video.title %></h4>
-                    <h5><% if (video.source)%><%== video.source %><% end %></h5>
                 </div>
             <% end %>
         </div>
 
-     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+      <%= javascript_include_tag 'slick.min.js', 'slick-init.js'%>
