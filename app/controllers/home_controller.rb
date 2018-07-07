@@ -18,18 +18,18 @@ class HomeController < ApplicationController
   def media
     @bodyClass = "media_page"
     @description = ButterCMS::Content.fetch([:media_page_description])
-    @videos = ButterCMS::Content.fetch([:video])
+    @videos = ButterCMS::Content.fetch([:featured_video])
     @coverage = ButterCMS::Content.fetch([:media_coverage])
 
     @description = @description.data.media_page_description
-    @videos = @videos.data
+    @videos = @videos.data.featured_video
     @coverage = @coverage.data
   end
 
   def videos
     @bodyClass = "videos"
-    @videos = ButterCMS::Content.fetch([:featured_video])
+    @videos = ButterCMS::Content.fetch([:video])
 
-    @videos = @videos.data.featured_video
+    @videos = @videos.data.video
   end
 end
