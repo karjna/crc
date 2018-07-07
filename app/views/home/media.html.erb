@@ -3,8 +3,8 @@
 <%== @description%>
 </div>
 
-
-<% @videos.video.each_with_index do |video, index| %>  
+<% @videos.each_with_index do |video, index| %>  
+    <% video = video.featured_videos[0] %>
     <div class = "row mt-3 mb-1"> 
         <% if index % 2 == 0 %>
             <div class = "col-sm-5">
