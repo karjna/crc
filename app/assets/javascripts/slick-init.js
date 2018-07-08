@@ -8,7 +8,7 @@ $(document).ready(function(){
     });
 
     $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
     dots: true,
@@ -16,7 +16,7 @@ $(document).ready(function(){
     centerMode: true,
     arrows: true,
     focusOnSelect: true,
-    prevArrow: '<i class="fas fa-angle-left"><span>Previous</span></i>',
-    nextArrow:'<i class="fas fa-angle-right"></i>'
+    prevArrow: '<i class="fas fa-angle-left" id="prev-arrow"></i>',
+    nextArrow:'<i class="fas fa-angle-right" id="next-arrow"></i>'
     });
 });
