@@ -36,6 +36,7 @@ Rails.application.routes.draw do
 
   get '/contact' => 'home#contact'
   get '/media/videos' => 'home#videos'
+  get '/media/coverage' => 'home#coverage'
   get '/media' => 'home#media'
   get '/donate' => 'home#donate'
 
