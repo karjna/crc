@@ -1,0 +1,13 @@
+<h1>Media Coverage</h1>
+<div class = "row">
+    <% @coverage.media_coverage.each do |media| %>
+        <div class = "col-sm-4">
+            <div class = "my-5">
+                <h3><%= media.title %></h3>
+                <h5><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
+                <p><%== media.summary %></p>
+                <a href = "<%= media.source_url %>" target = "_blank" class = "btn">Read the Full Story</a>
+            </div>
+        </div>
+    <% end %>
+</div>
