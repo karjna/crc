@@ -103,9 +103,16 @@ a.card-body, a.card{
     .card-text{
         color:white;
     }
+  
 }
 .card{
     background-color:transparent;
+}
+
+.card.has-case{
+    .card-body{
+        border: 1px solid white;
+    }
 }
 
 .breadcrumbs{
