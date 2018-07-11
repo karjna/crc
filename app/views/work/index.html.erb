@@ -3,7 +3,7 @@
     <% @work.work_topic.each do |workitem| %>
         <a href = "/work/<%= workitem.url_slug %>" class="card">
             <% if workitem.list_page_image != "" %>
-            <img class="card-img-top" src= "<%= workitem.list_page_image %>" alt="Card image cap">
+            <div class="card-img-top-bk" style = "background-image:url(<%= workitem.list_page_image %>)" ></div>
             <% end %>
             <div class="card-body">
                 <h5 class="card-title"><%= workitem.title %></h5>

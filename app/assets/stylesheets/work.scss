@@ -10,8 +10,11 @@
 }
 
 .topics{
-    .card-img-top{
-        filter:grayscale(0.7)
+    .card-img-top-bk{
+        filter:grayscale(0.7);
+        height:230px;
+        background-position: center center;
+        background-size: cover;
     }
 }
 
