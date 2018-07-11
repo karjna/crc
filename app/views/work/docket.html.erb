@@ -1,21 +1,28 @@
 <h1>Our Docket</h1>
-
-
-
 <% @states.each do |state| %>
-    <hr>
-    <h3 class = "text-center"><%= state.state_name %></h3>
-    <div class="row full-width justify-content-center">
+   <div class="row full-width justify-content-center">
+    <% first = true %>
+
         <% @docket.each do |item| %>
             <% if item.state.slug == state.slug %>
+                <% if first == true %>
+                    <hr class = "full-width">
+                    <h3 class = "text-center full-width"><%= state.state_name %></h3>
+                         
+                    <% first = false%>
+                <% end %>
+
+
                 <div class = "col-three">
-                    <div class="card docket-item">
+                    <div class="card docket-item <% if item.case.empty? %> has-case<% end %>">
                         <a href="" class="card-body ">
-                            <h5 class="card-title"><%= item.client_name %></h5>
-                            <p class="card-text"><%= item.city %> </p>
+                            <h5 class="card-title"><%= item.city %></h5>
+                            <p class="card-text"><% if item.category != "" %><%= item.category.title %><% end %></p>
                         </a>
                     </div>
                 </div>
+
+
             <% end %>
         <% end %>
     </div>
