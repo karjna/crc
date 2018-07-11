@@ -113,13 +113,14 @@ $banners: join donate;
 }
 .case{
     border-bottom: 1px solid #7b7b7b;
+    display: table;
     &.long{
         .case__image{
             width:50%;
             background-size:cover;
             background-position:center;
             min-height: 370px;
-            display: inline-block;
+            display: table-cell;
             margin-bottom: -6px;
         }
     }
@@ -144,8 +145,7 @@ $banners: join donate;
 }
 .case__details{
     width: 50%;
-    float: right;
-    display: inline-block;
+    display: table-cell;
     padding: 40px 50px;
     border-top:4px solid white;
 }
