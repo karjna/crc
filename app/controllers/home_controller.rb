@@ -19,11 +19,11 @@ class HomeController < ApplicationController
     @bodyClass = "media_page"
     @description = ButterCMS::Content.fetch([:media_page_description])
     @videos = ButterCMS::Content.fetch([:featured_video])
-    @coverage = ButterCMS::Content.fetch([:media_coverage])
+    @coverage = ButterCMS::Content.fetch([:featured_media_coverage])
 
     @description = @description.data.media_page_description
     @videos = @videos.data.featured_video
-    @coverage = @coverage.data
+    @coverage = @coverage.data.featured_media_coverage
   end
 
   def videos
@@ -31,5 +31,12 @@ class HomeController < ApplicationController
     @videos = ButterCMS::Content.fetch([:video])
 
     @videos = @videos.data.video
+  end
+
+  def coverage
+    @bodyClass = "coverage"
+    @coverage = ButterCMS::Content.fetch([:media_coverage])
+
+    @coverage = @coverage.data
   end
 end
