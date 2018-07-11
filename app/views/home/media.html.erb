@@ -28,11 +28,11 @@
         <% end %>
     </div>
     <hr>
-    <div class="modal fade" id="<%= get_youtube_id(video.youtube_link) %>" tabindex="-1" role="dialog" aria-labelledby="<%= get_youtube_id(video.youtube_link) %>" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal fade video-modal" id="<%= get_youtube_id(video.youtube_link) %>" tabindex="-1" role="dialog" aria-labelledby="<%= get_youtube_id(video.youtube_link) %>" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" ><%= video.title %></h5>
+                    <h3 class="modal-title ibm" ><%= video.title %></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -52,7 +52,8 @@
 
 <h2 class = "display-4  mt-5 text-uppercase text-center abel">Media Coverage</h2>
 <div class = "row">
-    <% @coverage.media_coverage.each do |media| %>
+    <% @coverage.each do |media| %>
+        <% media = media.featured_media_coverage[0] %>
         <div class = "col-sm-4">
             <div class = "my-5">
                 <h3><%= media.title %></h3>
@@ -63,3 +64,6 @@
         </div>
     <% end %>
 </div>
+
+<a href = "/media/coverage" class = "btn mb-4 mt-3 float-right">View More Media Coverage</a>
+<div class = "clearfix"></div>
