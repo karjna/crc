@@ -57,7 +57,7 @@
 
 // mobile nav modal
 
-#mobileNav{
+#mobileNav, .modal{
     background-color: rgba(0, 0, 0, 0.78);
     .modal-dialog{
         .modal-content{
@@ -81,6 +81,10 @@
             }
         }
     }
+}
+
+.video-modal{
+    background-color: rgba(0, 0, 0, 0.9)
 }
 
 .dropdown:hover>.dropdown-menu {
