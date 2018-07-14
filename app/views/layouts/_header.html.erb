@@ -1,10 +1,10 @@
  <nav class="header">
       <div class = "container">
-         <% unless current_page?(root_path) %> 
-                <div class="nav-item"> 
-                    <h1><a href = "/" class = "brand"><%= image_tag("logo.png") %><span class = "hidden">Civil Rights Corps</span></a></h1>         
-                </div>
-            <% end %>
+  
+        <div class="nav-item"> 
+            <h1><a href = "/" class = "brand"><%= image_tag("logo.png") %><span class = "hidden">Civil Rights Corps</span></a></h1>         
+        </div>
+          
         <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Work</a>
