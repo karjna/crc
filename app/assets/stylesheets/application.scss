@@ -55,6 +55,14 @@ $ibm: 'IBM Plex Mono', monospace;
     letter-spacing: 4px;
 }
 
+.table{
+    display: table;
+}
+
+.cell{
+    display: table-cell;
+}
+
 // general styles
 
 a{
@@ -102,6 +110,9 @@ a.card-body, a.card{
     }
     .card-text{
         color:white;
+    }
+    .card-title{
+        margin-bottom: 0;
     }
   
 }
