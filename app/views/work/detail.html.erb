@@ -9,7 +9,7 @@
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(@work.video_banner) %>?rel=0&amp;showinfo=0"></iframe>
     </div>
 <% else %>
-    <% if @work.banner_image %>
+    <% if @work.banner_image != "" %>
         <div class = "banner work-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div> 
     <% end %>  
 <% end %>
