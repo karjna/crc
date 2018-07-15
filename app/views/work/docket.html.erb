@@ -14,12 +14,14 @@
 
 
                 <div class = "col-three">
-                    <div class="card docket-item <% if item.case.empty? %> has-case<% end %>">
-                        <a href="" class="card-body ">
-                            <h5 class="card-title"><%= item.city %></h5>
-                            <p class="card-text"><% if item.category != "" %><%= item.category.title %><% end %></p>
-                        </a>
-                    </div>
+                    <% if !item.case.empty? %> 
+                        <div class="card docket-item has-case">
+                            <a href="/work/case/<%= item.case.slug %>" class="card-body ">
+                                <h5 class="card-title"><%= item.city %></h5>
+                                <p class="card-text"><% if item.category != "" %><%= item.category.title %><% end %></p>
+                            </a>
+                        </div>
+                    <% end %>
                 </div>
 
 
