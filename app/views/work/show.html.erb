@@ -4,14 +4,25 @@
 <% end %>
 <div class = "description"><%== @work.long_description %></div>
 <div class = "row">
+    <% count = 1 %>
     <% @cases[0].each do |cas| %>
-        <div class = "col-sm-6">
-            <div class="card">
-                <a class="card-body" href = "/work/<%= @work.url_slug %>/<%= cas.slug %>">
-                    <h5 class="card-title"><%= cas.fields.title %></h5>
+        <% if count % 2 == 1%>
+            <div class = "table">
+        <% end %>
+  
+          
+                <a class="work-cell cell" href = "/work/<%= @work.url_slug %>/<%= cas.slug %>">
+                <div>
+                    <h5 class="card-title text-center"><%= cas.fields.title %></h5>
                     <p class="card-text"><%= cas.fields.summary %></p>
+                    </div>
                 </a>
+     
+ 
+        
+        <% if count % 2 == 0%>
             </div>
-        </div>
+        <% end %>
+        <% count = count + 1 %>
     <% end %>
 </div>
