@@ -4,19 +4,28 @@
 
 
 <h1><%= @work.title %></h1>
-    
+<% if @work.video_banner != "" %>
+     <div class="embed-responsive embed-responsive-21by9 mb-3">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(@work.video_banner) %>?rel=0&amp;showinfo=0"></iframe>
+    </div>
+<% else %>
+    <% if @work.banner_image %>
+        <div class = "banner work-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div> 
+    <% end %>  
+<% end %>
 <div class = "description"><%= raw @work.about_body %></div>
 
     </div>
     <div class = "col-sm-4 pt-4">
         <% if @work.partners != "" %>
-            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Partners</h2>
+            <h3 class = "mb-3 mt-3 text-center anton text-uppercase">Partners</h2>
             <%== @work.partners%>
         <% end %>
 
-        <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Filings</h2>
 
         <% if @work.files.length > 0 %>
+            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Filings</h2>
+
             <div class = "">
                 <div class=" full-width">
                     <% @work.files.each do |file| %>
@@ -37,7 +46,7 @@
        
             <% @work.media_coverage.each do |media| %>
             
-                        <h5 class="card-title"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
+                <h5 class="card-title"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
     
             <% end %>
 
