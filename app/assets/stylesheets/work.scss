@@ -18,6 +18,33 @@
     }
 }
 
+.topic{
+    .table{
+        border-spacing: 29px 7px;
+    }
+    
+}
+
+.banner.work-banner{
+    height:270px;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    margin-bottom: 30px;
+}
+
+.work-cell{
+    width:50%;
+    border:1px solid $yellow;
+    border-radius: 5px;
+    padding: 20px 30px;
+    
+    &:hover{
+        border:1px solid white;
+        text-decoration: none;
+    }
+}
+
 .docket{
     hr{
         margin-top: 4rem;
