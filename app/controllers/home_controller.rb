@@ -1,10 +1,11 @@
 class HomeController < ApplicationController
   def index
     @bodyClass = "home"
-    @featured = ButterCMS::Content.fetch([
-        :featured_cases
-        ])
+    @featured = ButterCMS::Content.fetch([:featured_cases])
+    @bannertext = ButterCMS::Content.fetch([:homepage_headline])
+
     @featured = @featured.data.featured_cases
+    @bannertext = @bannertext.data.homepage_headline
   end
 
   def contact
