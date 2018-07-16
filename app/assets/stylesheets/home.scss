@@ -32,7 +32,16 @@
     background-image: image_url('pillar.jpg');
     .banner-title{
         font-size:96px;
-        text-transform:uppercase
+        text-transform:uppercase;
+        @media only screen and (max-width: 1200px) {
+            font-size: 80px;
+        }
+        @media only screen and (max-width: 991px) {
+            font-size: 64px;
+        }
+        @media only screen and (max-width: 767px) {
+            font-size: 48px;
+        }
     }
     p{
         max-width:900px;
@@ -95,9 +104,17 @@
     .mc-field-group{
         width: 80%;
         float: left;
+        @media only screen and (max-width: 991px) {
+            width: 70%;
+        }
     }
     .clear{
-        float: right;;
+        float: right;
+    }
+    .display-4{
+        @media only screen and (max-width: 991px) {
+            font-size: 2.5rem;
+        }
     }
 }
 $banners: join donate;
@@ -109,7 +126,10 @@ $banners: join donate;
 }
 
 .featured-area{
-    padding: 50px 0;
+    padding: 50px 80px;
+    @media only screen and (max-width:650px) {
+        padding: 50px 25px;
+    }
 }
 .case{
     border-bottom: 1px solid #7b7b7b;
@@ -122,6 +142,10 @@ $banners: join donate;
             min-height: 370px;
             display: table-cell;
             margin-bottom: -6px;
+            @media only screen and (max-width: 991px) {
+                min-height: 0px;
+                display: none
+            }
         }
     }
     &.short{
@@ -148,6 +172,13 @@ $banners: join donate;
     display: table-cell;
     padding: 40px 50px;
     border-top:4px solid white;
+    @media only screen and (max-width: 991px) {
+        width: 100%;
+        display: block;
+    }
+    @media only screen and (max-width:650px) {
+        padding: 40px 0px;
+    }
 }
 
 
