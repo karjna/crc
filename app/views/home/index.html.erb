@@ -2,12 +2,14 @@
     <div class = "center-vert">
         <h2 class = "abel banner-title text-center">Civil Rights Corps</h2>
         <p class = "roboto-con text-center">
-        Civil Rights Corps is a non-profit organization dedicated to challenging systemic injustice in the American legal system.  We work with individuals accused and convicted of crimes, their families and communities, people currently or formerly incarcerated, activists, organizers, judges, and government officials to challenge mass human caging and to create a legal system that promotes equality and human freedom.  Civil Rights Corps engages in advocacy and public education and specializes in innovative, systemic civil rights litigation with the goal of resensitizing the legal system and our culture to the injustice and brutality that characterize the contemporary American criminal system.
+
+
+        <%= @bannertext %>
         </p>
      </div>
 </div>
 <div class = "featured-area">
-    <div class = "container">
+    <div class = "">
         <% @featured.each do |item| %>
         
            <% if @featured.count % 2 == 1 %>
@@ -41,11 +43,11 @@
 <div class = "newsletter-area">
     <div class = "container">
         <div class = "row">
-            <div class = "col-sm-5">
+            <div class = "col-md-5">
                 <h4 class = "text-center text-uppercase roboto-con"> Sign Up for Our </h4>
                 <h2 class = "text-center text-uppercase anton display-4">Newsletter</h2>
             </div>
-            <div class = "col-sm-7">
+            <div class = "col-md-7">
     <!-- Begin MailChimp Signup Form -->
         <div id="mc_embed_signup">
         <form action="https://civilrightscorps.us14.list-manage.com/subscribe/post?u=1c2b18772807d9227b885e3ef&amp;id=d82c62d947" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
