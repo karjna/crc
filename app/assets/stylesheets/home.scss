@@ -42,11 +42,26 @@
         @media only screen and (max-width: 767px) {
             font-size: 48px;
         }
+        @media only screen and (max-width: 479px) {
+            font-size: 33px;
+        }
+        @media only screen and (max-width: 320px) {
+            font-size: 29px;
+        }
     }
     p{
         max-width:900px;
         margin:0 auto;
         padding:20px 40px;
+        @media only screen and (max-width: 479px) {
+            line-height: 20px;
+            padding: 20px 10px;
+        }
+        @media only screen and (max-width: 320px) {
+            line-height: 18px;
+            padding: 0px 8px;
+            font-size: 14px;
+        }
     }
     .center-vert{
         position: absolute;
@@ -100,12 +115,18 @@
         color: white;
         padding: 15px 20px;
         width: 100%;
+        @media only screen and (max-width: 479px) {
+           padding: 15px;
+        }
     }
     .mc-field-group{
         width: 80%;
         float: left;
         @media only screen and (max-width: 991px) {
             width: 70%;
+        }
+        @media only screen and (max-width: 479px) {
+            width: 65%;
         }
     }
     .clear{
@@ -114,6 +135,7 @@
     .display-4{
         @media only screen and (max-width: 991px) {
             font-size: 2.5rem;
+            margin-top: -13px;
         }
     }
 }
