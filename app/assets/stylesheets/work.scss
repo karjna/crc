@@ -15,6 +15,9 @@
         height:230px;
         background-position: center center;
         background-size: cover;
+        @media only screen and (max-width:479px) {
+            height: 175px;
+        }
     }
 }
 
@@ -42,6 +45,16 @@
     &:hover{
         border:1px solid white;
         text-decoration: none;
+    }
+    @media only screen and (max-width:767px) {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.work-cell + .work-cell {
+    @media only screen and (max-width:767px) {
+        margin-top: 25px;
     }
 }
 
