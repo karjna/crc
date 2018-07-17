@@ -15,10 +15,10 @@
 
                 <div class = "col-three">
                     <% if !item.case.empty? %> 
-                        <div class="card docket-item has-case">
+                        <div class="card docket-item ">
                             <a href="/work/case/<%= item.case.slug %>" class="card-body ">
                                 <h5 class="card-title"><%= item.city %></h5>
-                                <p class="card-text"><% if item.category != "" %><%= item.category.title %><% end %></p>
+                                <p class="card-text"><% if item.client_name != "" %><%= item.client_name %><% end %></p>
                             </a>
                         </div>
                     <% end %>
