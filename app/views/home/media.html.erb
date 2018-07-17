@@ -7,11 +7,16 @@
     <% video = video.featured_videos[0] %>
     <div class = "row mt-3 mb-1"> 
         <% if index % 2 == 0 %>
-            <div class = "col-sm-5">
+            <div class = "col-md-5">
                 <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
             </div>
         <% end %>
-        <div class = "col-sm-7">
+        <% if index % 2 == 1 %>
+            <div class = "col-md-5 d-lg-none">
+                <img data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
+            </div>
+        <% end %>
+        <div class = "col-md-7">
             <h3 ata-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4 ibm"><%= video.title %></h3>
             <h5><% if (video.source)%><%== video.source %><% end %></h5>
             
@@ -22,7 +27,7 @@
                 </button>
         </div>
         <% if index % 2 == 1 %>
-            <div class = "col-sm-5">
+            <div class = "col-md-5 d-none d-lg-block">
                 <img data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
             </div>
         <% end %>
@@ -53,7 +58,7 @@
 <div class = "row">
     <% @coverage.each do |media| %>
         <% media = media.featured_media_coverage[0] %>
-        <div class = "col-sm-4">
+        <div class = "col-lg-4 col-md-6">
             <div class = "my-5">
                 <h3><%= media.title %></h3>
                 <h5><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
