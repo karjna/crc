@@ -41,7 +41,9 @@
     border:1px solid $yellow;
     border-radius: 5px;
     padding: 20px 30px;
-    
+    p{
+        color:white;
+    }
     &:hover{
         border:1px solid white;
         text-decoration: none;
