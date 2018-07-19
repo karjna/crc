@@ -4,8 +4,9 @@
 <% end %>
 <div class = "description"><%== @work.long_description %></div>
 <div class = "row">
+
     <% count = 1 %>
-    <% @cases[0].each do |cas| %>
+    <% @cases.each do |cas| %>
         <% if count % 2 == 1%>
             <div class = "table">
         <% end %>

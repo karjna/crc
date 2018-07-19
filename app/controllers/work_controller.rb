@@ -18,6 +18,9 @@ class WorkController < ApplicationController
                 @cases.push(item.cases)
             end
         }
+
+        @cases = @cases[0]
+        @cases = @cases.sort_by { |k| k["slug"] }
     end
 
     def detail
