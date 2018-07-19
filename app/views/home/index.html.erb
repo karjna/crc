@@ -1,13 +1,15 @@
 <div class = "first shadow">
     <div class = "center-vert">
         <h2 class = "abel banner-title text-center">Civil Rights Corps</h2>
-        <p class = "roboto-con text-center">
-
-
+        <p class = "roboto-con text-center d-none d-md-block">
         <%= @bannertext %>
         </p>
      </div>
 </div>
+
+ <p class = "roboto-con text-center d-block d-md-none mt-5 px-3">
+<%= @bannertext %>
+</p>
 <div class = "featured-area">
     <div class = "">
         <% @featured.each do |item| %>
