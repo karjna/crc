@@ -17,8 +17,10 @@
                     <% if !item.case.empty? %> 
                         <div class="card docket-item ">
                             <a href="/work/case/<%= item.case.slug %>" class="card-body ">
-                                <h5 class="card-title"><%= item.city %></h5>
-                                <p class="card-text"><% if item.client_name != "" %><%= item.client_name %><% end %></p>
+                                <div class = 'cell'>
+                                    <h5 class="card-title"><%= item.city %></h5>
+                                    <p class="card-text"><% if item.client_name != "" %><%= item.client_name %><% end %></p>
+                                </div>
                             </a>
                         </div>
                     <% end %>
