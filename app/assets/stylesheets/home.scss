@@ -100,10 +100,25 @@
     background-size:cover;
     background-position:center;
     margin-bottom: 40px;
+    @media only screen and (max-width:776px) {
+        height: 200px;
+    }
+    @media only screen and (max-width:479px) {
+        height: 140px;
+    }
 }
 
 .page-banner.join{
     height:400px;
+    @media only screen and (max-width:991px) {
+        height: 300px;
+    }
+    @media only screen and (max-width:776px) {
+        height: 200px;
+    }
+    @media only screen and (max-width:479px) {
+        height: 140px;
+    }
 }
 
 .newsletter-area{
