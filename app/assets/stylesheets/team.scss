@@ -78,9 +78,9 @@ main {
 .grid {
 	margin: 5em auto 7em;
 	position: relative;
-	padding: 0 1em;
+	padding: 0 0em;
 	width: 100%;
-	max-width: 1000px;
+	// max-width: 1000px;
 	display: grid;
 	grid-template-columns: 33% 33% 33%;
 	@media only screen and (max-width:991px) {
@@ -110,7 +110,7 @@ main {
 }
 
 .product__bg {
-	height: 10em;
+	height: 12em;
 	background: var(--details-bg-down);
 	position: relative;
 	@media only screen and (max-width:991px) {
@@ -125,7 +125,7 @@ main {
 }
 
 .product__img {
-	max-height: 17em;
+	max-height: 20em;
 	margin: 0 auto;
 	display: block;
 	position: absolute;
