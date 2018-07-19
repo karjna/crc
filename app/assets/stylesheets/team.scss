@@ -223,6 +223,9 @@ main {
 	top: 10vh;
 	right: 10vw;
 	height: 80vh;
+	@media only screen and (max-width:991px) {
+       display: none;
+    }
 }
 
 .details__bg,
@@ -257,6 +260,9 @@ main {
 	margin: 2em 0 0 0;
 	text-shadow: 1px 1px black;
 	color: var(--color-details-desc);
+	@media only screen and (max-width:991px) {
+        max-width: 80%;;
+    }
 }
 
 .details__price {
