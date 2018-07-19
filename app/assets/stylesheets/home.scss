@@ -102,6 +102,10 @@
     margin-bottom: 40px;
 }
 
+.page-banner.join{
+    height:400px;
+}
+
 .newsletter-area{
     background-color: #1b1b1bc9;
     padding: 54px 0 40px;
@@ -146,6 +150,8 @@ $banners: join donate;
         background-image: image_url('#{$banner}.jpg')
     }
 }
+
+
 
 .featured-area{
     padding: 50px 80px;
