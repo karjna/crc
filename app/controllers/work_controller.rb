@@ -2,31 +2,23 @@ class WorkController < ApplicationController
     def index
         @bodyClass = "topics"
         @work = ButterCMS::Content.fetch([:work_topic])
-        @work = @work.data      
+        @work = @work.data   
+        @seo = ButterCMS::Content.fetch([:our_work_seo_description])
+   
     end
 
     def show
         @bodyClass = "topic"
         slug = params[:slug]  
            
-        @stopgap = []
         @cases = []    
         @work = ButterCMS::Content.fetch([:work_topic])
-        @recent = ButterCMS::Page.list('recent_work')
-
+        
         @work.data.work_topic.each { |item| 
             if (item.url_slug == slug)
                 @work = item
                 @cases.push(item.cases)
             end
-        }
-
-        @cases[0].each { |item| 
-            @recent.each { |all| 
-            if (item.slug == all.data.slug)
-                @stopgap.push(all)
-            end
-         }
         }
 
         @cases = @cases[0]
@@ -44,6 +36,7 @@ class WorkController < ApplicationController
         @bodyClass = "docket"
         @states = ButterCMS::Content.fetch([:states])
         @docket = ButterCMS::Content.fetch([:docket])
+        @seo = ButterCMS::Content.fetch([:docket_seo_description])
 
         @states = @states.data.states
         @docket = @docket.data.docket
