@@ -222,7 +222,8 @@ main {
 	position: fixed;
 	top: 10vh;
 	right: 10vw;
-	height: 80vh;
+	max-height: 80vh;
+	max-width: 37%;;
 	@media only screen and (max-width:991px) {
        display: none;
     }
@@ -256,7 +257,7 @@ main {
 .details__description {
 	line-height: 1.5;
 	font-weight: bold;
-	max-width: 50%;
+	max-width: 48%;
 	margin: 2em 0 0 0;
 	text-shadow: 1px 1px black;
 	color: var(--color-details-desc);
