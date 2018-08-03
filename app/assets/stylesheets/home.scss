@@ -30,6 +30,7 @@
 .first {
     @extend .slide;
     background-image: image_url('pillar.jpg');
+    background-position-y: 33%;
     .banner-title{
         font-size:96px;
         text-transform:uppercase;
