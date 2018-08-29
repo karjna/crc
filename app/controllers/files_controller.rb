@@ -1,8 +1,7 @@
 class FilesController < ApplicationController
     def index
-        @bodyClass = "files"
-        @files = ButterCMS::Content.fetch([:files]).data
-        @show_private = params[:private]
+        @bodyClass = "resources"
+        @files = ButterCMS::Content.fetch([:file_topics]).data
     end
 
     def show
