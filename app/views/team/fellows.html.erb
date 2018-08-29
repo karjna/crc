@@ -1,0 +1,22 @@
+<% title 'Our Fellows' %>
+
+<h1>Our Fellows</h1>
+
+<div class="content">
+    <div class="grid">
+        <% @sorted.team_members.each do |memberdata| %>
+            <div class="grid__item">
+                <div class="product">
+                    <div class="product__bg"></div>
+                    <img class="product__img" src="<%= memberdata.team_member_photo %>" alt="img 01"/>
+                    <h2 class="product__title"><%= memberdata.first_name %> <%= memberdata.last_name %></h2>
+                    <h3 class="product__subtitle"><%= memberdata.position %></h3>
+                    <div class="product__description"><%= raw memberdata.bio %></div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+ <%= javascript_include_tag 'imagesloaded.pkgd.min.js', 'anime.min.js', 'main'%>
+
