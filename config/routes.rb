@@ -22,17 +22,20 @@ Rails.application.routes.draw do
   get '/work/*topic/:slug' => 'work#detail'
  
 
-  get '/team' => 'team#index'
-  get '/team/:slug' => 'team#show'
+  get '/team/staff' => 'team#index'
+  get '/team/staff/:slug' => 'team#show'
 
-  get '/board' => 'board#index'
-  get '/board/:slug' => 'board#show'
+  get '/team/fellows' => 'team#fellows'
+  get '/team/fellows/:slug' => 'team#show'
+
+  get '/team/board' => 'board#index'
+  get '/team/board/:slug' => 'board#show'
 
   get '/jobs' => 'jobs#index'
   get '/jobs/:slug' => 'jobs#show'
 
-  get '/files' => 'files#index'
-  get '/file/:serial' => 'files#show'
+  get '/resources' => 'files#index'
+  get '/resources/:serial' => 'files#show'
 
   get '/contact' => 'home#contact'
   get '/media/videos' => 'home#videos'
