@@ -1,21 +1,31 @@
-<h1>File Library</h1>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Size</th>
-    </tr>
-  </thead>
-  <tbody>
-   <% @files.files.each do |file| %>
-    <% if file.private != true || @show_private == 'true' %>
-        <% slug = file.file.gsub(/https:\/\/cdn.buttercms.com\//, '')%>
-        <tr>
-            <td><a href = "/file/<%= slug %>"><%= file.file_name %></td>
-            <td></td>
-        </tr>
-    <% end %>
-   <% end %>
+<% title 'Resources' %>
 
-  </tbody>
-</table>
+<h1>Resources</h1>
+  <% @files.file_topics.each do |topic| %>
+    <h2 class = "text-center ibm"><%= topic.topic_title %></h2>
+    <p class = "text-center mb-5"><%= topic.topic_description %></p>
+
+    <div class = "row ">
+    <% counter = 0 %>
+      <% topic.files.each do |file| %>
+        <% slug = file.file.gsub(/https:\/\/cdn.buttercms.com\//, '')%>
+        <%if counter % 2 == 0 %>
+          <% if counter != 0 %>
+            </div>
+          <% end %>
+          <div class = "card-deck">
+        <% end %>
+
+        <a class = "card file-card" href = "/resources/<%= slug %>">
+          <h4 class = "ibm"><%= file.file_name %></h3>
+          <p><%= file. description %></p>
+        </a>
+
+        <% counter = counter + 1 %>
+        <% end %>
+
+
+       </div>
+    </div>
+    <hr>
+  <% end %>
