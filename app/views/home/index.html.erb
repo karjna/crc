@@ -6,9 +6,10 @@
      </div>
 </div>
 
- <p class = "roboto-con text-center d-block d-md-none mt-5 px-3">
-<%= @bannertext %>
+<p class = "roboto-con text-center d-block d-md-none mt-5 px-3">
+    <%= @bannertext %>
 </p>
+
 <div class = "featured-area">
     <div class = "">
         <% @featured.each do |item| %>
@@ -37,9 +38,13 @@
                     </div>
                 </div>
             <% end %>
+
+            
         <% end %>
     </div>
 </div>
+
+
 
 <div class = "newsletter-area">
     <div class = "container">
