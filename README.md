@@ -1,24 +1,12 @@
-# README
+# Civil Rights Corps Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##To run locally
 
-Things you may want to cover:
+Make sure ruby and rails are installed
+Then run
+`bundle install`
+To spin up the server run
+`rails s`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##Pipeline
+The staging branch deploys to  [https://civilrightscorps-staging.herokuapp.com/](https://civilrightscorps-staging.herokuapp.com/)
