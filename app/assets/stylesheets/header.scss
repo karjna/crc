@@ -1,78 +1,62 @@
 .header{
-    padding: 10px 80px 15px;
+    padding:0px 80px 0px;
     margin-bottom: 0px;
     width: 100%;
+    height:50px;
     display: inline-block;
+    background-color: $transparentblack;
     @media only screen and (max-width:991px) {
-        padding: 10px 80px 0px;
     }
     @media only screen and (max-width:650px) {
-        padding: 14px 50px 0px;
     }
     @media only screen and (max-width:479px) {
-        padding: 14px 35px 0px;
     }
 }
 
-.nav{
-    .nav-item{
-        h1{
-            margin-bottom: 0;
-            line-height: 40px;
-            font-size: 25px;
-            a{
-                opacity: 1;
-            }
-        }
+.home .header{
+  position: absolute;
+  z-index: 3;
+  border-top:4px solid $purple;
+  border-bottom: 1px solid $transparentgrey;
+  overflow: hidden;
+  .float-left .nav-item:last-child{
+    border-right:1px solid $transparentgrey;
+  }
 
+}
 
-    }
+.header__item{
+  @include mont-bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color:white;
+  padding:15px 16px;
+  text-align: center;
+  height:50px;
+  vertical-align: top;
+  display: inline-block;
+  img{
+    width: 16px;
+    vertical-align: sub;
+    margin-right: 2px;
+  }
+}
+
+.header__item + .header__item{
+  border-left:1px solid $transparentgrey;
+}
+
+.header__item--hamburger{
+  padding: 6px 0 0 10px;
+  font-size: 30px;
+  line-height: 7px;
+  cursor: pointer;
 }
 
 
-// nav
-.header{
-    h1{
-        font-size: 2rem;
-        margin-bottom: 30px;
-        margin-top: 20px;
-    }
-}
-.brand{
-    img{
-        width:195px;
-        @media only screen and (max-width:479px) {
-            width: 160px;
-        }
-    }
-}
-.nav-item{
-    a:not(.brand){
-        color: white;
-        opacity: 0.8;
-        font-size: 13px;
-        font-family: $roboto;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        &:hover{
-            opacity: 1;
-        }
-    }
-}
 
-.mobile-header{
-    display: inline-block;
-    h1{
-        font-size: 1.5rem;
-        
-    }
-    .hamburger{
-        font-size: 2.5rem;
-        cursor: pointer;
-        position: relative;
-        top:30px;
-    }
-}
+
+
 
 // mobile nav modal
 
@@ -80,8 +64,8 @@
     background-color: rgba(0, 0, 0, 0.78);
     .modal-dialog{
         .modal-content{
-            background-color: transparent; 
-            border: 0; 
+            background-color: transparent;
+            border: 0;
             .modal-header{
                 border-bottom:0px;
                 color:white;
@@ -118,7 +102,7 @@
 
 .dropdown:hover>.dropdown-menu {
     display: block;
-}   
+}
 
 .dropdown-menu{
     background-color: black;
