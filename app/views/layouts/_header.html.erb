@@ -1,94 +1,60 @@
- <nav class="header">
-      <div class = "">
+<nav class="header">
+  <div class = "float-left">
+    <a class = "header__item">
+      Sign Up&nbsp; <i class="far fa-envelope"></i>
+    </a>
+    <a class = "header__item" href="http://www.facebook.com/civilrightscorps.org">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class = "header__item" href="https://twitter.com/CivRightsCorps">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a class = "header__item" href="https://www.instagram.com/civilrightscorps/">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
 
-        <div class="nav-item float-left float-lg-none">
-            <h1><a href = "/" class = "brand"><%= image_tag("logo.png") %><span class = "hidden">Civil Rights Corps</span></a></h1>
-        </div>
-
-        <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Work</a>
-                 <div class="dropdown-menu" aria-labelledby="workDropdown">
-                    <a class="dropdown-item" href="/work">Overview</a>
-                    <a class="dropdown-item" href="/work/wealth-based-detention">Challenging the Money Bail System</a>
-                    <a class="dropdown-item" href="/work/criminalization-of-poverty">Criminalization of Poverty</a>
-                    <a class="dropdown-item" href="/work/prosecutors-project">Prosecutors</a>
-                    <a class="dropdown-item" href="/work/indigent-defense-initiative">Indigent Defense</a>
-                    <a class="dropdown-item" href="/work/docket">Our Docket</a>
-                </div>
-            </li>
-
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'team' %>" href="/team" role="button" id="teamDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team</a>
-                 <div class="dropdown-menu" aria-labelledby="teamDropdown">
-                    <a class="dropdown-item" href="/team/staff">Staff</a>
-                    <a class="dropdown-item" href="/team/board">Board</a>
-                    <a class="dropdown-item" href="/team/fellows">Fellows</a>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/resources">Policy Resources</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/donate">Donate</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="/media">Media</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/jobs">Jobs</a>
-            </li>
-        </ul>
-
-        <div class = "mobile-header d-lg-none float-right">
-
-
-
-            <div class = "float-right hamburger"><i class="fas fa-bars" data-toggle="modal" data-target="#mobileNav"></i></div>
-
-            <div class="modal fade" id="mobileNav" tabindex="-1" role="dialog" aria-labelledby="mobileNav" aria-hidden="true">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                           <i class="fas fa-times"></i>
-                            </button>
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-
-
-                        </div>
-                        <div class="modal-body">
-                            <ul class=" nav nav-pills">
-                                <li class="nav-item">
-                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work"> Our Work</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/resources">Policy Resources</a>
-                                </li>
-                               <li class="nav-item">
-                                    <a class="nav-link" href="/donate">Donate</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/media">Media</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/jobs">Jobs</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-     </div>
+  <div class = "float-right">
+    <a class = "header__item" href = "/donate">
+      <%= image_tag("logo-mark.png") %> Donate
+    </a>
+    <div class = "header__item header__item--hamburger">
+      <div class = "hamburger"><i class="fas fa-bars" data-toggle="modal" data-target="#mobileNav"></i></div>
+    </div>
+  </div>
 </nav>
+
+<div class="modal fade" id="mobileNav" tabindex="-1" role="dialog" aria-labelledby="mobileNav" aria-hidden="true">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <i class="fas fa-times"></i>
+  </button>
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <ul class=" nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work"> Our Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/resources">Policy Resources</a>
+                    </li>
+                   <li class="nav-item">
+                        <a class="nav-link" href="/donate">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/media">Media</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jobs">Jobs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

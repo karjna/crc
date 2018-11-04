@@ -9,7 +9,7 @@
 
     <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Civil Rights Corps"/>
     <meta name="twitter:title" content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Civil Rights Corps"/>
-    
+
     <meta name='description' content='<%= yield_meta_tag(:description, 'Civil Rights Corps is a non-profit organization dedicated to challenging systemic injustice in the American legal system.') %>' />
     <meta name='twitter:description' content='<%= yield_meta_tag(:description, 'Civil Rights Corps is a non-profit organization dedicated to challenging systemic injustice in the American legal system.') %>' />
     <meta name='og:description' content='<%= yield_meta_tag(:description, 'Civil Rights Corps is a non-profit organization dedicated to challenging systemic injustice in the American legal system.') %>' />
@@ -21,20 +21,20 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@CivRightsCorps">
 
-      
+
     <meta name='keywords' content='<%= yield_meta_tag(:keywords, 'civil, rights, corp, washington, lawyers') %>' />
 
-    <link href="https://fonts.googleapis.com/css?family=Anton|Lato:100,300,400|Roboto+Condensed|IBM+Plex+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Montserrat:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <%= favicon_link_tag 'favicon.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    
+
   </head>
 
   <body class = "<%= @bodyClass %>">
-    
-    <%= render 'layouts/header' %>  
+
+    <%= render 'layouts/header' %>
 
     <div class = "banner">
       <% unless current_page?(root_path) %>
@@ -48,7 +48,7 @@
       <% end %>
 
     </div>
-    <%= render 'layouts/footer' %>  
-   
+    <%= render 'layouts/footer' %>
+
   </body>
 </html>
