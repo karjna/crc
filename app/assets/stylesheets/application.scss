@@ -1,18 +1,51 @@
 @import "bootstrap";
 
  body{
-     background: #000;
      color:white;
      @extend .code;
  }
 
 //  variables
+
+
+$black: #1e272c;
+$white: #fff;
+$lightgrey: #dfe0e1;
+$purple: #704c9f;
+$darkpurple: #4d2e76;
+$transparentpurp: rgb(200, 179, 226);
+$transparentblack: rgba(35,31,32,0.3);
+$transparentgrey: rgba(223, 224, 225, 0.25);
+$green: #22c677;
+$darkgreen: #0ba259;
+$montserrat: 'Montserrat', sans-serif;
+$alfa: 'Alfa Slab One', cursive;
+
+@mixin montserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+@mixin mont-light{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+}
+
+@mixin mont-bold{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+@mixin alfa{
+  font-family: 'Alfa Slab One', cursive;
+}
+
+// Delete this
+
 $yellow: #f2c602;
 $roboto:'Roboto Condensed', sans-serif;
 $lato: 'Lato', sans-serif;
 $anton: 'IBM Plex Mono', monospace;
 $ibm: 'IBM Plex Mono', monospace;
-
 .roboto-con{
     font-family: 'Roboto Condensed', sans-serif;
 }
@@ -31,7 +64,7 @@ $ibm: 'IBM Plex Mono', monospace;
 
 }
 .code{
-  
+
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -39,6 +72,8 @@ $ibm: 'IBM Plex Mono', monospace;
     font-family: 'Anton', sans-serif;
     font-family: 'IBM Plex Mono', monospace;
 }
+
+// End Delete
 
 // utilities
 .two-column{
@@ -74,44 +109,40 @@ $ibm: 'IBM Plex Mono', monospace;
 // general styles
 
 a{
-    color: $yellow;
+    color: $green;
     &:hover{
-        color:white;;
+        color:$darkgreen;
     }
 }
 
 p{
-    font-family: $lato;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    font-family: $montserrat;
 }
 
 h1{
     font-size: 3em !important;
     text-align: center;
     margin-bottom: 50px;
-    font-family: $anton;
-    text-transform: uppercase;
-    letter-spacing: 3px;
+    @include mont-light;
     @media only screen and (max-width:767px) {
         font-size: 2.2em !important;
     }
 }
 
 .btn{
-    background-color:transparent;
-    border:1px solid white;
+    background-color:$purple;
     text-decoration: none;
     color:white;
+    border-radius: 5px;
     &:hover{
-        color:$yellow;
-        background-color:transparent;
-        border-color:$yellow;
+        color:$white;
+        background-color:$darkpurple;
+
     }
 }
 
 a.card-body, a.card{
-    border:1px solid $yellow;
+    border:1px solid $lightgrey;
     text-align: center;
     border-radius:5px;
     margin-bottom:1.25rem !important;
@@ -125,7 +156,7 @@ a.card-body, a.card{
     .card-title{
         margin-bottom: 0;
     }
-  
+
 }
 .card{
     background-color:transparent;
@@ -141,7 +172,7 @@ a.card-body, a.card{
     margin-bottom: -70px;
     text-align: center;
     text-transform: capitalize;
-    
+
     .badge{
         opacity: 0.7;
 
@@ -163,8 +194,8 @@ hr{
 @import 'home.scss';
 @import 'work.scss';
 @import 'header.scss';
+@import 'footer.scss';
 @import 'team.scss';
 @import 'media.scss';
 @import 'jobs.scss';
 @import 'files.scss';
-
