@@ -1,81 +1,70 @@
-<div class = "first shadow">
-    <div class = "center-vert">
-        <p class = "roboto-con text-center d-none d-md-block">
-        <%= @bannertext %>
-        </p>
-     </div>
+<div class = "banner banner--shadow">
+  <div class = "banner__image" style = "background-image:url(<%= image_path('banner-default.jpg') %>)"></div>
+  <div class = "banner__logo">
+      <%= image_tag("large-logo.png") %>
+  </div>
+  <div class = "banner__arrow">
+    <%= image_tag("down-arrow.png") %>
+  </div>
+</div>
 </div>
 
-<p class = "roboto-con text-center d-block d-md-none mt-5 px-3">
-    <%= @bannertext %>
-</p>
+<div class = "featured__container">
+  <div class = "triangle triangle--top"></div>
+  <div class = "featured__block">
+      <% @featured.each do |item| %>
 
-<div class = "featured-area">
-    <div class = "">
-        <% @featured.each do |item| %>
-        
-           <% if @featured.count % 2 == 1 %>
-                <div class = "case long">
-                    <div class = "case__image" style = "background-image:url(<%= item.featured_image == '' ? item.case.fields.banner_image : item.featured_image %>)">
-                    </div>
-                    <div class = "case__details">
-                        <h5 class = "case__type">Featured</h5>
-                        <h2 class = "case__title">
-                            <% if item.alternate_title == "" %>
-                                <%= item.case.fields.title %>
-                            <% else %>
-                                <%= item.alternate_title %>
-                            <% end %>
-                        </h2>
-                        <p class = "case__description">
-                            <% if item.alternate_summary == "" %>
-                                <%= item.case.fields.summary %>
-                            <% else %>
-                                <%= item.alternate_summary %>
-                            <% end %>
-                        </p>
-                        <a href = "/work/case/<%= item.case.slug %>" class = "case__link">Learn More</a>
-                    </div>
-                </div>
-            <% end %>
+         <% if @featured.count % 2 == 1 %>
+              <div class = "case ">
 
-            
-        <% end %>
-    </div>
+                  <div class = "case__details">
+                      <h5 class = "case__type">Featured</h5>
+                      <h2 class = "case__title">
+                          <% if item.alternate_title == "" %>
+                              <%= item.case.fields.title %>
+                          <% else %>
+                              <%= item.alternate_title %>
+                          <% end %>
+                      </h2>
+                      <p class = "case__description">
+                          <% if item.alternate_summary == "" %>
+                              <%= item.case.fields.summary %>
+                          <% else %>
+                              <%= item.alternate_summary %>
+                          <% end %>
+                      </p>
+                      <a href = "/work/case/<%= item.case.slug %>" class = "case__link">More&nbsp;<i class="fas fa-caret-right"></i></a>
+                  </div>
+                  <div class = "featured__image">
+                      <%= image_tag("justice.png") %>
+                  </div>
+              </div>
+          <% end %>
+      <% end %>
+  </div>
+  <div class = "triangle triangle--bottom"></div>
 </div>
 
 
 
 <div class = "newsletter-area">
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-md-5">
-                <h4 class = "text-center text-uppercase roboto-con"> Sign Up for Our </h4>
-                <h2 class = "text-center text-uppercase anton display-4">Newsletter</h2>
-            </div>
-            <div class = "col-md-7">
+    <h3>Sign-up for our Newsletter</h3>
     <!-- Begin MailChimp Signup Form -->
-        <div id="mc_embed_signup">
-        <form action="https://civilrightscorps.us14.list-manage.com/subscribe/post?u=1c2b18772807d9227b885e3ef&amp;id=d82c62d947" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-            
-        <div class="mc-field-group">
+    <div id="mc_embed_signup">
+      <form action="https://civilrightscorps.us14.list-manage.com/subscribe/post?u=1c2b18772807d9227b885e3ef&amp;id=d82c62d947" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+
+          <div class="mc-field-group">
             <label for="mce-EMAIL" class = "hidden">Email Address </label>
             <input type="email" value="Email Address" name="EMAIL" class="required email" id="mce-EMAIL">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c2b18772807d9227b885e3ef_d82c62d947" tabindex="-1" value=""></div>
+          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
         </div>
-            <div id="mce-responses" class="clear">
-                <div class="response" id="mce-error-response" style="display:none"></div>
-                <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1c2b18772807d9227b885e3ef_d82c62d947" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
-            </div>
-        </form>
-        </div>
-        </div>
+      </form>
     </div>
 </div>
-
-<!--End mc_embed_signup-->
-</div>
-
