@@ -2,8 +2,8 @@
 
 <h1>Resources</h1>
   <% @files.file_topics.each do |topic| %>
-    <h2 class = "text-center ibm"><%= topic.topic_title %></h2>
-    <p class = "text-center mb-5"><%= topic.topic_description %></p>
+    <h2 class = ""><%= topic.topic_title %></h2>
+    <p class = "mb-5"><%= topic.topic_description %></p>
 
     <div class = "row ">
     <% counter = 0 %>
@@ -17,7 +17,7 @@
         <% end %>
 
         <a class = "card file-card" href = "/resources/<%= slug %>">
-          <h4 class = "ibm"><%= file.file_name %></h3>
+          <h4 class = ""><%= file.file_name %></h3>
           <p><%= file. description %></p>
         </a>
 
