@@ -1,7 +1,6 @@
 @import "bootstrap";
 
  body{
-     color:white;
      @extend .code;
  }
 
@@ -112,6 +111,7 @@ a{
     color: $green;
     &:hover{
         color:$darkgreen;
+        text-decoration: none;
     }
 }
 
