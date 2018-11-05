@@ -1,12 +1,6 @@
 @import "bootstrap";
 
- body{
-     @extend .code;
- }
-
 //  variables
-
-
 $black: #1e272c;
 $white: #fff;
 $lightgrey: #dfe0e1;
@@ -73,6 +67,10 @@ $ibm: 'IBM Plex Mono', monospace;
 }
 
 // End Delete
+body{
+  color: $black;
+   @extend .code;
+}
 
 // utilities
 .two-column{
@@ -108,9 +106,9 @@ $ibm: 'IBM Plex Mono', monospace;
 // general styles
 
 a{
-    color: $green;
+    color: $purple;
     &:hover{
-        color:$darkgreen;
+        color:$green;
         text-decoration: none;
     }
 }
@@ -151,10 +149,16 @@ a.card-body, a.card{
         text-decoration: none;
     }
     .card-text{
-        color:white;
+      color:$black;
+      font-size: 15px;
+      text-align: left;
     }
     .card-title{
         margin-bottom: 0;
+        color:$black;
+        @include mont-light;
+        font-size: 22px;
+        margin-bottom: 15px;
     }
 
 }
@@ -184,7 +188,9 @@ a.card-body, a.card{
 }
 
 hr{
-    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-top: 1px solid $green;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .content-container{
