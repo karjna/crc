@@ -39,7 +39,7 @@
     .table{
         border-spacing: 29px 7px;
     }
-    
+
 }
 
 .banner.work-banner{
@@ -52,11 +52,12 @@
 
 .work-cell{
     width:50%;
-    border:1px solid $yellow;
+    border:1px solid $lightgrey;
     border-radius: 5px;
     padding: 20px 30px;
+    color:$purple;
     p{
-        color:white;
+        color:$black;
     }
     &:hover{
         border:1px solid white;
