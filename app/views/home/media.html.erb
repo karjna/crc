@@ -6,9 +6,9 @@
 <%== @description%>
 </div>
 
-<% @videos.each_with_index do |video, index| %>  
+<% @videos.each_with_index do |video, index| %>
     <% video = video.featured_videos[0] %>
-    <div class = "row mt-3 mb-1"> 
+    <div class = "row mt-3 mb-1">
         <% if index % 2 == 0 %>
             <div class = "col-md-5">
                 <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
@@ -20,9 +20,9 @@
             </div>
         <% end %>
         <div class = "col-md-7">
-            <h3 ata-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4 ibm"><%= video.title %></h3>
+            <h3 ata-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4"><%= video.title %></h3>
             <h5><% if (video.source)%><%== video.source %><% end %></h5>
-            
+
             <% clean = strip_tags(video.description)%>
             <p><%= truncate( clean, :length => 350 ) %></p>
             <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" >
@@ -40,7 +40,7 @@
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title ibm" ><%= video.title %></h5>
+                    <h3 class="modal-title " ><%= video.title %></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button>
@@ -50,7 +50,7 @@
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
                     </div>
                 </div>
-          
+
             </div>
         </div>
     </div>
@@ -63,7 +63,7 @@
         <% media = media.featured_media_coverage[0] %>
         <div class = "col-lg-4 col-md-6">
             <div class = "my-5">
-                <h3 class ="ibm"><%= media.title %></h3>
+                <h3 class =""><%= media.title %></h3>
                 <h5><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
                 <p><%== media.summary %></p>
                 <a href = "<%= media.source_url %>" target = "_blank" class = "btn">Read the Full Story</a>
