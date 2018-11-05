@@ -86,7 +86,7 @@ main {
 	@media only screen and (max-width:991px) {
         grid-template-columns: 50% 50%;
 	}
-	
+
 }
 
 .grid__item {
@@ -149,20 +149,19 @@ main {
 	margin: 0.5em 0 0;
 	font-size: 1.75em;
 	color: var(--color-product-title);
-    font-weight: 700;
+
 	top:-40px;
 	font-family: $lato;
-	background-color:black;
+	background-color:$white;
 }
 
 .product__subtitle {
 	position: relative;
 	margin: 0;
-	text-transform: uppercase;
 	color: var(--color-product-subtitle);
-	font-size: 0.85em;
-    letter-spacing: 0.115em;
+  font-size: 17px;
 	top:-40px;
+  @include mont-light;
 }
 
 .product:hover .product__subtitle {
@@ -294,7 +293,7 @@ main {
     margin: 1em;
     font-size: 35px;
 	cursor: pointer;
-	
+
 	color: var(--color-close);
 }
 
