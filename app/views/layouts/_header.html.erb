@@ -1,6 +1,6 @@
 <nav class="header">
   <div class = "float-left">
-    <a class = "header__item">
+    <a class = "header__item" href = "/#mc-field-group">
       Sign Up&nbsp; <i class="far fa-envelope"></i>
     </a>
     <a class = "header__item" href="http://www.facebook.com/civilrightscorps.org">
@@ -31,29 +31,58 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-body">
-                <ul class=" nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link <%= 'disabled' if params[:controller] == 'work' %>" href="/work"> Our Work</a>
+                <div class="modal__nav row">
+
+                  <div class = "col-sm-6">
+                    <li class="modal__item">
+                        <a class="modal__link <%= 'disabled' if params[:controller] == 'work' %>" href="/work"> Our Work</a>
+                        <div class="modal_submenu" aria-labelledby="workDropdown">
+                           <a class="modal__link modal__link--sub" href="/work">Overview</a>
+                           <a class="modal__link modal__link--sub" href="/work/wealth-based-detention">Challenging the Money Bail System</a>
+                           <a class="modal__link modal__link--sub" href="/work/criminalization-of-poverty">Criminalization of Poverty</a>
+                           <a class="modal__link modal__link--sub" href="/work/prosecutors-project">Prosecutors</a>
+                           <a class="modal__link modal__link--sub" href="/work/indigent-defense-initiative">Indigent Defense</a>
+                           <a class="modal__link modal__link--sub" href="/work/docket">Our Docket</a>
+                       </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
+                    <li class="modal__item">
+                        <a class="modal__link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
+                        <div class="sub-menu" aria-labelledby="teamDropdown">
+                           <a class="modal__link modal__link--sub" href="/team/staff">Staff</a>
+                           <a class="modal__link modal__link--sub" href="/team/board">Board</a>
+                           <a class="modal__link modal__link--sub" href="/team/fellows">Fellows</a>
+                       </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/resources">Policy Resources</a>
-                    </li>
-                   <li class="nav-item">
-                        <a class="nav-link" href="/donate">Donate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/media">Media</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/jobs">Jobs</a>
-                    </li>
-                </ul>
+
+
+                    </div>
+                    <div class = "col-sm-6">
+                      <li class="modal__item">
+                          <a class="modal__link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
+                      </li>
+                      <li class="modal__item">
+                          <a class="modal__link" href="/resources">Policy Resources</a>
+                      </li>
+                     <li class="modal__item">
+                          <a class="modal__link" href="/donate">Donate</a>
+                      </li>
+                      <li class="modal__item">
+                          <a class="modal__link" href="/jobs">Join Our Team</a>
+                      </li>
+                      <li class="modal__item">
+                          <a class="modal__link" href="/media">Media</a>
+                          <div class="modal_submenu" aria-labelledby="mediaDropdown">
+                             <a class="modal__link modal__link--sub" href="/media/videos">Videos</a>
+                             <a class="modal__link modal__link--sub" href="/media/articles">Articles</a>
+                         </div>
+                      </li>
+                    </div>
+                </div>
+                <div class = "social social--modal">
+                    <a href = "https://twitter.com/CivRightsCorps" target = "_blank" class = "social__icon social__icon--dark"><i class="fab fa-twitter"></i></a>
+                    <a href = "http://www.facebook.com/civilrightscorps.org" target = "_blank" class = "social__icon social__icon--dark"><i class="fab fa-facebook-f"></i></a>
+                    <a href = "https://www.instagram.com/civilrightscorps/" target = "_blank" class = "social__icon social__icon--dark"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </div>

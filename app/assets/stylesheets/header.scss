@@ -40,6 +40,10 @@
     vertical-align: sub;
     margin-right: 2px;
   }
+  &:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5)
+  }
 }
 
 .header__item + .header__item{
@@ -47,7 +51,7 @@
 }
 
 .header__item--hamburger{
-  padding: 6px 0 0 10px;
+  padding: 6px 10px 0 10px;
   font-size: 30px;
   line-height: 7px;
   cursor: pointer;
@@ -61,8 +65,9 @@
 // mobile nav modal
 
 #mobileNav, .modal{
-    background-color: rgba(0, 0, 0, 0.78);
+    background-color: #1d262c;
     .modal-dialog{
+      max-width: 80% !important;
         .modal-content{
             background-color: transparent;
             border: 0;
@@ -72,15 +77,6 @@
                 .close{
                     color:white;
                     opacity: 1;
-                }
-            }
-            .modal-body{
-                .nav-item{
-                    display: block;
-                    width: 100%;
-                    a{
-                        font-size: 38px;
-                    }
                 }
             }
         }
@@ -100,19 +96,38 @@
     background-color: rgba(0, 0, 0, 0.9)
 }
 
-.dropdown:hover>.dropdown-menu {
-    display: block;
+.modal__nav{
+  padding: 0;
 }
 
-.dropdown-menu{
-    background-color: black;
-    border:1px solid white;
-    margin: 0;
-    .dropdown-item:hover{
-        background-color: #2d2d2d;
-    }
+.modal__item{
+  list-style: none;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
-    background-color: transparent
+.modal__link{
+  @include mont-bold;
+  color:white;
+  margin-top: 15px;
+  font-size: 30px;
+  display: block;
+}
+
+.modal__link--sub{
+  @include mont-light;
+  margin-top: 2px;
+  font-size: 16px;
+}
+
+.social--modal{
+  width:100%;
+  text-align: center;
+  margin-top: 45px;
+  .social__icon.social__icon--dark{
+    color:$black;
+    height: 23px;
+    width: 23px;
+    padding: 5px;
+    font-size: 11px;
+    margin: 0 4px;
+  }
 }
