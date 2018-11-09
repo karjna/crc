@@ -1,15 +1,16 @@
+<% if current_page?(root_path) %>
 <nav class="header">
   <div class = "float-left">
     <a class = "header__item" href = "/#mc-field-group">
       Sign Up&nbsp; <i class="far fa-envelope"></i>
     </a>
-    <a class = "header__item" href="http://www.facebook.com/civilrightscorps.org">
+    <a class = "header__item" target="_blank" href="http://www.facebook.com/civilrightscorps.org">
       <i class="fab fa-facebook-f"></i>
     </a>
-    <a class = "header__item" href="https://twitter.com/CivRightsCorps">
+    <a class = "header__item" target="_blank" href="https://twitter.com/CivRightsCorps">
       <i class="fab fa-twitter"></i>
     </a>
-    <a class = "header__item" href="https://www.instagram.com/civilrightscorps/">
+    <a class = "header__item" target="_blank" href="https://www.instagram.com/civilrightscorps/">
       <i class="fab fa-instagram"></i>
     </a>
   </div>
@@ -24,6 +25,43 @@
   </div>
 </nav>
 
+
+<% else %>
+  <nav class = "interior-header">
+
+    <div class = "interior-header__main">
+      <div class = "float-left">
+        <a class = "interior-header__logo" href = "/">
+          <%= image_tag("logo.svg") %>
+        </a>
+      </div>
+      <div class = "float-right">
+        <a class = "header__item header__item--big" target="_blank" href="http://www.facebook.com/civilrightscorps.org">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class = "header__item header__item--big" target="_blank" href="https://twitter.com/CivRightsCorps">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a class = "header__item header__item--big" target="_blank" href="https://www.instagram.com/civilrightscorps/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <div class = "header__item header__item--big header__item--hamburger">
+          <div class = "hamburger"><i class="fas fa-bars" data-toggle="modal" data-target="#mobileNav"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class = "action-bar">
+      <div class = "float-right">
+        <a class = "action-bar__item" href = "/#mc-field-group">
+          Sign Up&nbsp; <i class="far fa-envelope"></i>
+        </a>
+        <a class = "action-bar__item" href = "/donate">
+          Donate&nbsp; <%= image_tag("logo-mark.png") %>
+        </a>
+      </div>
+    </div>
+  </nav>
+<% end %>
 <div class="modal fade" id="mobileNav" tabindex="-1" role="dialog" aria-labelledby="mobileNav" aria-hidden="true">
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <i class="fas fa-times"></i>

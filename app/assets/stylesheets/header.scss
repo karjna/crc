@@ -58,10 +58,46 @@
   cursor: pointer;
 }
 
+// interior header
 
+.action-bar{
+  background-color: rgba(112, 76, 159, 0.9);
+  display: inline-block;
+  width: 100%;
+  margin-top: -7px;
+  border-top: 3px solid rgb(92, 59, 136);
+  padding: 0 15px;
+}
 
+.action-bar__item{
+  color:white;
+  @include mont-bold;
+  text-transform: uppercase;
+  font-size: 11px;
+  padding: 0 7px;
+  img{
+    width:13px;
+    vertical-align: baseline;
+  }
+}
+.action-bar__item + .action-bar__item{
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
 
+.interior-header__main{
+  background-color: $black;
+  display: inline-block;
+  width:100%;
+  padding: 7px 15px 10px;
+}
 
+.interior-header__logo{
+  width:140px;
+  display: inline-block;
+  img{
+    width:100%;
+  }
+}
 
 // mobile nav modal
 
