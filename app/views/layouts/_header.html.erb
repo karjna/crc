@@ -1,10 +1,10 @@
  <nav class="header">
       <div class = "">
-  
-        <div class="nav-item float-left float-lg-none"> 
-            <h1><a href = "/" class = "brand"><%= image_tag("logo.png") %><span class = "hidden">Civil Rights Corps</span></a></h1>         
+
+        <div class="nav-item float-left float-lg-none">
+            <h1><a href = "/" class = "brand"><%= image_tag("logo.png") %><span class = "hidden">Civil Rights Corps</span></a></h1>
         </div>
-          
+
         <ul class=" nav nav-fill nav-pills d-none d-lg-flex">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'work' %>" href="/work" role="button" id="workDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Work</a>
@@ -17,24 +17,24 @@
                     <a class="dropdown-item" href="/work/docket">Our Docket</a>
                 </div>
             </li>
-           
+
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle <%= 'disabled' if params[:controller] == 'team' %>" href="/team" role="button" id="teamDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Team</a>
                  <div class="dropdown-menu" aria-labelledby="teamDropdown">
                     <a class="dropdown-item" href="/team/staff">Staff</a>
                     <a class="dropdown-item" href="/team/board">Board</a>
-                    
+                    <a class="dropdown-item" href="/team/fellows">Fellows</a>
                 </div>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/resources">Resources</a>
+                <a class="nav-link" href="/resources">Policy Resources</a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="/donate">Donate</a>
             </li>
-        
+
             <li class="nav-item">
                 <a class="nav-link" href="/media">Media</a>
             </li>
@@ -45,7 +45,7 @@
 
         <div class = "mobile-header d-lg-none float-right">
 
-            
+
 
             <div class = "float-right hamburger"><i class="fas fa-bars" data-toggle="modal" data-target="#mobileNav"></i></div>
 
@@ -56,8 +56,8 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                    
-                          
+
+
                         </div>
                         <div class="modal-body">
                             <ul class=" nav nav-pills">
@@ -71,7 +71,7 @@
                                     <a class="nav-link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/resources">Resources</a>
+                                    <a class="nav-link" href="/resources">Policy Resources</a>
                                 </li>
                                <li class="nav-item">
                                     <a class="nav-link" href="/donate">Donate</a>
@@ -84,7 +84,7 @@
                                 </li>
                             </ul>
                         </div>
-                   
+
                     </div>
                 </div>
             </div>
