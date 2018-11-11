@@ -2,6 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body.gallery{
+  h6.float-right.art-byline {
+    position: relative;
+    top: -26px;
+    background: black;
+}
   .slider-for{
     .slick-slide{
       height:500px;
@@ -26,6 +31,7 @@ body.gallery{
         margin: 0 auto
       }
     }
+
   }
   .slider-nav{
     .slick-slide{
