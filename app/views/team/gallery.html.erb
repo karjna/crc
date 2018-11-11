@@ -1,0 +1,67 @@
+<% title 'Our Artists and Residents Work' %>
+
+<h1>Gallery</h1>
+
+<div class="content">
+  <div class = "slider-for">
+      <div>
+        <%= image_tag("artist_apokaluptein.jpg",:class => "img-fluid") %>
+      </div>
+      <div>
+        <%= image_tag("artist_eastern-state-penitentiary.jpg",:class => "img-fluid") %>
+      </div>
+      <div>
+        <%= image_tag("artist_purgatory-detail.jpg",:class => "img-fluid") %>
+      </div>
+      <div>
+        <%= image_tag("artist_purgatory-detail2.jpg",:class => "img-fluid") %>
+      </div>
+      <div>
+        <%= image_tag("artist_purgatory-envelopes.jpg",:class => "img-fluid") %>
+      </div>
+      <div>
+        <%= image_tag("artist_purgatory-palais-de-tokyo.jpg",:class => "img-fluid") %>
+      </div>
+  </div>
+  <div class = "slider-nav">
+    <div>
+      <%= image_tag("artist_apokaluptein.jpg",:class => "img-fluid") %>
+    </div>
+    <div>
+      <%= image_tag("artist_eastern-state-penitentiary.jpg",:class => "img-fluid") %>
+    </div>
+    <div>
+      <%= image_tag("artist_purgatory-detail.jpg",:class => "img-fluid") %>
+    </div>
+    <div>
+      <%= image_tag("artist_purgatory-detail2.jpg",:class => "img-fluid") %>
+    </div>
+    <div>
+      <%= image_tag("artist_purgatory-envelopes.jpg",:class => "img-fluid") %>
+    </div>
+    <div>
+      <%= image_tag("artist_purgatory-palais-de-tokyo.jpg",:class => "img-fluid") %>
+    </div>
+  </div>
+
+  <hr class = "mt-5"/>
+  <div class = "mt-5 mb-5">
+    <h1 class = "mt-3">Poems</h1>
+    <div class = "row">
+      <div class = "col-sm-6">
+        <a class = "btn full-width mt-4" target="_blank" href = "<%=image_path('poet_on-bail.pdf')%>">Pretrial Detention (For a Mother Somewhere)</a>
+      </div>
+      <div class = "col-sm-6">
+        <a class = "btn full-width mt-4" target="_blank" href = "<%=image_path('poet_for-profit-bail.pdf')%>">For Profit Probation: The Poor & Double Jeopardy</a>
+      </div>
+      <div class = "col-sm-6">
+        <a class = "btn full-width mt-4" target="_blank" href = "<%=image_path('poet_victim.pdf')%>">Huh? Or, the Insane as Real</a>
+      </div>
+      <div class = "col-sm-6">
+        <a class = "btn full-width mt-4" target="_blank" href = "<%=image_path('poet_because-fred-could-be-dead.pdf')%>">Because Fred Could Be Dead</a>
+      </div>
+    </div>
+  </div>
+  <hr class = "mt-5"/>
+</div>
+<%= javascript_include_tag 'slick.js', 'gallery-init.js'%>
