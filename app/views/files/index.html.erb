@@ -1,6 +1,9 @@
 <% title 'Resources' %>
 
 <h1>Resources</h1>
+</div>
+
+<div class = 'content-container'>
   <% @files.file_topics.each do |topic| %>
     <h2 class = ""><%= topic.topic_title %></h2>
     <p class = "mb-5"><%= topic.topic_description %></p>
@@ -27,5 +30,5 @@
 
        </div>
     </div>
-    <hr>
+    <hr />
   <% end %>

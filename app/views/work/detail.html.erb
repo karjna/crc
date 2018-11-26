@@ -1,21 +1,31 @@
 <% title @work.title %>
 <% meta_tag :description, @work.seo_description %>
 
-<div class = "row">
-<div class = "col-md-8">
 
-
+<nav aria-label="breadcrumb" class = "breadcrumbs__container">
+  <ol class="list-inline breadcrumbs">
+     <li class="list-inline-item"><a class = "breadcrumbs__link" href="/work">Work</a></li>&bull;
+    <% if @parent != "case" %><li class="list-inline-item"><a class = "breadcrumbs__link" href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>&bull;<% end %>
+    <li class="list-inline-item" aria-current="page"><span class = "breadcrumbs__link"><%= @work.title %></span></li>
+  </ol>
+</nav>
 
 <h1><%= @work.title %></h1>
+
 <% if @work.video_banner != "" %>
      <div class="embed-responsive embed-responsive-21by9 mb-3">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(@work.video_banner) %>?rel=0&amp;showinfo=0"></iframe>
     </div>
 <% else %>
     <% if @work.banner_image != "" %>
-        <div class = "banner work-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div> 
-    <% end %>  
+        <div class = "page-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div>
+    <% end %>
 <% end %>
+</div>
+<div class = 'content-container'>
+
+  <div class = "row">
+  <div class = "col-md-8">
 <div class = "description"><%= raw @work.about_body %></div>
 
     </div>
@@ -33,7 +43,7 @@
                 <div class=" full-width">
                     <% @work.files.each do |file| %>
                         <div class="card">
-                        
+
                             <a href="<%= file.file %>" class="card-body">
                                 <h5 class="card-title"><%= file.file_title %></h5>
                                 <p class="card-text"><%= file.description %> </p>
@@ -46,22 +56,13 @@
 
         <% if @work.media_coverage.length > 0 %>
             <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Media Coverage</h2>
-       
+
             <% @work.media_coverage.each do |media| %>
-            
+
                 <h5 class="card-title"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
-    
+
             <% end %>
 
         <% end %>
     </div>
 </div>
-
-<nav aria-label="breadcrumb" class = "pt-5 pb-5">
-  <ol class="list-inline breadcrumbs">
-   
-     <li class="list-inline-item"><a class = "badge " href="/work">Work</a></li>&bull;
-    <% if @parent != "case" %><li class="list-inline-item"><a class = "badge " href="/work/<%= @parent   %>"><%= @parent.gsub!("-"," ") %></a></li>&bull;<% end %>
-    <li class="list-inline-item" aria-current="page"><span class = "badge"><%= @work.title %></span></li>
-  </ol>
-</nav>

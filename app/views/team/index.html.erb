@@ -1,7 +1,9 @@
 <% title 'Our Team' %>
 
 <h1>Our Team</h1>
+</div>
 
+<div class = 'content-container'>
 <div class="content">
     <div class="grid">
         <% @sorted.team_members.each do |memberdata| %>
@@ -19,4 +21,3 @@
 </div>
 
  <%= javascript_include_tag 'imagesloaded.pkgd.min.js', 'anime.min.js', 'main'%>
-

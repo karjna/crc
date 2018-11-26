@@ -2,6 +2,8 @@
 <% meta_tag :description, @seo.data.docket_seo_description %>
 
 <h1>Our Docket</h1>
+</div>
+<div class = 'content-container'>
 <% @states.each do |state| %>
    <div class="row full-width justify-content-center">
     <% first = true %>
@@ -9,15 +11,17 @@
         <% @docket.each do |item| %>
             <% if item.state.slug == state.slug %>
                 <% if first == true %>
-                    <hr class = "full-width">
+                    <% if state != @states.first %>
+                      <hr class = "full-width">
+                    <% end %>
                     <h3 class = "text-center full-width"><%= state.state_name %></h3>
-                         
+
                     <% first = false%>
                 <% end %>
 
 
                 <div class = "col-three">
-                    <% if !item.case.empty? %> 
+                    <% if !item.case.empty? %>
                         <div class="card docket-item ">
                             <a href="/work/case/<%= item.case.slug %>" class="card-body ">
                                 <div class = 'cell'>
@@ -34,4 +38,3 @@
         <% end %>
     </div>
 <% end %>
-

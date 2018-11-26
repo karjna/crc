@@ -1,7 +1,9 @@
 <% title 'Our Work' %>
 <% meta_tag :description, @seo.data.our_work_seo_description %>
 
-<h1> Our Work</h1>
+<h1>Our Work</h1>
+</div>
+<div class = 'content-container'>
 <div class = "card-columns two-column">
     <% @work.work_topic.each do |workitem| %>
         <a href = "/work/<%= workitem.url_slug %>" class="card">

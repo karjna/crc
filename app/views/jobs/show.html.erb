@@ -1,16 +1,15 @@
 <% title @job.job_title %>
 <% meta_tag :description, @job.seo_description %>
 
-
-<h1><%= @job.job_title %></h1>
-
-<%== @job.job_description %>
-
-
-<nav aria-label="breadcrumb" class = "pt-5 text-center">
-  <ol class="list-inline">
-    <li class="list-inline-item"><a class = "badge " href="/">Home</a></li>&bull;
-    <li class="list-inline-item"><a class = "badge " href="/jobs">Jobs</a></li>&bull;
-    <li class="list-inline-item" aria-current="page"><span class = "badge"><%= @job.job_title %></span></li>
+<nav aria-label="breadcrumb" class = "breadcrumbs__container">
+  <ol class="list-inline breadcrumbs">
+    <li class="list-inline-item"><a class = "breadcrumbs__link " href="/">Home</a></li>&bull;
+    <li class="list-inline-item"><a class = "breadcrumbs__link " href="/jobs">Jobs</a></li>&bull;
+    <li class="list-inline-item" aria-current="page"><span class = "breadcrumbs__link"><%= @job.job_title %></span></li>
   </ol>
 </nav>
+<h1><%= @job.job_title %></h1>
+</div>
+<div class = 'content-container content-container--long-text'>
+
+<%== @job.job_description %>
