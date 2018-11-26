@@ -67,6 +67,12 @@
   top:-10px;
   z-index: 3;
   overflow: hidden;
+  background-image: image_url('justice.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: 40px;
+  background-position-x: 96%;
 }
 
 .triangle{
@@ -91,6 +97,7 @@
   width:40%;
   display: inline-block;
   float: right;
+
   img{
     width: 100%;
   }
@@ -109,6 +116,7 @@
         display: none
     }
 }
+
 
 .case__type{
     font-family: $alfa;
