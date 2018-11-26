@@ -151,7 +151,6 @@ main {
 	color: var(--color-product-title);
 
 	top:-40px;
-	font-family: $lato;
 	background-color:$white;
 }
 
@@ -238,9 +237,9 @@ main {
 	font-size: 4.5em;
 	color: var(--color-details-title);
 	font-weight: 700;
-	font-family: $lato;
 	background-color: black;
 	padding:0 15px 8px 0px;
+  color:white;
 }
 
 .details__subtitle {
@@ -251,15 +250,15 @@ main {
 	color: var(--color-details-subtitle);
 	max-width: 580px;
 	text-shadow: 3px 2px black;
+  color:white;
 }
 
 .details__description {
 	line-height: 1.5;
-	font-weight: bold;
 	max-width: 48%;
 	margin: 2em 0 0 0;
+  color:white;
 	text-shadow: 1px 1px black;
-	color: var(--color-details-desc);
 	@media only screen and (max-width:991px) {
         max-width: 80%;;
     }
@@ -294,7 +293,7 @@ main {
     font-size: 35px;
 	cursor: pointer;
 
-	color: var(--color-close);
+	color: white;;
 }
 
 .dummy-menu {

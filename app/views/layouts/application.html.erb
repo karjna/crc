@@ -33,19 +33,22 @@
   </head>
 
   <body class = "<%= @bodyClass %>">
+    <% unless current_page?(root_path) %>
+      <div class = 'header--large'>
+    <% end %>
 
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header'%>
+
+    <% unless current_page?(root_path) %>
 
 
-      <% unless current_page?(root_path) %>
-        <div class = 'container content-container'>
-      <% end %>
+    <% end %>
 
-      <%= yield %>
+    <%= yield %>
 
-      <% unless current_page?(root_path) %>
-        </div>
-      <% end %>
+    <% unless current_page?(root_path) %>
+      </div>
+    <% end %>
 
 
     <%= render 'layouts/footer' %>

@@ -60,13 +60,40 @@
 
 // interior header
 
+.header--large{
+  background-color: $black;
+  height: 275px;
+  position: relative;
+  overflow: hidden;
+  &:after{
+    background-image: image_url('justice.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    content: '';
+    right:0;
+    display: inline-block;
+    position: absolute;
+    width: 32%;
+    background-position: top right;
+    background-position-y: 65px;
+    opacity: 0.2;
+  }
+  h1{
+    position: absolute;
+    bottom: 0px;
+    left:30px;
+    @include mont-bold;
+  }
+}
 .action-bar{
   background-color: rgba(112, 76, 159, 0.9);
   display: inline-block;
   width: 100%;
-  margin-top: -7px;
-  border-top: 3px solid rgb(92, 59, 136);
   padding: 0 15px;
+  position: fixed;
+  z-index: 4;
+  top:0;
 }
 
 .action-bar__item{
@@ -85,17 +112,34 @@
 }
 
 .interior-header__main{
-  background-color: $black;
+  position: fixed;
+  top:23px;
+  background-color: rgba(30, 39, 44, 0.9);
   display: inline-block;
   width:100%;
-  padding: 7px 15px 10px;
+  padding: 0 0 0 15px;
+  z-index: 4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 .interior-header__logo{
-  width:140px;
+  width:90px;
   display: inline-block;
+  margin: 10px 0;
   img{
     width:100%;
+  }
+}
+
+.interior-header{
+  .header__item{
+    padding: 18px;
+    height:59px;
+    font-size: 16px;
+    border-left:1px solid $transparentgrey;
+  }
+  .header__item--hamburger{
+    font-size: 20px;
   }
 }
 

@@ -209,7 +209,8 @@
 // contact page
 .contact{
     .content-container{
-        max-width: 800px;;
+        max-width: 800px;
+        margin: 0 auto;
     }
     .banner{
         position: relative;
@@ -260,12 +261,15 @@ $banners: join donate;
     background-size:cover;
     background-position:center;
     margin-bottom: 40px;
+    background-color: $black;
+    background-blend-mode: overlay;
     @media only screen and (max-width:776px) {
         height: 200px;
     }
     @media only screen and (max-width:479px) {
         height: 140px;
     }
+
 }
 
 .page-banner.join{

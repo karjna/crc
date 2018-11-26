@@ -32,44 +32,10 @@ $alfa: 'Alfa Slab One', cursive;
   font-family: 'Alfa Slab One', cursive;
 }
 
-// Delete this
 
-$yellow: #f2c602;
-$roboto:'Roboto Condensed', sans-serif;
-$lato: 'Lato', sans-serif;
-$anton: 'IBM Plex Mono', monospace;
-$ibm: 'IBM Plex Mono', monospace;
-.roboto-con{
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.lato{
-    font-family: 'Lato', sans-serif;
-}
-
-.ibm{
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-.anton{
-    font-family: 'Anton', sans-serif;
-    font-family: 'IBM Plex Mono', monospace;
-
-}
-.code{
-
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.abel{
-    font-family: 'Anton', sans-serif;
-    font-family: 'IBM Plex Mono', monospace;
-}
-
-// End Delete
 body{
   color: $black;
-   @extend .code;
+  @include montserrat;
 }
 
 // utilities
@@ -115,13 +81,15 @@ a{
 
 p{
     font-family: $montserrat;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
 }
 
 h1{
     font-size: 3em !important;
-    text-align: center;
     margin-bottom: 50px;
     @include mont-light;
+    color:white;
     @media only screen and (max-width:767px) {
         font-size: 2.2em !important;
     }
@@ -145,7 +113,7 @@ a.card-body, a.card{
     border-radius:5px;
     margin-bottom:1.25rem !important;
     &:hover{
-        border:1px solid white;
+        border:1px solid $green;
         text-decoration: none;
     }
     .card-text{
@@ -171,30 +139,58 @@ a.card-body, a.card{
         border: 1px solid white;
     }
 }
+.breadcrumbs__container{
+  position: absolute;
+  top: 152px;
+  left: 30px;
+}
 
 .breadcrumbs{
-    margin-bottom: -70px;
-    text-align: center;
-    text-transform: capitalize;
-
-    .badge{
-        opacity: 0.7;
-
+    @include alfa;
+    color:$green;
+    display: inline-block;
+    font-size: 11px;
+    .breadcrumbs__link{
+      color:$green;
+      text-transform: capitalize;
         &:hover{
             text-decoration: none;
             opacity: 1;
+            color: $purple;
         }
     }
 }
 
 hr{
-    border-top: 1px solid $green;
-    margin-top: 3em;
-    margin-bottom: 3em;
+  border-top: 10px dotted $purple;
+  margin: 3em 0 4em;
 }
 
 .content-container{
-    padding-top: 25px;
+    padding: 25px 40px;
+    ul{
+      list-style: none;
+      li{
+        margin-bottom: 15px;
+        position: relative;
+        &:before{
+          content: '';
+          width: 9px;
+          height: 9px;
+          border-radius: 9px;
+          background-color: $purple;
+          display: inline-block;
+          position: absolute;
+          top: 9px;
+          left: -22px;
+        }
+      }
+    }
+}
+
+.content-container--long-text{
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 @import 'home.scss';
