@@ -149,13 +149,14 @@ main {
 	margin: 0.5em 0 0;
 	font-size: 1.75em;
 	color: var(--color-product-title);
-
+  text-align: center;
 	top:-40px;
 	background-color:$white;
 }
 
 .product__subtitle {
 	position: relative;
+  text-align: center;
 	margin: 0;
 	color: var(--color-product-subtitle);
   font-size: 17px;

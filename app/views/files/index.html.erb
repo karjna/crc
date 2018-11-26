@@ -5,30 +5,36 @@
 
 <div class = 'content-container'>
   <% @files.file_topics.each do |topic| %>
-    <h2 class = ""><%= topic.topic_title %></h2>
-    <p class = "mb-5"><%= topic.topic_description %></p>
-
-    <div class = "row ">
-    <% counter = 0 %>
-      <% topic.files.each do |file| %>
-        <% slug = file.file.gsub(/https:\/\/cdn.buttercms.com\//, '')%>
-        <%if counter % 2 == 0 %>
-          <% if counter != 0 %>
-            </div>
-          <% end %>
-          <div class = "card-deck">
-        <% end %>
-
-        <a class = "card file-card" href = "/resources/<%= slug %>">
-          <h4 class = ""><%= file.file_name %></h3>
-          <p><%= file. description %></p>
-        </a>
-
-        <% counter = counter + 1 %>
-        <% end %>
-
-
-       </div>
+  <div class = "row">
+    <div class = "col-md-4">
+      <h2 class = ""><%= topic.topic_title %></h2>
     </div>
-    <hr />
+    <div class = "col-md-8">
+      <p class = "mb-5"><%= topic.topic_description %></p>
+
+      <div class = "row ">
+        <% counter = 0 %>
+        <% topic.files.each do |file| %>
+          <% slug = file.file.gsub(/https:\/\/cdn.buttercms.com\//, '')%>
+          <%if counter % 2 == 0 %>
+            <% if counter != 0 %>
+              </div>
+            <% end %>
+            <div class = "card-deck">
+          <% end %>
+              <a class = "card file-card" href = "/resources/<%= slug %>">
+                <h4 class = ""><%= file.file_name %></h4>
+                <p><%= file. description %></p>
+              </a>
+
+              <% counter = counter + 1 %>
+              <% end %>
+            </div>
+      </div>
+      <%if topic != @files.file_topics.last%>
+      <hr />
+      <% end %>
+    </div>
+
+  </div>
   <% end %>

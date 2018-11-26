@@ -280,8 +280,9 @@ $banners: join donate;
 
 }
 
-.page-banner.join{
+.page-banner.join, body.jobs .header--large{
     height:400px;
+    padding-top: 83px;
     @media only screen and (max-width:991px) {
         height: 300px;
     }
