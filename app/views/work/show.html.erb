@@ -1,35 +1,37 @@
 <% title @work.title %>
 <% meta_tag :description, @work_topic_seo_description %>
 
+<nav aria-label="breadcrumb" class = "breadcrumbs__container">
+  <ol class="list-inline breadcrumbs">
+     <li class="list-inline-item"><a class = "breadcrumbs__link" href="/work">Work</a></li>&bull;
+  
+    <li class="list-inline-item" aria-current="page"><span class = "breadcrumbs__link"><%= @work.title %></span></li>
+  </ol>
+</nav>
 <h1><%= @work.title %></h1>
-
 
 <% if @work.landing_page_image != "" %>
     <div class = "page-banner" style = "background-image:url(<%= @work.landing_page_image %>)"></div>
 <% end %>
 </div>
 <div class = 'content-container'>
-<div class = "description"><%== @work.long_description %></div>
-<div class = "row">
+  <div class = "description">
+    <%== @work.long_description %>
+  </div>
+  <h2 class = "mont-bold section-header">Cases</h2>
+  <div class = "row">
     <% count = 1 %>
     <% @cases.each do |cas| %>
-        <% if count % 2 == 1%>
-            <div class = "table">
-        <% end %>
+        <% if count % 2 == 1%><div class = "table"><% end %>
 
+        <a class="work__cell" href = "/work/<%= @work.url_slug %>/<%= cas.slug %>">
+          <div>
+            <h3 class="work__title"><%= cas.fields.title %></h3>
+            <p class="work__text"><%= cas.fields.summary %></p>
+          </div>
+        </a>
 
-                <a class="work-cell cell" href = "/work/<%= @work.url_slug %>/<%= cas.slug %>">
-                <div>
-                    <h5 class="card-title text-center"><%= cas.fields.title %></h5>
-                    <p class="card-text"><%= cas.fields.summary %></p>
-                    </div>
-                </a>
-
-
-
-        <% if count % 2 == 0%>
-            </div>
-        <% end %>
+        <% if count % 2 == 0%></div><% end %>
         <% count = count + 1 %>
     <% end %>
 </div>
