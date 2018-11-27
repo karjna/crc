@@ -87,7 +87,7 @@
                        </div>
                     </li>
                     <li class="modal__item">
-                        <a class="modal__link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
+                      <a class="modal__link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
                         <div class="sub-menu" aria-labelledby="teamDropdown">
                            <a class="modal__link modal__link--sub" href="/team/staff">Staff</a>
                            <a class="modal__link modal__link--sub" href="/team/board">Board</a>
@@ -99,7 +99,7 @@
                     </div>
                     <div class = "col-sm-6">
                       <li class="modal__item">
-                          <a class="modal__link <%= 'disabled' if params[:controller] == 'team' %>" href="/team/staff">Team</a>
+                        <a class="modal__link <%= 'disabled' if params[:controller] == 'home#contact' %>" href="/contact">Contact</a>
                       </li>
                       <li class="modal__item">
                           <a class="modal__link" href="/resources">Policy Resources</a>
