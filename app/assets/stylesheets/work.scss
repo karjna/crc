@@ -5,46 +5,6 @@
     width:100%;;
 }
 
-.description{
-    margin-bottom: 40px;
-    font-size: 18px;
-    max-width: 900px;
-    margin: 60px auto 100px;
-    text-align: center;
-}
-
-.topics{
-    .card-img-top-bk{
-        filter:grayscale(0.7);
-        height:230px;
-        background-position: center center;
-        background-size: cover;
-        @media only screen and (max-width:479px) {
-            height: 175px;
-        }
-    }
-
-    .card-body{
-        min-height: 185px;
-        @media only screen and (max-width:1200px) {
-            min-height: 210px;
-        }
-        @media only screen and (max-width:991px) {
-            min-height: 280px;
-        }
-        @media only screen and (max-width:776px) {
-            min-height: auto;
-        }
-    }
-}
-
-.topic{
-    .table{
-        border-spacing: 29px 7px;
-    }
-
-}
-
 .banner.work-banner{
     height:270px;
     background-size: cover;
@@ -53,17 +13,65 @@
     margin-bottom: 30px;
 }
 
-.work-cell{
-    width:50%;
-    border:1px solid $lightgrey;
-    border-radius: 5px;
+.description{
+    margin-bottom: 40px;
+    font-size: 19px;
+    max-width: 900px;
+    margin: 60px auto 100px;
+    text-align: center;
+}
+
+// Work#index Page
+
+.gcard{
+  @include gradient-h;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  min-height: 264px;
+}
+
+.gcard__body{
+  background-color: white;
+  border: 1px solid $lightgrey;
+  border-bottom: 0px;
+  color: $black;
+  padding: 20px 30px;
+  min-height: 258px;
+}
+
+.gcard__title{
+
+}
+
+.gcard__text{
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.gcard__link{
+  color: $green;
+  @include mont-bold;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#map-svg{
+  margin: 0 auto;
+}
+
+// Work#show Page
+
+.work__cell{
+    display: block;
+    border-bottom:1px solid $lightgrey;
     padding: 20px 30px;
     color:$purple;
     p{
         color:$black;
     }
     &:hover{
-        border:1px solid white;
+
         text-decoration: none;
     }
     @media only screen and (max-width:767px) {
@@ -72,12 +80,17 @@
     }
 }
 
-.work-cell + .work-cell {
+.work__cell + .work__cell {
     @media only screen and (max-width:767px) {
         margin-top: 25px;
     }
 }
 
+.work__title{
+
+}
+
+// Docket Page
 .docket{
   svg{
     width: 180px;

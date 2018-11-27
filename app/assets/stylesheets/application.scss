@@ -32,6 +32,29 @@ $alfa: 'Alfa Slab One', cursive;
   font-family: 'Alfa Slab One', cursive;
 }
 
+.mont-bold{
+  @include mont-bold;
+}
+
+.alfa{
+  @include alfa;
+}
+
+@mixin gradient{
+  background: #22c677;
+  background: -moz-linear-gradient(top, #22c677 0%, #704c9f 100%);
+  background: -webkit-linear-gradient(top, #22c677 0%,#704c9f 100%);
+  background: linear-gradient(to bottom, #22c677 0%,#704c9f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#22c677', endColorstr='#704c9f',GradientType=0 );
+}
+
+@mixin gradient-h{
+  background: #704c9f;
+  background: -moz-linear-gradient(left, #704c9f 0%, #22c677 100%);
+  background: -webkit-linear-gradient(left, #704c9f 0%,#22c677 100%);
+  background: linear-gradient(to right, #704c9f 0%,#22c677 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#704c9f', endColorstr='#22c677',GradientType=1 );
+}
 
 body{
   color: $black;
@@ -93,6 +116,11 @@ h1{
     @media only screen and (max-width:767px) {
         font-size: 2.2em !important;
     }
+}
+
+h2{
+  font-size: 40px;
+  margin-bottom: 40px;
 }
 
 .btn{
@@ -162,8 +190,13 @@ a.card-body, a.card{
 }
 
 hr{
-  border-top: 10px dotted $purple;
+  border-top: 8px dotted $purple;
   margin: 3em 0 4em;
+}
+
+.section-header{
+  border-bottom: 8px dotted $purple;
+  font-size: 40px;
 }
 
 .content-container{
@@ -191,6 +224,15 @@ hr{
 .content-container--long-text{
   max-width: 900px;
   margin: 0 auto;
+}
+
+.content-container--black{
+  background-color: $black;
+  color:white;
+}
+
+.close-to-footer{
+  margin-bottom: -47px;
 }
 
 @import 'home.scss';
