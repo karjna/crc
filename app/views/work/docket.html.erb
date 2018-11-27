@@ -3,9 +3,9 @@
 
 <h1>Our Docket</h1>
 </div>
-<div class = 'content-container'>
+<div class = 'content-container content-container--long-text'>
 <% @states.each do |state| %>
-   <div class="row full-width justify-content-center">
+   <div class="row full-width" id="<%= state.state_name %>">
     <% first = true %>
 
         <% @docket.each do |item| %>
@@ -14,27 +14,40 @@
                     <% if state != @states.first %>
                       <hr class = "full-width">
                     <% end %>
-                    <h3 class = "text-center full-width"><%= state.state_name %></h3>
+                    <div class = "col-md-4">
+                      <h3 class = "text-center docket__state"><%= state.state_name %></h3>
 
+                      <%= show_svg("#{state.abreviation}.svg") %>
+                    </div>
+                    <div class = "docket__table-container col-md-8">
+                      <div class = "cell">
+                      <table class = "docket__table ">
                     <% first = false%>
                 <% end %>
 
 
-                <div class = "col-three">
+
                     <% if !item.case.empty? %>
-                        <div class="card docket-item ">
-                            <a href="/work/case/<%= item.case.slug %>" class="card-body ">
-                                <div class = 'cell'>
-                                    <h5 class="card-title"><%= item.city %></h5>
-                                    <p class="card-text"><% if item.client_name != "" %><%= item.client_name %><% end %></p>
-                                </div>
-                            </a>
-                        </div>
+                        <tr>
+                          <td>
+                            <a href="/work/case/<%= item.case.slug %>" class="docket__type"><%= item.city %>  </a>
+                          </td>
+                          <td>
+                          <td>
+                            <h5 class="docket__city"><% if item.client_name != "" %><%= item.client_name %><% end %></h5>
+                          </td>
+                          <td>
+                            <a href="/work/case/<%= item.case.slug %>" class="docket__type"><i class="fas fa-link"></i></a>
+                          </td>
+                        </tr>
                     <% end %>
-                </div>
+
 
 
             <% end %>
         <% end %>
+          </table>
+          </div>
+          </div>
     </div>
 <% end %>

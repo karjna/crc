@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="93px" height="143px" viewBox="0 0 93 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>NV</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="Tablet" transform="translate(-41.000000, -457.000000)" fill="url(#linearGradient-1)">
+            <g id="NV" transform="translate(41.000000, 457.000000)">
+                <polygon points="38.5253536 6.35125136 70.8665941 13.4546246 92.5945593 17.8002176 83.736235 62.1754081 79.2235038 87.0789989 76.4657236 100.032209 74.7107726 109.308379 72.5379761 123.013711 71.1173014 125.604353 69.7801959 125.520783 68.7773667 123.347987 66.437432 122.930141 65.3510337 122.010881 63.84679 122.09445 63.0946681 122.763003 61.5904244 123.849402 61.3397171 129.949946 61.0890098 131.203482 60.6711643 141.56605 59.7519042 143.070294 45.7958651 121.760174 10.6132753 69.863765 0.225636561 53.9856366 7.37079434 26.742111 14.064679 0.584983678"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

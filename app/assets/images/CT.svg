@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>CT</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="CT" fill="url(#linearGradient-1)">
+            <polygon points="6.68552775 21.6443961 9.69401523 18.970185 11.2818281 17.2152339 11.9503808 17.7166485 14.2067465 16.4631121 18.5523395 15.543852 24.4021763 12.6189336 23.9007617 9.10903156 23.2322089 5.43199129 21.8951034 0.417845484 18.3016322 1.33710555 0.0835690968 5.2648531 0.584983678 7.8554951 1.83852013 13.9560392 1.83852013 20.8922742 1.08639826 22.6472252 2.50707291 24.4857454"></polygon>
+        </g>
+    </g>
+</svg>

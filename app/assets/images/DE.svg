@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="25px" viewBox="0 0 16 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>DE</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="DE" fill="url(#linearGradient-1)">
+            <polygon points="13.7053319 16.8809576 12.8696409 17.298803 9.86115343 15.2931447 8.35690968 11.3653972 6.76909684 8.35690968 4.84700762 7.52121872 3.09205658 4.51273123 3.50990207 2.84134929 3.92774755 0.919260065 4.01131665 0 3.50990207 0.0835690968 2.08922742 0.919260065 0.417845484 2.33993471 0.250707291 2.590642 1.42067465 6.01697497 3.34276387 10.6968444 6.43482046 24.151469 10.6132753 23.9007617 15.6274211 22.9815016"></polygon>
+        </g>
+    </g>
+</svg>

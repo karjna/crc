@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="50px" viewBox="0 0 24 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>NH</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="NH" fill="url(#linearGradient-1)">
+            <polygon points="22.3129489 41.1995647 23.2322089 38.5253536 20.9758433 37.5225245 20.5579978 34.9318825 17.1316649 34.0126224 16.8809576 31.5055495 7.10337323 0.183852013 6.51838955 0.250707291 6.01697497 1.58781284 5.51556039 1.16996736 4.67986942 0.334276387 3.42633297 1.92208923 3.25919478 3.83582155 3.67704026 10.8639826 5.2648531 13.2039173 5.2648531 16.7973885 2.00565832 20.8087051 -1.13686838e-13 21.560827 -1.13686838e-13 22.1458107 0.919260065 23.7336235 0.919260065 30.9205658 0.250707291 38.6089227 0.0835690968 42.5366703 0.919260065 43.7066376 0.752121872 47.6343852 0.334276387 48.8879217 1.16996736 49.8071817 5.43199129 48.8043526 16.9645267 45.8794342 18.3852013 43.4559304 21.7279652 41.8681175"></polygon>
+        </g>
+    </g>
+</svg>

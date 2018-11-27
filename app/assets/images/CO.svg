@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="83px" viewBox="0 0 106 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>CO</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="Tablet" transform="translate(-219.000000, -508.000000)" fill="url(#linearGradient-1)">
+            <g id="CO" transform="translate(219.000000, 508.000000)">
+                <polygon points="105.4642 10.4461371 75.3793254 7.52121872 9.27616975 0.334276387 7.43764962 18.8030468 1.58781284 60.9218716 2.84217094e-14 72.3708379 28.4134929 75.6300326 59.7519042 79.3070729 88.7503808 81.8141458 100.700762 82.3155604"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

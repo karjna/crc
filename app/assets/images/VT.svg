@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="46px" viewBox="0 0 24 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>VT</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#22C677" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="VT" fill="url(#linearGradient-1)">
+            <polygon points="0.584983678 10.2789989 2.590642 15.7109902 3.25919478 20.1401523 2.42350381 23.3993471 4.51273123 27.0763874 5.2648531 28.9984766 4.67986942 31.1712731 7.43764962 32.4248096 9.86115343 41.450272 9.86115343 45.8794342 19.4715996 44.1244831 18.6359086 43.2052231 19.1373232 41.6174102 19.3044614 38.0239391 18.4687704 36.8539717 18.6359086 32.9262242 19.3044614 25.1542982 19.3044614 18.0509249 18.3852013 16.5466812 18.3852013 15.2095756 20.725136 14.2903156 23.6500544 10.6132753 23.6500544 7.60478781 22.0622416 5.3484222 21.8115343 0.509771491 -1.13686838e-13 6.18411317"></polygon>
+        </g>
+    </g>
+</svg>

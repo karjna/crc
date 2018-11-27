@@ -79,49 +79,30 @@
 }
 
 .docket{
-    hr{
-        margin-top: 4rem;
-        margin-bottom: 3rem;
+  svg{
+    width: 180px;
+    height: 180px;
+  }
+  .docket__state{
+    @include mont-bold;
+    width: 180px;
+    top: 65px;
+    font-size: 2.3rem;
+    position: absolute;
+  }
+  .docket__table-container{
+    height:180px;
+    display: table;
+    .cell{
+      vertical-align:middle;
     }
-    h3{
-        text-transform: uppercase;
-        font-size: 24px;
-        letter-spacing: 3px;
-        margin-bottom: 40px;
+  }
+  .docket__table{
+    width: 100%;
+    vertical-align:middle;
+    tr{
+        border-bottom: 1px solid $lightgrey;
     }
-    .row{
-        margin: 0px;
-    }
-    .col-three{
-        width:25%;
-        padding: 15px;
-        display: inline-block;
-        margin: auto;
-        @media only screen and (max-width:991px) {
-           width: 45%;
-        }
-        @media only screen and (max-width:560px) {
-            width:80%;
-        }
-        .card-body{
-            margin-bottom: 0 !important;
-            display: table;
-            @media only screen and (max-width:1200px) {
-                min-height: 112px;
 
-            }
-            @media only screen and (max-width:560px) {
-               min-height: auto;
-            }
-            .cell{
-                vertical-align: middle
-            }
-        }
-        .card-text{
-            text-transform: uppercase;
-            font-size: 15px;
-        }
-        .card-title{
-        }
-    }
+  }
 }
