@@ -21,6 +21,24 @@
     text-align: center;
 }
 
+.description--partners{
+  a{
+    background: $purple;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 6px;
+    margin-right: 4px;
+    font-weight: bold;
+    &:hover{
+      color: white;
+      background-color: $green;
+    }
+  }
+}
+
 // Work#index Page
 
 .gcard{
@@ -86,8 +104,44 @@
     }
 }
 
-.work__title{
+// Work#detail Page
 
+.sidebar__media{
+  border-bottom:1px solid $lightgrey;
+  padding: 16px 10px;
+  margin: 0;
+  a{
+    color: $black;
+    &:hover{
+      color: $green;
+    }
+  }
+}
+
+.sidebar__file{
+  border: 1px solid $lightgrey;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 20px;
+  color: $black;
+  position: relative;
+  left: -16px;
+  border-right: 4px solid $purple;
+  h5{
+    margin-bottom: 0;
+  }
+  &:hover{
+    border-right-color: $green;
+  }
+}
+
+.sidebar__file-text{
+  margin: 0;
+}
+
+.border__gray--left{
+  border-left: 1px solid $lightgrey;
 }
 
 // Docket Page

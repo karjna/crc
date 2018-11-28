@@ -25,41 +25,41 @@
 <div class = 'content-container'>
 
   <div class = "row">
-  <div class = "col-md-8">
-<div class = "description"><%= raw @work.about_body %></div>
-
+    <div class = "col-md-8 pr-5">
+      <div class = "description  mt-1">
+        <%= raw @work.about_body %>
+      </div>
     </div>
-    <div class = "col-sm-4 pt-4">
+    <div class = "col-sm-4 border__gray--left">
         <% if @work.partners != "" %>
-            <h3 class = "mb-3 mt-3 text-center anton text-uppercase">Partners</h2>
-            <%== @work.partners%>
+
+            <h3 class = "mb-3 mt-1 mont-bold">Partners</h3>
+            <div class = "description--partners">
+              <%== @work.partners%>
+            </div>
         <% end %>
 
-
         <% if @work.files.length > 0 %>
-            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Filings</h2>
+            <h3 class = "mb-3 mt-5 mont-bold">Filings</h3>
 
             <div class = "">
                 <div class=" full-width">
                     <% @work.files.each do |file| %>
-                        <div class="card">
-
-                            <a href="<%= file.file %>" class="card-body">
-                                <h5 class="card-title"><%= file.file_title %></h5>
-                                <p class="card-text"><%= file.description %> </p>
+                            <a href="<%= file.file %>" class="sidebar__file">
+                                <h5 class="sidebar__file-title"><%= file.file_title %></h5>
+                                <p class="sidebar__file-text"><%= file.description %> </p>
                             </a>
-                        </div>
                     <% end %>
                 </div>
             </div>
         <% end %>
 
         <% if @work.media_coverage.length > 0 %>
-            <h3 class = "mb-3 mt-5 text-center anton text-uppercase">Media Coverage</h2>
+            <h3 class = "mb-3 mt-5 mont-bold">Media Coverage</h3>
 
             <% @work.media_coverage.each do |media| %>
 
-                <h5 class="card-title"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
+                <h5 class="sidebar__media"> <a target="_blank" href="<%= media.article_source_link %>"><%= media.article_title %></a></h5>
 
             <% end %>
 
