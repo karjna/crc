@@ -13,13 +13,22 @@
     }
 }
 
+.header__logo--home{
+  width:85px;
+  display: inline-block;
+  img{
+    width:100%;
+  }
+}
+
 .home .header{
   position: absolute;
   z-index: 3;
   border-top:4px solid $purple;
-  border-bottom: 1px solid $transparentgrey;
+  // border-bottom: 1px solid $transparentgrey;
   overflow: hidden;
-  background-color: $transparentblack;
+  height:85px;
+  background-color: transparent;
   .float-left .nav-item:last-child{
     border-right:1px solid $transparentgrey;
   }
@@ -47,12 +56,14 @@
   }
 }
 
-.header__item + .header__item{
+.header__item--big + .header__item--big{
   border-left:1px solid $transparentgrey;
 }
 
+
+
 .header__item--hamburger{
-  padding: 6px 10px 0 10px;
+  padding: 11px 10px 0 10px;
   font-size: 30px;
   line-height: 7px;
   cursor: pointer;

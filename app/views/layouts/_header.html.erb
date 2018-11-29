@@ -1,9 +1,11 @@
 <% if current_page?(root_path) %>
 <nav class="header">
   <div class = "float-left">
-    <a class = "header__item" href = "/#mc-field-group">
-      Sign Up&nbsp; <i class="far fa-envelope"></i>
-    </a>
+    <a href = "/" class = "header__logo--home"><%= image_tag("large-logo.png") %></a>
+  </div>
+
+  <div class = "float-right">
+
     <a class = "header__item" target="_blank" href="http://www.facebook.com/civilrightscorps.org">
       <i class="fab fa-facebook-f"></i>
     </a>
@@ -13,9 +15,9 @@
     <a class = "header__item" target="_blank" href="https://www.instagram.com/civilrightscorps/">
       <i class="fab fa-instagram"></i>
     </a>
-  </div>
-
-  <div class = "float-right">
+    <a class = "header__item" href = "/#mc-field-group">
+      Sign Up&nbsp; <i class="far fa-envelope"></i>
+    </a>
     <a class = "header__item" href = "/donate">
       <%= image_tag("logo-mark.png") %> Donate
     </a>
