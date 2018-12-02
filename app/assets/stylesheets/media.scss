@@ -345,3 +345,86 @@ $slick-opacity-not-active: 0.25 !default;
     top: 50%;
     font-size: 31px;
 }
+
+.video__image{
+  background-size: cover;
+  display: inline-block;
+  background-position: center;
+  width:100%;
+  height:250px;
+  cursor: pointer;
+}
+
+.video__image--large{
+  height:400px;
+  margin-bottom: 20px;
+}
+
+.video__title, .article__title{
+  @include mont-bold;
+}
+
+.video__description{
+  font-size: 13px;
+}
+
+.video__source, .article__source{
+  color:$purple;
+  font-size: 15px;
+  @include mont-bold;
+}
+
+.video__link, .article__link{
+  color:$green !important;
+  @include mont-bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+// CTA
+
+.background-black{
+  background-color: $black;
+}
+
+.background-white{
+  background-color: white;
+}
+
+.cta--media{
+  color: white;
+  text-align: center;
+  @include mont-bold;
+  padding: 15px;
+  font-size: 25px;
+  margin-top: 60%;
+  img{
+    width:100%;
+  }
+}
+
+.cta-btn{
+  @include mont-bold;
+  width:60%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.mw-1400{
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.articles{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article{
+  border-bottom: 1px solid $lightgrey;
+}
+
+.article__description{
+  font-size: 15px;
+}
