@@ -14,7 +14,11 @@ class TeamController < ApplicationController
     def show
         @bodyClass = "team member"
         slug = params[:slug]
-    
+
         @member = ButterCMS::Page.get('team_member', slug).data.fields
+    end
+
+    def gallery
+      @bodyClass = "gallery"
     end
 end

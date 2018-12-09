@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   get 'home/index'
 
   root :to => 'home#index'
@@ -20,12 +20,13 @@ Rails.application.routes.draw do
   get '/work/docket' => 'work#docket'
   get '/work/:slug' => 'work#show'
   get '/work/*topic/:slug' => 'work#detail'
- 
+
 
   get '/team/staff' => 'team#index'
   get '/team/staff/:slug' => 'team#show'
 
   get '/team/fellows' => 'team#fellows'
+  get '/team/fellows/gallery' => 'team#gallery'
   get '/team/fellows/:slug' => 'team#show'
 
   get '/team/board' => 'board#index'
