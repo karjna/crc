@@ -4,16 +4,16 @@
 <h1>Media Coverage</h1>
 </div>
 
-<div class = 'content-container'>
+<div class = 'content-container content-container--long-text'>
 <div class = "row">
     <% @coverage.media_coverage.each do |media| %>
-        <div class = "col-lg-4 col-md-6">
-            <div class = "my-5">
-                <h3><%= media.title %></h3>
-                <h5><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
-                <p><%== media.summary %></p>
-                <a href = "<%= media.source_url %>" target = "_blank" class = "btn">Read the Full Story</a>
-            </div>
+      <div class = "article">
+        <div class = "my-5">
+          <h3 class ="article__title"><%= media.title %></h3>
+          <h5 class="article__source"><a href = "<%= media.source_url %>" target="_blank"><%= media.author %>, <%= media.source_name %></a></h5>
+          <p class = "article__description"><%== media.summary %></p>
+          <a href = "<%= media.source_url %>" target = "_blank" class = "article__link">Read the Full Story&nbsp;<i class="fas fa-caret-right"></i></a>
         </div>
+      </div>
     <% end %>
 </div>
