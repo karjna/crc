@@ -43,6 +43,8 @@ Rails.application.routes.draw do
   get '/media/coverage' => 'home#coverage'
   get '/media' => 'home#media'
   get '/donate' => 'home#donate'
+  get '/newsletter' => 'home#newsletter'
+  get '/thank-you' => 'home#thank_you'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
