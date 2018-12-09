@@ -1,6 +1,68 @@
 // Place all the styles related to the Team controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body.gallery{
+  h6.float-right.art-byline {
+    position: relative;
+    top: -26px;
+    background: $black-offset;
+}
+  .slider-for{
+    .slick-slide{
+      height:500px;
+      @media only screen and (max-width: 991px) {
+
+      }
+      @media only screen and (max-width: 767px) {
+          height:375px;
+      }
+      @media only screen and (max-width: 479px) {
+          height:250px
+      }
+      @media only screen and (max-width: 320px) {
+          height:170px;
+      }
+      div{
+        height:100%;
+      }
+      img{
+        height: 100%;
+        width:auto;
+        margin: 0 auto
+      }
+    }
+
+  }
+  .slider-nav{
+    .slick-slide{
+      height:150px;
+      @media only screen and (max-width: 991px) {
+          height:115px;
+      }
+      @media only screen and (max-width: 767px) {
+          height:84px;
+      }
+      @media only screen and (max-width: 479px) {
+          height:75px;
+      }
+      @media only screen and (max-width: 320px) {
+        height:50px;
+      }
+      div{
+        height:100%;
+      }
+      img{
+        height: 100%;
+        width:auto;
+        margin: 0 auto
+      }
+    }
+  }
+}
+
+
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}body{margin:0;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;margin:0.67em 0;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:bold;}dfn{font-style:italic;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em;}pre{white-space:pre-wrap;}q{quotes:"\201C" "\201D" "\2018" "\2019";}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.5em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}figure{margin:0;}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em;}legend{border:0;padding:0;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}
 *,
 *::after,
@@ -110,17 +172,17 @@ main {
 }
 
 .product__bg {
-	height: 12em;
+	height: 13em;
 	background: var(--details-bg-down);
 	position: relative;
 	@media only screen and (max-width:991px) {
-        height: 8em;
+        height: 9em;
 	}
 	@media only screen and (max-width:479px) {
-        max-height: 6em !important;
+        max-height: 7em !important;
 	}
 	@media only screen and (max-width:360px) {
-        max-height: 4em !important;
+        max-height: 5em !important;
     }
 }
 
@@ -151,7 +213,8 @@ main {
 	color: var(--color-product-title);
   text-align: center;
 	top:-40px;
-	background-color:$white;
+  @include mont-bold;
+	background-color:$black-offset;
 }
 
 .product__subtitle {
