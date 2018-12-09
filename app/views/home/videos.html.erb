@@ -1,17 +1,19 @@
 
 <% title 'Videos' %>
+
+<h1>Videos</h1>
 </div>
 
-<div class = 'content-container'>
+<div class = 'content-container content-container--long-text'>
 <div class = "slider-for">
     <% @videos.each do |video| %>
 
         <div class = "">
-            <div class="embed-responsive embed-responsive-21by9 mb-3">
+            <div class="embed-responsive embed-responsive-16by9 mb-3">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(video.youtube_link) %>?rel=0&amp;showinfo=0"></iframe>
             </div>
-            <h3><%= video.title %></h3>
-            <h5><% if (video.source)%><%== video.source %><% end %></h5>
+            <h3 class = "video__title"><%= video.title %></h3>
+            <h5 class = "video__source"><% if (video.source)%><%== video.source %><% end %></h5>
             <% clean = strip_tags(video.description)%>
             <p><%= truncate( clean, :length => 350 ) %></p>
         </div>
@@ -23,9 +25,9 @@
 
         <div class = "">
             <div class = "image">
-                <img class = "img-fluid" src = "https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg">
+              <div data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "video__image video__image--small" style = "background-image: url(https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg)"></div>
             </div>
-            <h4><%= video.title %></h4>
+            <h4 class = "video__title mt-2"><%= video.title %></h4>
 
         </div>
     <% end %>
