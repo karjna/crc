@@ -254,7 +254,7 @@ main {
 
 .details--open {
     pointer-events: auto;
-    background-color: black;
+    background-color: $black-offset;
 }
 
 .details > * {
@@ -301,7 +301,7 @@ main {
 	font-size: 4.5em;
 	color: var(--color-details-title);
 	font-weight: 700;
-	background-color: black;
+	background-color: $black-offset;
 	padding:0 15px 8px 0px;
   color:white;
 }
