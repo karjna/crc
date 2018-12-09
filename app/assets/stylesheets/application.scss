@@ -2,6 +2,7 @@
 
 //  variables
 $black: #1e272c;
+$black-offset: #272F35;
 $white: #fff;
 $lightgrey: #dfe0e1;
 $purple: #704c9f;
@@ -202,7 +203,7 @@ hr{
 
 .content-container{
     padding: 25px 40px;
-    ul{
+    ul:not(.slick-dots){
       list-style: none;
       li{
         margin-bottom: 15px;
@@ -222,18 +223,26 @@ hr{
     }
 }
 
+
+
 .content-container--long-text{
   max-width: 900px;
   margin: 0 auto;
 }
 
 .content-container--black{
-  background-color: $black;
+  background-color: $black-offset;
   color:white;
+  a{
+    color:$green;
+  }
+  .btn{
+    color: white;
+  }
 }
 
 .close-to-footer{
-  margin-bottom: -47px;
+  margin-bottom: -48px;
 }
 
 @import 'home.scss';
