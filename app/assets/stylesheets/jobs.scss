@@ -6,3 +6,29 @@ body.jobs{
         font-size: 3rem
     }
 }
+
+// Donate
+
+.table--bordered{
+  border-collapse: separate;
+  border-spacing: 30px;
+  margin: 0 -30px;
+  .cell{
+      border:1px solid $lightgrey;
+      padding: 20px 30px;
+  }
+}
+
+.max-50{
+    width:50%;
+}
+
+.small-text{
+  @include mont-light;
+  font-size: 13px;
+}
+
+.introduction {
+    font-size: 19px;
+    margin-top: 30px;
+}
