@@ -6,10 +6,10 @@
     display: inline-block;
     background-color: $purple;
     @media only screen and (max-width:991px) {
-    }
-    @media only screen and (max-width:650px) {
+      padding:  0 50px;
     }
     @media only screen and (max-width:479px) {
+      padding: 0 30px;
     }
 }
 
@@ -55,6 +55,9 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.5)
   }
+  @media only screen and (max-width:767px) {
+    padding-top: 23px;
+  }
 }
 
 .header__item--big + .header__item--big{
@@ -68,6 +71,9 @@
   font-size: 30px;
   line-height: 7px;
   cursor: pointer;
+  @media only screen and (max-width:767px) {
+    font-size: 45px;
+  }
 }
 
 // interior header
