@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     @featured = @featured.data.featured_cases
     @bannertext = @bannertext.data.homepage_headline
     @bannerimage = @bannerimage.data.banner_image[0].banner_image
+
   end
 
   def contact
