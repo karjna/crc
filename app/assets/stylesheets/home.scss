@@ -48,7 +48,16 @@
     display: inline-table;
     margin: auto;
     position: absolute;
-    max-width: 850px;
+    padding: 0 50px;
+    max-width: 920px;
+    @media only screen and (max-width: 767px) {
+      font-size: 32px;
+    }
+    @media only screen and (max-width: 479px) {
+      font-size: 27px;
+      text-align: left;
+      padding: 0 30px;
+    }
   }
 }
 
@@ -77,6 +86,12 @@
   background-position: right;
   background-position-y: 40px;
   background-position-x: 96%;
+  @media only screen and (max-width: 1200px) {
+    background-position-x: 109%;
+  }
+  @media only screen and (max-width: 991px) {
+    background-image: none;
+  }
 }
 
 .triangle{
@@ -158,7 +173,7 @@
         display: block;
     }
     @media only screen and (max-width:650px) {
-        padding: 40px 0px;
+        padding: 40px 30px;
     }
 }
 
