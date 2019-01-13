@@ -80,7 +80,7 @@
   top:-10px;
   z-index: 3;
   overflow: hidden;
-  background-image: image_url('justice.png');
+  // background-image: image_url('justice.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right;
@@ -164,9 +164,9 @@
 }
 
 .case__details{
-    width: 60%;
+    width: 100%;
     display: inline-block;
-    padding: 40px 50px 40px 80px;
+    padding: 40px 80px 40px 80px;
     color: white;
     @media only screen and (max-width: 991px) {
         width: 100%;
@@ -221,7 +221,7 @@
       }
     }
     .mc-field-group{
-      width:80%;
+      width: calc(100% - 150px);;
       float: left;
     }
     .clear{
@@ -305,7 +305,7 @@ $banners: join donate;
 
 .page-banner.join, body.jobs .header--large{
     height:400px;
-    padding-top: 83px;
+    padding-top: 64px;
     @media only screen and (max-width:991px) {
         height: 300px;
     }
