@@ -78,6 +78,10 @@
   margin: 0 auto;
 }
 
+.svg__filled:hover{
+  fill: $green;
+}
+
 // Work#show Page
 
 .work__cell{
