@@ -11,18 +11,12 @@
 
     <div class = "row my-5">
 
-        <div class = "col-sm-6">
-            <h2 class = " px-3  display-4 text-center "><%= job.job_title %></h2>
-        </div>
-        <div class = "col-sm-6 text-center">
-            <% if job.job_summary != "" %>
-                <p class="card-text "><%= job.job_summary %></p>
-            <% else %>
-                <% clean = strip_tags(job.job_description)%>
-                <p class="card-text  "><%= truncate( clean, :length => 400 ) %></p>
-            <% end %>
+        <div class = "col-sm-12 text-center">
+            <h2 class = " px-3  display-4  "><%= job.job_title %></h2>
             <a href = "/jobs/<%= job.slug %>" class = "btn ">Learn More</a>
+
         </div>
+
     </div>
     <%if job != @sorted.job_listings.last%>
     <hr>
