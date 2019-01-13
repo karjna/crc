@@ -31,16 +31,6 @@
 <% else %>
 
   <nav class = "interior-header">
-    <div class = "action-bar">
-      <div class = "float-right">
-        <a class = "action-bar__item" href = "/newsletter">
-          Sign Up&nbsp; <i class="far fa-envelope"></i>
-        </a>
-        <a class = "action-bar__item" href = "/donate">
-          Donate&nbsp; <%= image_tag("logo-mark.png") %>
-        </a>
-      </div>
-    </div>
     <div class = "interior-header__main">
       <div class = "float-left">
         <a class = "interior-header__logo" href = "/">
@@ -48,6 +38,12 @@
         </a>
       </div>
       <div class = "float-right">
+        <a class = "header__item header__item--big header__item--text" target="_blank" href="/donate">
+          Donate&nbsp;
+        </a>
+        <a class = "header__item header__item--big header__item--text" target="_blank" href="/newsletter">
+          Sign Up&nbsp; 
+        </a>
         <a class = "header__item header__item--big" target="_blank" href="http://www.facebook.com/civilrightscorps.org">
           <i class="fab fa-facebook-f"></i>
         </a>
