@@ -138,13 +138,13 @@ main {
 }
 
 .grid {
-	margin: 5em auto 7em;
+	margin: 2em auto 7em;
 	position: relative;
 	padding: 0 0em;
 	width: 100%;
 	// max-width: 1000px;
 	display: grid;
-	grid-template-columns: 33% 33% 33%;
+	grid-template-columns: 25% 25% 25% 25%;
 	@media only screen and (max-width:991px) {
         grid-template-columns: 50% 50%;
 	}
@@ -152,10 +152,10 @@ main {
 }
 
 .grid__item {
-	padding: 0 4vw;
-	margin: 0 0 12vh;
+	padding: 0 1vw;
+	margin: 0 0 2vh;
 	@media only screen and (max-width:991px) {
-        margin: 0 0 6vh;
+        margin: 0 0 3vh;
     }
 }
 
@@ -165,14 +165,19 @@ main {
 
 .product {
 	height: 100%;
-	padding-top: 10em;
+	padding-top: 0em;
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
+  &:hover{
+    .product__hover{
+      bottom: 0px;
+    }
+  }
 }
 
 .product__bg {
-	height: 13em;
+	height: 20em;
 	background: var(--details-bg-down);
 	position: relative;
 	@media only screen and (max-width:991px) {
@@ -184,6 +189,20 @@ main {
 	@media only screen and (max-width:360px) {
         max-height: 5em !important;
     }
+}
+
+.product__hover{
+  position: absolute;
+  bottom: -150px;
+  width:101%;
+  min-height:90px;
+  padding: 20px 5px 0px;
+  transition: 0.4s ease-in all;
+  background: -moz-linear-gradient(top, rgba(112,76,159,0) 0%, rgba(112,76,159,0.85) 71%, rgba(112,76,159,0.85) 80%);
+  background: -webkit-linear-gradient(top, rgba(112,76,159,0) 0%,rgba(112,76,159,0.85) 71%,rgba(112,76,159,0.85) 80%);
+  background: linear-gradient(to bottom, rgba(112,76,159,0) 0%,rgba(112,76,159,0.85) 71%,rgba(112,76,159,0.85) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00704c9f', endColorstr='#d9704c9f',GradientType=0 );
+
 }
 
 .product__img {
@@ -210,11 +229,10 @@ main {
 	position: relative;
 	margin: 0.5em 0 0;
 	font-size: 1.75em;
+  line-height: 1em;
 	color: var(--color-product-title);
   text-align: center;
-	top:-40px;
   @include mont-bold;
-	background-color:$black-offset;
 }
 
 .product__subtitle {
@@ -222,8 +240,8 @@ main {
   text-align: center;
 	margin: 0;
 	color: var(--color-product-subtitle);
-  font-size: 17px;
-	top:-40px;
+  font-size: 15px;
+  margin: 10px 0px 20px;
   @include mont-light;
 }
 
@@ -297,13 +315,11 @@ main {
 }
 
 .details__title {
-	margin: -1.5em 0 0em;
+	margin: -1.5em 5em 0em 0;
 	font-size: 4.5em;
-	color: var(--color-details-title);
+	color: #22c677;
 	font-weight: 700;
-	background-color: $black-offset;
 	padding:0 15px 8px 0px;
-  color:white;
 }
 
 .details__subtitle {
