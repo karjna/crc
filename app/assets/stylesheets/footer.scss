@@ -3,6 +3,9 @@
   padding: 25px 80px 15px;
   display: inline-table;
   width: 100%;
+  @media only screen and (max-width: 479px) {
+    padding: 25px 30px 15px;
+  }
 }
 
 .footer--top{
@@ -24,6 +27,9 @@
   text-align: -webkit-right;
   text-align: right;
   display: block;
+  @media only screen and (max-width:767px) {
+    text-align: left;
+  }
 }
 
 .footer__item{
