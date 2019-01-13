@@ -60,6 +60,7 @@
   }
 }
 
+
 .header__item--big + .header__item--big{
   border-left:1px solid $transparentgrey;
 }
@@ -131,13 +132,14 @@
 
 .interior-header__main{
   position: fixed;
-  top:23px;
+  top:0px;
   background-color: rgba(30, 39, 44, 0.9);
   display: inline-block;
   width:100%;
   padding: 0 0 0 15px;
   z-index: 4;
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  border-top:4px solid $purple;
 }
 
 .interior-header__logo{
@@ -158,6 +160,10 @@
   }
   .header__item--hamburger{
     font-size: 20px;
+  }
+  .header__item--text{
+    font-size: 11px;
+    padding: 21px 2px 18px 11px;
   }
 }
 
