@@ -11,8 +11,8 @@
                 <div class="product">
                     <div class="product__bg"></div>
                     <img class="product__img" src="<%= memberdata.team_member_photo %>" alt="img 01"/>
-                    <h2 class="product__title"><%= memberdata.first_name %> <%= memberdata.last_name %></h2>
-                    <h3 class="product__subtitle"><%= memberdata.position %></h3>
+                    <div class = "product__hover"><h2 class="product__title"><%= memberdata.first_name %> <%= memberdata.last_name %></h2>
+                    <h3 class="product__subtitle"><%= memberdata.position %></h3></div>
                     <div class="product__description"><%= raw memberdata.bio %></div>
                 </div>
             </div>
