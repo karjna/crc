@@ -6,7 +6,7 @@ module WorkHelper
   end
 
   def color_state(state)
-    html = 'fill="url(#linearGradient-1)"'
+    html = 'fill="#704c9f" class="svg__filled"'
     if @states.include?(state)
       return html.html_safe
     end
