@@ -278,11 +278,31 @@
 }
 
 // banner css
-$banners: join donate;
+$banners: join donate contact mission;
 
 @each $banner in $banners{
     .page-banner.#{$banner}{
         background-image: image_url('#{$banner}.jpg')
+    }
+
+    .page-banner--full.#{$banner}{
+      background-image: none;
+      &:before{
+        background-image: image_url('#{$banner}.jpg');
+        width:100%;
+        height:100%;
+        position: absolute;
+        top:0;
+        left:0;
+        content: '';
+        z-index: 0;
+        background-size:cover;
+        background-position:center;
+        display: inline-block;
+        background-color: $black;
+        background-blend-mode: overlay;
+        filter: blur(2px);
+      }
     }
 }
 
@@ -303,6 +323,28 @@ $banners: join donate;
 
 }
 
+.page-banner--full{
+  height:auto;
+  margin-bottom: -48px;
+  padding-top: 105px;
+  position: relative;
+}
+
+body.full{
+  .header--large{
+    height:3px;
+  }
+
+  h1{
+    position: relative;
+    z-index: 2;
+  }
+  .content-container--black, .content-container{
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+  }
+}
 .page-banner.join, body.jobs .header--large{
     height:400px;
     padding-top: 64px;
