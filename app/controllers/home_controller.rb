@@ -12,15 +12,19 @@ class HomeController < ApplicationController
   end
 
   def contact
-    @bodyClass = "contact"
+    @bodyClass = "contact full"
   end
 
   def donate
-    @bodyClass = "donate"
+    @bodyClass = "donate full"
   end
 
   def newsletter
     @bodyClass = "newsletter"
+  end
+
+  def mission
+    @bodyClass = "mission full"
   end
 
   def thank_you

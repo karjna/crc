@@ -43,6 +43,7 @@ Rails.application.routes.draw do
   get '/media/coverage' => 'home#coverage'
   get '/media' => 'home#media'
   get '/donate' => 'home#donate'
+  get '/mission' => 'home#mission'
   get '/newsletter' => 'home#newsletter'
   get '/thank-you' => 'home#thank_you'
 
