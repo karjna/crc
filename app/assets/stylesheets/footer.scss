@@ -3,7 +3,7 @@
   padding: 25px 80px 15px;
   display: inline-table;
   width: 100%;
-  @media only screen and (max-width: 479px) {
+  @media only screen and (max-width: 767px) {
     padding: 25px 30px 15px;
   }
 }
@@ -12,6 +12,11 @@
   background-color: $black;
 }
 
+.address{
+  @media only screen and (max-width:640px) {
+    font-size: 14px;
+  }
+}
 .footer--bottom{
   background-color: $purple;
   ul{
