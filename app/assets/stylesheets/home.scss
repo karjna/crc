@@ -315,10 +315,9 @@ $banners: join donate contact mission;
     background-color: $black;
     background-blend-mode: overlay;
     @media only screen and (max-width:776px) {
-        height: 200px;
+
     }
     @media only screen and (max-width:479px) {
-        height: 140px;
     }
 
 }
