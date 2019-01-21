@@ -114,14 +114,26 @@ h1{
     margin-bottom: 50px;
     @include mont-light;
     color:white;
-    @media only screen and (max-width:767px) {
+    @media only screen and (max-width:991px) {
         font-size: 2.2em !important;
+    }
+    @media only screen and (max-width:767px) {
+        font-size: 2em !important;
+    }
+    @media only screen and (max-width:479px) {
+        font-size: 1.5em !important;
     }
 }
 
 h2{
   font-size: 40px;
   margin-bottom: 40px;
+}
+
+h3, .h3{
+  @media only screen and (max-width:479px) {
+    font-size: 1.25rem;
+  }
 }
 
 .btn{
@@ -197,12 +209,18 @@ hr{
 }
 
 .section-header{
-  border-bottom: 8px dotted $purple;
+  border-bottom: 2px solid $purple;
   font-size: 40px;
+  @media only screen and (max-width:776px) {
+    font-size: 34px;
+  }
 }
 
 .content-container{
     padding: 25px 40px;
+    @media only screen and (max-width:479px) {
+      padding: 20px 30px;
+    }
     ul:not(.slick-dots){
       list-style: none;
       li{
