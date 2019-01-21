@@ -11,10 +11,10 @@
   <% if index == 0 %>
   <div class = "row">
 
-    <div class = "col-sm-8">
+    <div class = "col-lg-8 col-md-6">
       <div data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "video__image video__image--large" style = "background-image: url(https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg)"></div>
     </div>
-    <div class = "col-sm-4 ">
+    <div class = "col-lg-4 col-md-6 ">
       <div class = "video">
         <h3 data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-0 video__title"><%= video.title %></h3>
         <h5 class = "video__source"><% if (video.source)%><%== video.source %><% end %></h5>
