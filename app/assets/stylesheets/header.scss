@@ -157,6 +157,9 @@
     height:59px;
     font-size: 16px;
     border-left:1px solid $transparentgrey;
+    @media only screen and (max-width:340px) {
+      padding:18px 15px;
+    }
   }
   .header__item--hamburger{
     font-size: 20px;
