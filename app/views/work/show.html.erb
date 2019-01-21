@@ -4,7 +4,7 @@
 <nav aria-label="breadcrumb" class = "breadcrumbs__container">
   <ol class="list-inline breadcrumbs">
      <li class="list-inline-item"><a class = "breadcrumbs__link" href="/work">Work</a></li>&bull;
-  
+
     <li class="list-inline-item" aria-current="page"><span class = "breadcrumbs__link"><%= @work.title %></span></li>
   </ol>
 </nav>
@@ -34,4 +34,5 @@
         <% if count % 2 == 0%></div><% end %>
         <% count = count + 1 %>
     <% end %>
+    </div>
 </div>
