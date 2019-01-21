@@ -19,6 +19,13 @@
     max-width: 900px;
     margin: 60px auto 100px;
     text-align: center;
+    @media only screen and (max-width:776px) {
+      font-size: 16px;
+    }
+    @media only screen and (max-width:479px) {
+      text-align: left;
+
+    }
 }
 
 .description--partners{
@@ -92,6 +99,9 @@
     border-bottom:1px solid $lightgrey;
     padding: 20px 30px;
     color:$purple;
+    @media only screen and (max-width:991px) {
+      padding: 20px 15px;
+    }
     p{
         color:$black;
     }
@@ -156,6 +166,9 @@
   svg{
     width: 180px;
     height: 180px;
+    @media only screen and (max-width:767px) {
+      display: none;
+    }
   }
   .docket__state{
     @include mont-bold;
@@ -163,12 +176,22 @@
     top: 65px;
     font-size: 2.3rem;
     position: absolute;
+    @media only screen and (max-width:767px) {
+      top:0px;
+      position: relative;
+      text-align: left !important;
+      font-size: 1.5rem;
+    }
   }
   .docket__table-container{
     height:180px;
     display: table;
     .cell{
       vertical-align:middle;
+    }
+    @media only screen and (max-width:767px) {
+      margin: 20px 0;
+      height: auto;
     }
   }
   .docket__table{
