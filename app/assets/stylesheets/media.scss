@@ -345,7 +345,9 @@ $slick-opacity-not-active: 0.25 !default;
     top: 50%;
     font-size: 31px;
 }
-
+.video{
+  margin-bottom: 20px;
+}
 .video__image{
   background-size: cover;
   display: inline-block;
@@ -353,11 +355,32 @@ $slick-opacity-not-active: 0.25 !default;
   width:100%;
   height:250px;
   cursor: pointer;
+  @media only screen and (max-width:991px) {
+    height:180px;
+  }
+  @media only screen and (max-width:767px) {
+    height:140px;
+  }
+  @media only screen and (max-width:497px) {
+    height:200px;
+  }
 }
 
 .video__image--large{
   height:400px;
   margin-bottom: 20px;
+  @media only screen and (max-width:1200px) {
+    height:350px;
+  }
+  @media only screen and (max-width:991px) {
+    height:200px;
+  }
+  @media only screen and (max-width:767px) {
+    height:270px;
+  }
+  @media only screen and (max-width:497px) {
+    height:200px;
+  }
 }
 
 .video__title, .article__title{
