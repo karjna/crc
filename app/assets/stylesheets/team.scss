@@ -145,7 +145,10 @@ main {
 	// max-width: 1000px;
 	display: grid;
 	grid-template-columns: 25% 25% 25% 25%;
-	@media only screen and (max-width:991px) {
+  @media only screen and (max-width:991px) {
+        grid-template-columns: 33% 33% 33%;
+	}
+	@media only screen and (max-width:767px) {
         grid-template-columns: 50% 50%;
 	}
 
@@ -180,14 +183,20 @@ main {
 	height: 20em;
 	background: var(--details-bg-down);
 	position: relative;
+  @media only screen and (max-width: 1050px) {
+    height:18em;
+  }
 	@media only screen and (max-width:991px) {
-        height: 9em;
+        height: 19em;
+	}
+  @media only screen and (max-width:767px) {
+        max-height: 17em !important;
 	}
 	@media only screen and (max-width:479px) {
-        max-height: 7em !important;
+        max-height: 12em !important;
 	}
 	@media only screen and (max-width:360px) {
-        max-height: 5em !important;
+        max-height: 11em !important;
     }
 }
 
@@ -215,10 +224,12 @@ main {
 	pointer-events: none;
 	transform: translate3d(-50%,0,0);
 	@media only screen and (max-width:991px) {
-       max-height: 15em;
+       max-height: 23em;
+       top:-2em;
 	}
 	@media only screen and (max-width:479px) {
-        max-height: 13em !important;
+        max-height: 14em !important;
+        top:0;
 	}
 	@media only screen and (max-width:360px) {
         max-height: 10em !important;
@@ -469,7 +480,6 @@ main {
 		padding: 0 2vw;
 	}
 	.product__bg {
-		height: 10em;
 	}
 	.product__img {
 		max-height: 19em;
