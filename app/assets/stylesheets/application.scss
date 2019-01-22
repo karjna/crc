@@ -118,13 +118,19 @@ h1{
     @include mont-light;
     color:white;
     @media only screen and (max-width:991px) {
-        font-size: 2.2em !important;
+        font-size: 2em !important;
     }
     @media only screen and (max-width:767px) {
         font-size: 2em !important;
     }
     @media only screen and (max-width:479px) {
         font-size: 1.5em !important;
+    }
+    @media only screen and (max-width:379px) {
+        font-size: 1.3em !important;
+    }
+    @media only screen and (max-width:320px) {
+        font-size: 1.1em !important;
     }
 }
 
@@ -205,6 +211,9 @@ a.card-body, a.card{
     color:$green;
     display: inline-block;
     font-size: 11px;
+    @media only screen and (max-width:379px) {
+        font-size: 10px;
+    }
     .breadcrumbs__link{
       color:$green;
       text-transform: capitalize;

@@ -12,25 +12,28 @@
 
 <h1><%= @work.title %></h1>
 
-<% if @work.video_banner != "" %>
-     <div class="embed-responsive embed-responsive-21by9 mb-3">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(@work.video_banner) %>?rel=0&amp;showinfo=0"></iframe>
-    </div>
-<% else %>
-    <% if @work.banner_image != "" %>
-        <div class = "page-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div>
-    <% end %>
+
+<% if @work.banner_image != "" %>
+    <div class = "page-banner" style = "background-image:url(<%= @work.banner_image %>)"> </div>
 <% end %>
+
 </div>
 <div class = 'content-container'>
 
   <div class = "row">
     <div class = "col-md-8 pr-5">
-      <div class = "description  mt-1">
+      <% if @work.video_banner != "" %>
+           <div class="embed-responsive embed-responsive-21by9 mb-3">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= get_youtube_id(@work.video_banner) %>?rel=0&amp;showinfo=0"></iframe>
+          </div>
+      <% end %>
+      <div class = "description text-left mt-1">
         <%= raw @work.about_body %>
       </div>
     </div>
-    <div class = "col-sm-4 border__gray--left">
+    <hr class = "d-block d-md-none"/>
+    <div class = "col-md-4 border__gray--left">
+
         <% if @work.partners != "" %>
 
             <h3 class = "mb-3 mt-1 mont-bold">Partners</h3>
