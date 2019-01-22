@@ -366,6 +366,12 @@ $slick-opacity-not-active: 0.25 !default;
   }
 }
 
+body.videos .video__image{
+  @media only screen and (max-width:575px) {
+    height:260px;
+  }
+}
+
 .video__image--large{
   height:400px;
   margin-bottom: 20px;
