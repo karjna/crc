@@ -4,7 +4,8 @@ $(document).ready(function(){
     slidesToScroll: 1,
     arrows: false,
     fade: true,
-    asNavFor: '.slider-nav'
+    asNavFor: '.slider-nav',
+    adaptiveHeight: true
     });
 
     $('.slider-nav').slick({
@@ -17,6 +18,25 @@ $(document).ready(function(){
     arrows: true,
     focusOnSelect: true,
     prevArrow: '<i class="fas fa-angle-left" id="prev-arrow"></i>',
-    nextArrow:'<i class="fas fa-angle-right" id="next-arrow"></i>'
+    nextArrow:'<i class="fas fa-angle-right" id="next-arrow"></i>',
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+
+    {
+      breakpoint: 576,
+      settings: "unslick"
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
     });
 });
