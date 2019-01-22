@@ -54,7 +54,15 @@
   padding-bottom: 6px;
   margin-bottom: 20px;
   min-height: 264px;
+  @media only screen and (max-width:1104px) {
+    min-height: 279px;
+  }
+  @media only screen and (max-width:991px) {
+    min-height: auto;
+  }
+
 }
+
 
 .gcard__body{
   background-color: white;
@@ -63,6 +71,9 @@
   color: $black;
   padding: 20px 30px;
   min-height: 258px;
+  @media only screen and (max-width:991px) {
+    min-height: auto;
+  }
 }
 
 .gcard__title{
