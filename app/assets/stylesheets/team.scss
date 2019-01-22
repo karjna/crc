@@ -534,3 +534,22 @@ main {
 		margin: 1.75em 1.5em 0 0;
 	}
 }
+
+.fellows{
+    @media only screen and (max-width: 991px){
+    .product__img {
+        max-height: 20em;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+    .product__bg {
+        max-height: 19em !important;
+    }
+  }
+  @media only screen and (max-width: 479px){
+    .product__bg {
+        max-height: 15em !important;
+    }
+  }
+}
