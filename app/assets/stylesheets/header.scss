@@ -84,6 +84,9 @@
   height: 275px;
   position: relative;
   overflow: hidden;
+  @media only screen and (max-width:479px) {
+        height:200px;
+	}
   &:after{
     background-image: image_url('justice.png');
     background-repeat: no-repeat;
@@ -197,6 +200,14 @@
         top: 37px;
         right: 76px;
         z-index: 1;
+        @media only screen and (max-width:615px) {
+          top:26px;
+          right:35px;
+        }
+        @media only screen and (max-width:400px) {
+          top:17px;
+          right:23px;
+        }
     }
 }
 
