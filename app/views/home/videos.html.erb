@@ -5,7 +5,7 @@
 </div>
 
 <div class = 'content-container content-container--long-text'>
-<div class = "slider-for">
+<div class = "slider-for d-none d-sm-block">
     <% @videos.each do |video| %>
 
         <div class = "">
@@ -28,7 +28,8 @@
               <div data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "video__image video__image--small" style = "background-image: url(https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg)"></div>
             </div>
             <h4 class = "video__title mt-2"><%= video.title %></h4>
-
+            <% clean = strip_tags(video.description)%>
+            <p class="d-sm-none"><%= truncate( clean, :length => 350 ) %></p>
         </div>
     <% end %>
 </div>
