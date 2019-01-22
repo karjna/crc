@@ -20,6 +20,10 @@ body.jobs{
       border:1px solid $lightgrey;
       padding: 20px 30px;
   }
+  @media only screen and (max-width:767px) {
+    margin: 0;
+    display: block;
+  }
 }
 
 .max-50{
