@@ -1,14 +1,39 @@
 <% title 'Our Work' %>
 <% meta_tag :description, @seo.data.our_work_seo_description %>
 
-<h1>Our Work</h1>
+  <h1>Our Work</h1>
 </div>
-<div class = 'content-container'>
 
+  <div class = "circle__area d-none d-lg-block" id ="">
+    <div class = "circle__nav content-container">
+      <% @work.work_topic.each_with_index do |workitem, index| %>
+        <h3  id="title-<%= index %>" class="circle__title"></h3>
+      <% end %>
+    </div>
+    <div class = "circle">
+      <% @work.work_topic.each_with_index do |workitem, index| %>
+          <a href = "/work/<%= workitem.url_slug %>" class="slice" id="slice-<%= index %>" style = "background-image: url(<%= workitem.list_page_image %>)">
+              <div class = "slice__overlay"></div>
+              <div class="slice__body">
+                <div class = "slice__shape"></div>
+                <div class = "slice__title"><%= workitem.title %></div>
+                  <% if workitem.short_description != "" %>
+                      <p class="slice__text"><%= workitem.short_description %> <span class ="slice__link gcard__link">Learn More</span></p>
+                  <% else %>
+                      <% clean = strip_tags(workitem.long_description)%>
+                      <p class="slice__text"><%= truncate( clean, :length => 160 ) %> <span class ="slice__link gcard__link">Learn More</span></p>
+                  <% end %>
+
+              </div>
+          </a>
+      <% end %>
+    </div>
+
+  </div>
+  <div class = 'content-container d-none-lg'>
   <div class = "card-columns two-column">
       <% @work.work_topic.each do |workitem| %>
           <a href = "/work/<%= workitem.url_slug %>" class="gcard">
-
               <div class="gcard__body">
                   <h3 class="gcard__title"><%= workitem.title %></h3>
                   <% if workitem.short_description != "" %>
