@@ -183,11 +183,11 @@
 }
 .newsletter-area{
     padding: 54px 30px 40px;
-    background-color: white;
+    background-color: #242e32;
     max-width: 810px;
     margin: 0 auto;
     h3{
-      color:$black;
+      color:white;
       @include mont-light;
     }
     #mc_embed_signup{
