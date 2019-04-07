@@ -177,6 +177,10 @@
     }
 }
 
+.newsletter-container{
+  background-color: white;
+  margin-top: -10px;
+}
 .newsletter-area{
     padding: 54px 30px 40px;
     background-color: white;
@@ -264,7 +268,7 @@
     display: table;
     line-height: 19px;
     font-size: 16px;
-    background: $green;
+    background: rgba(30, 39, 44, 0.63);
     max-width: 552px;
     margin: 0 auto;
     padding: 20px;
@@ -272,7 +276,7 @@
         vertical-align: middle
     }
     &:hover{
-        background-color: rgba(0, 0, 0, 0.5)
+        background-color: $green
     }
 
 }

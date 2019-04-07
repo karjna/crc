@@ -28,8 +28,8 @@
   <% end %>
 
   <% if index == 1 %>
-  <div class = "row background-black">
-    <div class = "col-sm-6 background-white">
+  <div class = "row ">
+    <div class = "col-sm-6 ">
       <div class = "video video--small">
       <div data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "video__image video__image--small" style = "background-image: url(https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg)"></div>
       <h3 data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4 video__title"><%= video.title %></h3>
@@ -45,7 +45,7 @@
     <% end %>
 
     <% if index == 2 %>
-    <div class = "col-sm-6 background-white">
+    <div class = "col-sm-6 ">
       <div class = "video video--small">
         <div data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "video__image video__image--small" style = "background-image: url(https://img.youtube.com/vi/<%= get_youtube_id(video.youtube_link) %>/hqdefault.jpg)"></div>
         <h3 data-toggle="modal" data-target="#<%= get_youtube_id(video.youtube_link) %>" class = "mt-4 video__title"><%= video.title %></h3>

@@ -30,10 +30,10 @@
     </div>
 
   </div>
-  <div class = 'content-container d-none-lg'>
+  <div class = 'content-container d-lg-none'>
   <div class = "card-columns two-column">
       <% @work.work_topic.each do |workitem| %>
-          <a href = "/work/<%= workitem.url_slug %>" class="gcard">
+          <a href = "/work/<%= workitem.url_slug %>" class="gcard" style = "background-image: url(<%= workitem.list_page_image %>)">
               <div class="gcard__body">
                   <h3 class="gcard__title"><%= workitem.title %></h3>
                   <% if workitem.short_description != "" %>

@@ -58,7 +58,8 @@ $alfa: 'Alfa Slab One', cursive;
 }
 
 body{
-  color: $black;
+  color: white;
+  background-color: #242e33;
   @include montserrat;
 }
 
@@ -96,9 +97,9 @@ body{
 // general styles
 
 a {
-    color: $purple;
+    color: $green;
     &:hover{
-        color:$green;
+        color:$purple;
         text-decoration: none;
     }
 }
@@ -231,7 +232,7 @@ hr{
 }
 
 .section-header{
-  border-bottom: 2px solid $purple;
+  border-bottom: 2px solid $green;
   font-size: 40px;
   @media only screen and (max-width:776px) {
     font-size: 34px;

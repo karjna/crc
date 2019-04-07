@@ -144,6 +144,7 @@
   padding-left: 7%;
   &:nth-child(2){
     // transform: rotate(90deg);
+
   }
   &:nth-child(3){
     // transform: rotate(270deg);
@@ -213,6 +214,9 @@
   height: 400px;
   float: left;
   box-sizing: border-box;
+  @media only screen and (max-width: 1090px) {
+      shape-outside: polygon(0 0, 182px 0, 43px 113px, -81px 400px);
+  }
 
 }
 #slice-0 .slice__shape{
@@ -221,6 +225,9 @@
 #slice-1 .slice__shape{
   shape-outside: polygon(101% 0, 18% 0, 77% 195px, 107% 400px);
   float:right;
+  @media only screen and (max-width: 1090px) {
+      shape-outside: polygon(107% 0, 30% 0, 90% 157px, 107% 400px);
+  }
 }
 #slice-2 .slice__shape{
     shape-outside: polygon(-7% 0, 20% 50%, 100% 93%, 0 100%);
@@ -238,6 +245,12 @@
   opacity: 0;
   box-sizing: border-box;
   transition: 0.5s all ease-in;
+  @media only screen and (max-width: 1200px) {
+      font-size: 14px;
+  }
+  @media only screen and (max-width: 1040px) {
+      font-size: 13px;
+  }
 
 }
 
@@ -263,12 +276,19 @@
   display: block;
 }
 
+#slice-1 .slice__link, #slice-3 .slice__link{
+  text-align: left;
+}
+
 .gcard{
-  @include gradient-h;
   display: inline-block;
   padding-bottom: 6px;
   margin-bottom: 20px;
   min-height: 264px;
+  position: relative;
+  width:100%;
+  background-size: cover;
+  background-position: center;
   @media only screen and (max-width:1104px) {
     min-height: 279px;
   }
@@ -278,28 +298,46 @@
   img{
     width: 100%;
   }
+
 }
 
 
 .gcard__body{
-  background-color: white;
-  border: 1px solid $lightgrey;
+  z-index: 1;
   border-bottom: 0px;
-  color: $black;
+  color: white;
   padding: 20px 30px;
   min-height: 258px;
+  margin-bottom: -10px;
   @media only screen and (max-width:991px) {
-    min-height: auto;
+    min-height: auto
+  }
+  &:before{
+    content:'';
+    background-color: $black;
+    height: 100%;
+    opacity: 0.79;
+    width:100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    mix-blend-mode:multiply;
+    background-blend-mode: multiply;
+    position: absolute;
   }
 }
 
 .gcard__title{
+  position: relative;
+  z-index: 2;
 
 }
 
 .gcard__text{
   font-size: 13px;
   line-height: 1.5;
+  position: relative;
+  z-index: 2;
 }
 
 .gcard__link{
@@ -307,12 +345,16 @@
   @include mont-bold;
   text-transform: uppercase;
   font-size: 13px;
+  position: relative;
+  z-index: 2;
 }
 
 #map-svg{
   margin: 0 auto;
   @media only screen and (max-width:991px) {
     transform: scale(0.7);
+    position: relative;
+    left: -20%;
   }
 }
 
@@ -324,14 +366,14 @@
 
 .work__cell{
     display: block;
-    border-bottom:1px solid $lightgrey;
-    padding: 20px 30px;
-    color:$purple;
+    border-bottom:1px solid #505050;
+    padding: 40px 30px 20px;
+    color:white;
     @media only screen and (max-width:991px) {
       padding: 20px 15px;
     }
     p{
-        color:$black;
+        color:white;
     }
     &:hover{
 
