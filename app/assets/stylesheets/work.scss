@@ -144,7 +144,9 @@
   padding-left: 7%;
   &:nth-child(2){
     // transform: rotate(90deg);
-
+    @media only screen and (min-width: 1650px) {
+        padding-right: 10%;
+    }
   }
   &:nth-child(3){
     // transform: rotate(270deg);
@@ -159,6 +161,9 @@
     .slice__text{
       opacity: 1;
     }
+  }
+  @media only screen and (min-width: 1650px) {
+      padding-top: 10%;
   }
 }
 
