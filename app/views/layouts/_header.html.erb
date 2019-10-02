@@ -1,5 +1,6 @@
 <% if current_page?(root_path) %>
 <nav class="header">
+<div class = "position-relative">
   <div class = "float-left">
     <a href = "/" class = "header__logo--home"><%= image_tag("logo.png") %></a>
   </div>
@@ -31,6 +32,7 @@
     <div class = "header__item header__item--hamburger"  data-toggle="modal" data-target="#mobileNav">
       <div class = "hamburger"><i class="fas fa-bars"  ></i></div>
     </div>
+  </div>
   </div>
 </nav>
 
