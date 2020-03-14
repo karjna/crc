@@ -1,0 +1,20 @@
+<% title @poem.title %>
+<% meta_tag :description, 'View poems from Poets in Residence at Civil Rights Corps' %>
+
+<nav aria-label="breadcrumb" class = "breadcrumbs__container">
+  <ol class="list-inline breadcrumbs">
+     <li class="list-inline-item"><a class = "breadcrumbs__link" href="/gallery">Gallery</a></li>&bull;
+
+    <li class="list-inline-item" aria-current="page"><span class = "breadcrumbs__link"><%= @poem.title %></span></li>
+  </ol>
+</nav>
+<h1><%= @poem.title %></h1>
+</div>
+<div class = 'content-container content-container--black'>
+  <div class="content">
+    <%== @poem.formatted_poem %>
+    <p class = "mt-3">
+      <a class = "btn" href = "<%= @poem.poem_file %>">Download Poem</a>
+    </p>
+  </div>
+</div>
