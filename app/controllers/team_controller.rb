@@ -19,6 +19,23 @@ class TeamController < ApplicationController
     end
 
     def gallery
-      @bodyClass = "gallery"
+        @bodyClass = "gallery"
+        @sorted_gallery = ButterCMS::Content.fetch([:gallery])
+        @gallery = @sorted_gallery.data
+
+        @sorted_poems = ButterCMS::Content.fetch([:poems])
+        @poems = @sorted_poems.data
+    end
+
+    def poem
+        @bodyClass = "poem"
+        slug = params[:slug]
+        
+        @poems = ButterCMS::Content.fetch([:poems])
+        @poems.data.poems.each { |item|
+            if( item.slug == slug)
+                @poem = item
+            end
+        }
     end
 end
