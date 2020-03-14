@@ -26,8 +26,10 @@ Rails.application.routes.draw do
   get '/team/staff/:slug' => 'team#show'
 
   get '/team/fellows' => 'team#fellows'
-  get '/team/fellows/gallery' => 'team#gallery'
   get '/team/fellows/:slug' => 'team#show'
+
+  get '/gallery' => 'team#gallery'
+  get '/gallery/:slug' => 'team#poem'
 
   get '/team/board' => 'board#index'
   get '/team/board/:slug' => 'board#show'
@@ -46,6 +48,8 @@ Rails.application.routes.draw do
   get '/mission' => 'home#mission'
   get '/newsletter' => 'home#newsletter'
   get '/thank-you' => 'home#thank_you'
+
+  get '/:slug' => 'work#show'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
