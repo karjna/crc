@@ -28,7 +28,7 @@
     <div class = "row">
       <% @poems.poems.each do |poem| %>
       <div class = "col-sm-6">
-        <a class = "btn full-width mt-4" target="_blank" href = "/gallery/<%= poem.slug%>"><%= poem.title %></a>
+        <a class = "btn full-width mt-4" href = "/gallery/<%= poem.slug%>"><%= poem.title %></a>
       </div>
       <% end %>
     </div>
