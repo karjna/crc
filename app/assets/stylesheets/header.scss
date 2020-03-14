@@ -116,6 +116,37 @@
     @include mont-bold;
   }
 }
+
+.header--flex{
+  background-color: $black;
+  min-height: 275px;
+  position: relative;
+  overflow: hidden;
+  @media only screen and (max-width:479px) {
+        min-height:200px;
+	}
+  &:after{
+    // background-image: image_url('justice.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    content: '';
+    right:0;
+    display: inline-block;
+    position: absolute;
+    width: 32%;
+    background-position: top right;
+    background-position-y: 65px;
+    opacity: 0.2;
+  }
+  h1{
+    position: relative;
+    margin-top: 176px;
+    left:30px;
+    @include mont-bold;
+  }
+}
+
 .action-bar{
   background-color: rgba(112, 76, 159, 0.9);
   display: inline-block;

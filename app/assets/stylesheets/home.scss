@@ -336,8 +336,9 @@ $banners: join donate contact mission;
 }
 
 body.full{
-  .header--large{
+  .header--large, .header--flex{
     height:3px;
+    min-height: 3px;
   }
 
   h1{
@@ -350,7 +351,7 @@ body.full{
     z-index: 2;
   }
 }
-.page-banner.join, body.jobs .header--large{
+.page-banner.join, body.jobs .header--large, body.jobs .header--flex{
     height:400px;
     padding-top: 64px;
     @media only screen and (max-width:991px) {
