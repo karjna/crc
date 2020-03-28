@@ -143,6 +143,7 @@
     position: relative;
     margin-top: 176px;
     left:30px;
+    z-index: 1;
     @include mont-bold;
   }
 }

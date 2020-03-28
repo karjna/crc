@@ -180,6 +180,47 @@
     }
 }
 
+.resource-container{
+  background-color: $black;
+  padding: 30px 0px 50px;
+  margin-bottom: 30px;
+  margin-top:-8px;
+}
+
+.resource-area{
+  max-width: 1300px;
+  margin:0 auto;
+}
+
+.resource{
+  background-color: $black-offset;
+  color:white;
+  @include mont-bold;
+  font-size: 20px;
+  width:30%;
+  margin: 0 10px;
+  padding: 20px 30px;
+  display: inline-table;
+  min-height: 170px;
+  box-shadow: -2px 2px 0px 1px #171d21;
+  .view-link{
+    text-transform: uppercase;
+    margin-top: 40px;
+    display: block;
+    font-weight: 700;
+    color: $green;
+    font-size: 15px;
+    text-align: right;
+  }
+  @media only screen and (max-width: 991px) {
+    width: 93%;
+    display: block;
+    min-height:0px;
+    margin: 0 30px;
+    margin-bottom:15px;
+  }
+}
+
 .newsletter-container{
   margin-top: -10px;
 }
@@ -313,19 +354,16 @@ $banners: join donate contact mission;
 }
 
 .page-banner{
-    height:275px;
-    width:100%;
-    background-size:cover;
-    background-position:center;
-    margin-bottom: 40px;
-    background-color: $black;
-    background-blend-mode: overlay;
-    @media only screen and (max-width:776px) {
-
-    }
-    @media only screen and (max-width:479px) {
-    }
-
+  height:275px;
+  width:100%;
+  background-size:cover;
+  background-position:center;
+  margin-bottom: 40px;
+  background-color: $black;
+  background-blend-mode: overlay;
+  z-index: 0;
+  top: 0;
+  position: absolute;
 }
 
 .page-banner--full{

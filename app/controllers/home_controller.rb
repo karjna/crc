@@ -1,11 +1,13 @@
 class HomeController < ApplicationController
   def index
     @bodyClass = "home"
-    @featured = ButterCMS::Content.fetch([:featured_cases])
+    @featuredcases = ButterCMS::Content.fetch([:featured_cases])
+    @featuredresources = ButterCMS::Content.fetch([:featured_resources])
     @bannertext = ButterCMS::Content.fetch([:homepage_headline])
     @bannerimage = ButterCMS::Content.fetch([:banner_image])
 
-    @featured = @featured.data.featured_cases
+    @featuredcases = @featuredcases.data.featured_cases
+    @featuredresources = @featuredresources.data.featured_resources
     @bannertext = @bannertext.data.homepage_headline
     @bannerimage = @bannerimage.data.banner_image[0].banner_image
 

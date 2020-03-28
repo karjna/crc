@@ -202,6 +202,7 @@ a.card-body, a.card{
   position: absolute;
   top: 152px;
   left: 30px;
+  z-index: 1;
   @media only screen and (max-width:479px) {
       top:100px;
 	}
