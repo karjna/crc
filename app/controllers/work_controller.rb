@@ -15,7 +15,16 @@ class WorkController < ApplicationController
 
     def show
         @bodyClass = "topic"
-        slug = params[:slug]
+        case params[:slug]
+        when "bail"
+            slug = "wealth-based-detention"
+        when "poverty"
+            slug = "criminalization-of-poverty"
+        when "indigent-defense"
+            slug = "indigent-defense-initiative"
+        else
+            slug = params[:slug]
+        end
 
         @cases = []
         @work = ButterCMS::Content.fetch([:work_topic])
