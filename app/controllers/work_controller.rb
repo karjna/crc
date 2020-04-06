@@ -22,6 +22,8 @@ class WorkController < ApplicationController
             slug = "criminalization-of-poverty"
         when "indigent-defense"
             slug = "indigent-defense-initiative"
+        when "prosecutors"
+            slug = "prosecutors-project"
         else
             slug = params[:slug]
         end
