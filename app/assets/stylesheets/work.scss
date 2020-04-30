@@ -478,3 +478,53 @@
 
   }
 }
+
+.covid-button{
+  border: 1px solid $white;
+  display: inline-block;
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 30px;
+  margin: 0 auto;
+  text-align: left;
+  cursor: pointer;
+  img{
+    width:15%;
+    filter: brightness(7.5);
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    @media only screen and (max-width:767px) {
+      width:100px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+  &:hover{
+    border-color: $green;
+    h3{
+      color:$green;
+    }
+  }
+}
+
+.covid-button__container{
+  display: inline-block;
+  width: 80%;
+  padding: 10px 15px;
+  p {
+    font-size: 14px;
+  }
+  @media only screen and (max-width:767px) {
+    width: 100%;
+  }
+}
+
+.small-cta{
+  text-transform: uppercase;
+  margin-top: 10px;
+  display: block;
+  @include mont-bold;
+  color: $green;
+  margin-bottom: 0px;
+}

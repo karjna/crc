@@ -31,7 +31,7 @@
 
   </div>
   <div class = 'content-container d-lg-none'>
-  <div class = "card-columns two-column">
+   <div class = "card-columns two-column">
       <% @work.work_topic.each do |workitem| %>
           <a href = "/work/<%= workitem.url_slug %>" class="gcard" style = "background-image: url(<%= workitem.list_page_image %>)">
               <div class="gcard__body">
@@ -46,6 +46,18 @@
               </div>
           </a>
       <% end %>
+  </div>
+</div>
+<div class = 'content-container text-center'>
+  <div class = "covid-container">
+    <a class = "covid-button">
+      <%= image_tag("corona.png") %>
+      <div class = "covid-button__container">
+        <h3>Fighting COVID-19 in Jails Across the Country</h3>
+        <p>We're collaborating with organizations around the country to challenge the deplorable conditions in jails in light of COVID-19. Each day, the situation becomes more and more urgent for the people trapped in cages in the middle of this global pandemic.  
+        </p><p class = "small-cta">View our round-up of our COVID-19 legal challenges</p>
+      </div>
+    </a>
   </div>
 </div>
 <div class = 'content-container content-container--black pt-5 text-center close-to-footer'>
