@@ -6,12 +6,12 @@
 
   <div class = "circle__area d-none d-lg-block" id ="">
     <div class = "circle__nav content-container">
-      <% @work.work_topic.each_with_index do |workitem, index| %>
+      <% @work.each_with_index do |workitem, index| %>
         <h3  id="title-<%= index %>" class="circle__title"></h3>
       <% end %>
     </div>
     <div class = "circle">
-      <% @work.work_topic.each_with_index do |workitem, index| %>
+      <% @work.each_with_index do |workitem, index| %>
           <a href = "/work/<%= workitem.url_slug %>" class="slice" id="slice-<%= index %>" style = "background-image: url(<%= workitem.list_page_image %>)">
               <div class = "slice__overlay"></div>
               <div class="slice__body">
@@ -32,7 +32,7 @@
   </div>
   <div class = 'content-container d-lg-none'>
    <div class = "card-columns two-column">
-      <% @work.work_topic.each do |workitem| %>
+      <% @work.each do |workitem| %>
           <a href = "/work/<%= workitem.url_slug %>" class="gcard" style = "background-image: url(<%= workitem.list_page_image %>)">
               <div class="gcard__body">
                   <h3 class="gcard__title"><%= workitem.title %></h3>
@@ -50,7 +50,7 @@
 </div>
 <div class = 'content-container text-center'>
   <div class = "covid-container">
-    <a class = "covid-button">
+    <a class = "covid-button" href = "/covid">
       <%= image_tag("corona.png") %>
       <div class = "covid-button__container">
         <h3>Fighting COVID-19 in Jails Across the Country</h3>

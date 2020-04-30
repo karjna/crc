@@ -2,7 +2,7 @@ class WorkController < ApplicationController
     def index
         @bodyClass = "topics"
         @work = ButterCMS::Content.fetch([:work_topic])
-        @work = @work.data
+        @work = @work.data.work_topic.first(4)
         @seo = ButterCMS::Content.fetch([:our_work_seo_description])
         @statesRaw = ButterCMS::Content.fetch([:states])
 
