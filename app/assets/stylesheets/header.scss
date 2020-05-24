@@ -148,6 +148,21 @@
   }
 }
 
+.header-banner {
+  position: absolute;
+  z-index: 1;
+  mix-blend-mode: multiply;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  img {
+    width:100%;
+  }
+}
+
 .action-bar{
   background-color: rgba(112, 76, 159, 0.9);
   display: inline-block;
