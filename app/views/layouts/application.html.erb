@@ -34,15 +34,15 @@
 
   <body class = "<%= @bodyClass %>">
     <% unless current_page?(root_path) %>
-      <div class = 'header--flex'>
+      <div class = "header--flex">
+      <% if asset_exists?('banners/'+ @bodyClass + '.jpg') %>
+        <div class = "header-banner">
+          <%= image_tag( @bodyClass + ".jpg" ) %>
+        </div>
+      <% end %>
     <% end %>
 
     <%= render 'layouts/header'%>
-
-    <% unless current_page?(root_path) %>
-
-
-    <% end %>
 
     <%= yield %>
 
