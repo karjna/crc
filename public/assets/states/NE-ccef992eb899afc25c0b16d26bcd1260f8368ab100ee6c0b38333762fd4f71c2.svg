@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="119px" height="60px" viewBox="0 0 119 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>NE</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#704C9F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="Tablet" transform="translate(-315.000000, -470.000000)" fill="url(#linearGradient-1)">
+            <g id="NE" transform="translate(315.000000, 470.000000)">
+                <polygon points="102.205005 14.4574538 101.369314 12.5353645 100.951469 11.198259 98.5279652 9.86115343 94.5166485 8.60761697 92.6781284 7.60478781 90.5053319 7.68835691 87.4132753 8.0226333 83.9033732 9.02546246 78.8892274 5.59912949 77.0507073 3.92774755 68.1088139 4.42916213 33.4276387 2.42350381 3.67704026 0.584983678 0.0835690968 37.104679 27.7449402 39.8624592 26.5749728 57.4955386 44.7094668 58.3312296 78.6385201 59.3340588 115.241785 59.8354733 119.002394 59.8354733 117.163874 57.3284004 114.991077 54.0692057 115.074646 52.1471164 113.904679 49.8907508 112.316866 45.5451578 111.98259 39.9460283 110.812622 36.5196953 110.394777 32.3412405 108.472688 29.2491839 107.636997 25.3214363 105.297062 18.7194777 104.461371 14.2903156"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

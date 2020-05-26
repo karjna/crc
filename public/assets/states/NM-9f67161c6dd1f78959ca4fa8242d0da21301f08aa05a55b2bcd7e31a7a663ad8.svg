@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="106px" viewBox="0 0 102 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>NM</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#704C9F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="Tablet" transform="translate(-201.000000, -597.000000)" fill="url(#linearGradient-1)">
+            <g id="NM" transform="translate(201.000000, 597.000000)">
+                <polygon points="28.5806311 99.7815016 14.6245919 97.6087051 13.6217628 105.631338 0.417845484 103.959956 5.43199129 70.783025 11.2818281 26.3242655 14.9588683 0.501414581 43.3723613 3.76060936 74.6272035 7.43764962 101.369314 9.77758433 101.118607 18.8030468 99.9486398 18.7194777 93.7645267 100.366485 70.0309032 98.8622416 38.1910773 95.770185 38.7760609 101.035038"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
