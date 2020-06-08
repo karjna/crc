@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="58px" viewBox="0 0 108 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>KS</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="3.061617e-15%" id="linearGradient-1">
+            <stop stop-color="#704C9F" offset="0%"></stop>
+            <stop stop-color="#704C9F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.65">
+        <g id="Tablet" transform="translate(-341.000000, -539.000000)" fill="url(#linearGradient-1)">
+            <g id="KS" transform="translate(341.000000, 539.000000)">
+                <polygon points="92.6781284 2.92491839 56.074864 2.42350381 22.1458107 1.42067465 4.01131665 0.668552775 0.417845484 54.8213275 20.725136 55.6570185 58.0805223 57.4119695 96.7730141 57.9133841 107.30272 57.6626768 107.887704 28.4134929 106.884875 19.1373232 104.795647 17.4659412 102.789989 14.9588683 100.8679 11.9503808 101.369314 9.44330794 102.789989 8.27334059 102.789989 6.51838955 102.121436 5.93340588 99.9486398 5.76626768 97.0237214 2.92491839"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
