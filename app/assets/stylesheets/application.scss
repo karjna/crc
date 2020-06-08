@@ -287,11 +287,16 @@ hr{
   margin-bottom: -48px;
 }
 
-@import 'home.scss';
-@import 'work.scss';
-@import 'header.scss';
-@import 'footer.scss';
-@import 'team.scss';
-@import 'media.scss';
-@import 'jobs.scss';
-@import 'files.scss';
+@import 'home';
+@import 'work';
+@import 'header';
+@import 'footer';
+@import 'team';
+@import 'media';
+@import 'jobs';
+@import 'files';
+
+ /*
+ *= require_tree .
+ *= require_self
+ */

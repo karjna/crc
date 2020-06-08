@@ -3,3 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 
+ $(document).ready(function(){
+  $('.popup__close').click(function(){
+    $('.popup').hide();
+  });
+});

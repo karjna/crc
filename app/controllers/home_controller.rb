@@ -5,12 +5,21 @@ class HomeController < ApplicationController
     @featuredresources = ButterCMS::Content.fetch([:featured_resources])
     @bannertext = ButterCMS::Content.fetch([:homepage_headline])
     @bannerimage = ButterCMS::Content.fetch([:banner_image])
+    @modalfetch = ButterCMS::Content.fetch([:homepage_modal])
 
     @featuredcases = @featuredcases.data.featured_cases
     @featuredresources = @featuredresources.data.featured_resources
     @bannertext = @bannertext.data.homepage_headline
     @bannerimage = @bannerimage.data.banner_image[0].banner_image
-
+    @modal = false
+    if (@modalfetch.data.homepage_modal.length > 0)
+      @modalfetch.data.homepage_modal.each { |item|
+        if( item.active == true)
+            @modal = item
+            break
+        end
+      }
+    end
   end
 
   def contact

@@ -18,8 +18,11 @@
 //= require bootstrap
 
 
-
-
+$(document).ready(function(){
+  $('.popup__close').click(function(){
+    $('.popup').hide();
+  });
+});
 
 
 
