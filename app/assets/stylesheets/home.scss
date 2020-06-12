@@ -332,6 +332,7 @@
   width: 100%;
   background: rgba(0,0,0,0.3);
   z-index: 1000;
+  overflow-y: scroll;
 }
 
 .popup__body {
@@ -412,6 +413,9 @@
   height: 375px;
   clip-path: polygon( 49% 0%, 100% 0%, 100% 100%, -1% 100%);
   shape-outside: polygon( 49% 0%, 100% 0%, 100% 100%, -1% 100%);
+  @media only screen and (max-width:400px) {
+    display: none;
+  }
 }
 
 .popup__close {
