@@ -2,13 +2,14 @@
   <div class="popup">
     <div class="popup__body" style = "background-image: url(<%= @modal.modal_image %>)">
     <div class="popup__overlay"></div>
+    <div class="popup__overlay--purple"></div>
     <div class = "popup__close">x</div>
       <div class="popup__header">
         <%= @modal.modal_title %>
         
       </div>
       <div class="popup__description">
-         <%= @modal.modal_description %>
+         <%== @modal.modal_description %>
       </div>
       <div class="popup__footer">
         <a class="popup__button btn" href="<%= @modal.modal_link%>"><%= @modal.modal_button_text%></a>

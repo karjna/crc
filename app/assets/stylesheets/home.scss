@@ -326,7 +326,7 @@
 
 }
 
-  .popup{
+.popup{
   position: fixed;
   height: 100vh;
   width: 100%;
@@ -335,20 +335,49 @@
 }
 
 .popup__body {
-  margin: 15vh 10% 0;
+  margin: 11vh 10% 0;
   padding: 50px 40px;
   background: $black;
   position: relative;
-  min-height: 65vh;
+  min-height: 75vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position-x: 200px;
+  border: 1px solid white;
+  @media only screen and (max-width:1200px) {
+    margin-top: 8vh;
+  }
+  @media only screen and (max-width:1060px) {
+    padding:30px 40px;
+  }
+  @media only screen and (max-width:767px) {
+    margin-top: 4vh;
+    background-position-x: -68px;
+  }
+  @media only screen and (max-width:650px) {
+    margin: 4vh 5% 0;
+  }
+  @media only screen and (max-width:479px) {
+    padding:20px;
+  }
 }
 
 .popup__header {
   @include mont-bold;
-  font-size: 32px;
+  font-size: 45px;
   z-index: 2;
   position: relative;
   @media only screen and (max-width:650px) {
     font-size: 24px;
+  }
+  @media only screen and (max-width:1060px) {
+    font-size: 36px;
+  }
+  @media only screen and (max-width:767px) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width:479px) {
+    font-size: 19px;
   }
 }
 
@@ -356,6 +385,26 @@
   margin:40px 0px;
   z-index: 2;
   position: relative;
+  max-width: 80%;
+  @media only screen and (max-width:1200px) {
+    font-size: 14px;
+    margin: 20px 0px;
+  }
+  @media only screen and (max-width:1060px) {
+    max-width: 90%;
+  }
+  @media only screen and (max-width:767px) {
+    max-width: 100%;
+  }
+  @media only screen and (max-width:650px) {
+    font-size: 12px;
+  }
+  @media only screen and (max-width:650px) {
+    p{
+      font-size: 12px;
+      line-height: 16px;
+    };
+  }
 }
 
 .popup__close {
@@ -376,21 +425,34 @@
 }
 
 .popup__overlay {
-  background-color: rgba(0,0,0,0.4);
+  background-color: $black;
+  position: absolute;
+  top: 0;
+  left: -13%;
+  width: 82%;
+  height: 100%;
+  z-index: 1;
+  transform: skew(-20deg, 0deg);
+  @media only screen and (max-width:767px) {
+    left:-22%;
+    width:100%;
+  }
+  @media only screen and (max-width:479px) {
+    left: -33%;
+    width: 121%;
+  }
+}
+
+.popup__overlay--purple{
+  background-color: rgba(16, 88, 45, 0.33);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 1;
+  height:100%;
 }
 
-.popup__footer{
-  position: absolute;
-  bottom: 50px;
-  text-align: right;
-  right: 40px;
-}
+
 // banner css
 $banners: join donate contact mission;
 
