@@ -9,11 +9,15 @@
         
       </div>
       <div class="popup__description">
+        <div class="popup__shape"></div>
+
          <%== @modal.modal_description %>
       </div>
       <div class="popup__footer">
         <a class="popup__button btn" href="<%= @modal.modal_link%>"><%= @modal.modal_button_text%></a>
       </div>
+      <a class='popup__link' href='/donate'>We can’t do this without you, donate today</a>
+
     </div>
   </div>
 <% end %>
