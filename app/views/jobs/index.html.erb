@@ -4,6 +4,15 @@
 </div>
 
 <div class = 'content-container'>
+    <% if @sorted.job_listings.length === 0 %>
+         <div class = "row my-5">
+
+            <div class = "col-sm-12 text-center">
+                <h3 class = "px-3">Thank you for your interest in joining the CRC family.<br><br> At this time, we do not have any available positions,<br> please continue to check back here for openings. </h3>
+            </div>
+
+        </div>
+    <% end %>
 
  <% @sorted.job_listings.each do |job| %>
 
@@ -17,6 +26,6 @@
 
     </div>
     <%if job != @sorted.job_listings.last%>
-    <hr>
+        <hr>
     <% end %>
 <% end %>
