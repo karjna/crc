@@ -5,7 +5,7 @@
 </div>
 <div class = 'content-container content-container--long-text'>
 <% @states.each do |state| %>
-   <div class="row full-width" id="<%= state.state_name %>">
+   <div class="row full-width" id="<%= state.abreviation %>">
     <% first = true %>
 
         <% @docket.each do |item| %>
