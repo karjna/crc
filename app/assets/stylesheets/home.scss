@@ -279,6 +279,11 @@
       b {
         color: #b38ee4;
       }
+      a {
+        &:hover {
+          color:white;
+        }
+      }
     }
   }
 }
