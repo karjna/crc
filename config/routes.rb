@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get '/blog/:slug' => 'posts#show', :as => :buttercms_post
   end
 
+  get '/docket' => 'work#docket'
+
   get '/work' => 'work#index'
   get '/work/docket' => 'work#docket'
   get '/work/:slug' => 'work#show'
