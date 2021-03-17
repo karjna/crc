@@ -44,3 +44,13 @@ body.jobs{
     font-size: 19px;
     margin-top: 30px;
 }
+
+.donate-button {
+  background-color: $green;
+  font-size: 24px;
+  margin: 15px auto;
+  padding: 10px 30px;
+  width: 80%;
+  min-width: 120px;
+  display: inline-block;
+}
