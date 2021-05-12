@@ -74,29 +74,6 @@
   <div class = "triangle triangle--bottom"></div>
 </div>
 
-<div class = "resource-container">
-  <div class = "resource-area">
-    <h2 class = "text-center">COVID-19 Policy Resources</h2>
-    <% @featuredresources.each do |item| %>
-      <a href="<%= item.resources.file %>" class = "resource">
-        <% if item.alternate_title %>
-          <%= item.alternate_title %>
-        <% else %>
-          <%= item.resources.file_name %>
-        <% end %>
-        <span class = "view-link">View <i class="fas fa-caret-right"></i></span>
-      </a>
-    <% end %>
-    <% if @featuredresources.count < 3 %>
-      <a href="/resources" class = "resource resource__more">
-        View All Resources
-      </a>
-      <% else %>
-      <a class = "btn text-center" href = "/resources">View All Resources</a>
-    <% end %>
-  </div>
-</div>
-
 <div class = "newsletter-container">
   <div class = "newsletter-area">
       <h3>Sign-up for our Newsletter</h3>
